@@ -1,0 +1,344 @@
+﻿:root {
+    --transition: 0.25s ease-in-out;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a, img, button, span, ion-icon, label, input, textarea {
+    display: block;
+}
+
+/* Hero Section */
+
+#ProjectBackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes mymove {
+    0% {
+        left: 50vw;
+        top: 55vh;
+        width: 100px;
+        height: 50px;
+    }
+
+    100% {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.hero {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: no-repeat;
+    background-color: transparent;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Semi-transparent overlay using one of your theme colors */
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.hero-content {
+    --list: #e3e3e3, #c8c8c8;
+    --grad: linear-gradient(270deg, var(--list));
+    position: absolute;
+    top: 7vh;
+    left: 0;
+    color: #555; /* Dark text for readability */
+    padding: 0 20px;
+    background: conic-gradient(rgb(0 0 0/ .1) 0 0) padding-box, var(--grad) border-box;
+    border-radius: 10px;
+    animation: fadeIn 1s ease-out forwards;
+    animation: slideUp 1s ease-out forwards;
+    animation-delay: 1.5s;
+    opacity: 0;
+}
+
+    .hero-content h1 {
+        font-size: 4rem;
+        margin-bottom: 1rem;
+        color: #555;
+    }
+
+    .hero-content p {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        color: #555;
+    }
+/* Global Reset & Styles */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.HomeBtn {
+    --list: #e3e3e3, #a8a8a8;
+    --grad: linear-gradient(45deg, var(--list));
+    width: 100px;
+    height: 50px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 0 5px;
+    border: 1px solid #000;
+    transition: .3s;
+    text-shadow: 1px 1px 2px;
+    text-align: center;
+    border: solid 1px #fff;
+    aspect-ratio: 7/ 10;
+    border-radius: 1em;
+    background: conic-gradient(rgb(0 0 0/ .1) 0 0) padding-box, var(--grad) border-box;
+}
+
+.HomeBtn:hover {
+    background: #ababab;
+    color: #fff;
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+
+    .cta-button {
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+    }
+}
+
+.main-button {
+    position: absolute;
+    text-align: center;
+    align-content: center;
+}
+
+.main-btn {
+    padding: 5px;
+    border-radius:10px;
+    background-color: rgba(250,250,250,0.7);
+    font-size: 1.2rem;
+    font-weight: 800;
+    text-decoration: none;
+    border: none;
+}
+
+#sectorA-main-button {
+    top: 17vh;
+    left: 50vw;
+    animation: fadeIn 1s ease-out forwards;
+    animation: slideDown 1s ease-out forwards;
+    animation-delay: 1s;
+    opacity: 0;
+}
+
+#sectorB-main-button {
+    top: 20vh;
+    left: 73vw;
+    animation: fadeIn 1s ease-out forwards;
+    animation: slideDown 1s ease-out forwards;
+    animation-delay: 1.2s;
+    opacity: 0;
+}
+
+#sectorC-main-button {
+    top: 25vh;
+    left: 45vw;
+    animation: fadeIn 1s ease-out forwards;
+    animation: slideDown 1s ease-out forwards;
+    animation-delay: 1.4s;
+    opacity: 0;
+}
+
+#sectorD-main-button {
+    top: 35vh;
+    left: 40vw;
+    animation: fadeIn 1s ease-out forwards;
+    animation: slideDown 1s ease-out forwards;
+    animation-delay: 1.6s;
+    opacity: 0;
+}
+
+#sectorE-main-button {
+    top: 50vh;
+    left: 39vw;
+    color: var(--drab-dark-brown);
+    animation: fadeIn 1s ease-out forwards;
+    animation: slideDown 1s ease-out forwards;
+    animation-delay: 1.8s;
+    opacity: 0;
+}
+
+#sectorV-main-button {
+    top: 55vh;
+    left: 20vw;
+    animation: fadeIn 1s ease-out forwards;
+    animation: slideDown 1s ease-out forwards;
+    animation-delay: 2s;
+    opacity: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+
+    .cta-button {
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+    }
+}
+
+
+
+#mainMenu {
+    display: block;
+    position: fixed;
+    top:0;
+    right:0;
+    width:100%;
+    height: 40px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    text-align: right;
+    
+    text-decoration: none;
+    color: var(--drab-dark-brown);
+    background-color: #d3d3d3;
+}
+
+.dropbtn {
+    color: var(--drab-dark-brown);
+    background-color: transparent;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    width: 130px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 200;
+    border: none;
+}
+
+    .dropbtn a:hover {
+        background-color: var(--butter-cup);
+        color: var(--accent-white);
+    }
+
+.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    width: 130px;
+    background-color: var(--seaside-villa);
+    font-size: 0.7rem;
+    font-style: oblique;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+    .dropdown-content a {
+        color: black;
+        padding: 5px 10px;
+        text-decoration: none;
+        display: block;
+    }
+
+        .dropdown-content a:hover {
+            background-color: var(--merino);
+            color: var(--drab-dark-brown);
+        }
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: var(--butter-cup);
+    color: var(--accent-white);
+}
+
+
+
+.hidden {
+    visibility: hidden;
+}

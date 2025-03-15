@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="CSS/villasCSS.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>VILAT</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="row">
+            <div class="column side">
+                <h1>VILAT</h1>
+            </div>
+
+            <div class="column middle">
+
+                <!--  <img id="green_coast_logo" src="Green-coast-logo3.png" />-->
+
+            </div>
+            <div class="column side">
+                <div id="mainMenu">
+                    <div class="dropdown">
+                        <a class="dropbtn" href="index Projekti.html">Projekti</a>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">Apartamente</button>
+                        <div class="dropdown-content">
+                            <a href="SektoriA.html">SEKTORI A</a>
+                            <a href="SektoriB.html">SEKTORI B </a>
+                            <a href="SektoriC.html">SEKTORI C</a>
+                            <a href="SektoriD.html">SEKTORI D</a>
+                            <a href="SektoriE.html">SEKTORI E </a>
+
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a class="dropbtn" href="Vilat.html">Vila</a>
+                    </div>
+                    <div class="dropdown">
+                        <a class="dropbtn" href="LoginPage.html">Log in</a>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+    </header>
+
+    <div class="sidenav">
+
+        <div id="apNameTable">
+            <p class="aparttId aptId" id="aptId"></p>
+        </div>
+
+        <table id="apartmentDetailsTable" border="1">
+            <thead>
+                <tr>
+                    <td class="aparttId">Sektori</td>
+                    <td class="vleraSip" id="aptSector"></td>
+                    <td class="vleraFin"></td>
+                </tr>
+                <tr>
+                    <td class="aparttId">Tipologjia</td>
+                    <td class="vleraSip" id="aptTypology"></td>
+                    <td class="vleraFin"></td>
+                </tr>
+                <tr>
+                    <td class="aparttId">Sipërfaqe e Katit 0</td>
+                    <td class="vleraSip" id="areaFloor0"></td>
+                    <td class="vleraFin"></td>
+                </tr>
+
+                <tr>
+                    <td class="aparttId">Sipërfaqe e Katit 1</td>
+                    <td class="vleraSip" id="areaFloor1"></td>
+                    <td class="vleraFin"></td>
+                </tr>
+
+
+                <tr>
+                    <td class="aparttId">Siperfaqe totale</td>
+                    <td class="vleraSip" id="aptTotalArea"></td>
+                    <td class="vleraFin"></td>
+                </tr>
+
+                <tr>
+                    <td class="aparttId">Siperfaqe verande</td>
+                    <td class="vleraSip" id="aptVerandaArea"></td>
+                    <td class="vleraFin"></td>
+                </tr>
+
+                <tr>
+                    <td class="aparttId">Siperfaqe oborri</td>
+                    <td class="vleraSip" id="aptPlotArea"></td>
+                    <td class="vleraFin"></td>
+                </tr>
+
+                <tr>
+                    <td class="aparttId">Siperfaqe pishine</td>
+                    <td class="vleraSip" id="aptPoolArea"></td>
+                    <td class="vleraFin"></td>
+                </tr>
+
+                <tr>
+                    <td class="aparttId">Siperfaqe depo</td>
+                    <td class="vleraSip" id="aptDepo"></td>
+                    <td class="vleraFin"></td>
+                </tr>
+
+                <tr>
+                    <td class="aparttId">Parking</td>
+                    <td class="vleraSip" id="aptParking"></td>
+                    <td class="vleraFin"></td>
+                </tr>
+                <tr>
+                    <td class="aparttId">Statusi</td>
+                    <td class="vleraSip" id="aptStatus"></td>
+                    <td class="vleraFin"></td>
+                </tr>
+
+            </thead>
+
+        </table>
+        <div class=" hidden">
+
+            <div id="aptFloor"></div>
+            <div id="aptScale"></div>
+            <div id="aptNetArea"></div>
+            <div id="aptLoggiaArea"></div>
+            <div id="aptTotalNetArea"></div>
+            <div id="aptCommonArea"></div>
+            <div id="aptTerraceArea"></div>
+
+        </div>
+        <div class="button-container">
+
+            <button class="ApBtn" id="VI03btn" onclick="showPlan('VI03')">VI03</button>
+            <button class="ApBtn" id="VI04btn" onclick="showPlan('VI04')">VI04</button>
+            <button class="ApBtn" id="VI05btn" onclick="showPlan('VI05')">VI05</button><br>
+            <button class="ApBtn" id="VI06btn" onclick="showPlan('VI06')">VI06</button>
+            <button class="ApBtn" id="VI07btn" onclick="showPlan('VI07')">VI07</button>
+            <button class="ApBtn" id="VI08btn" onclick="showPlan('VI08')">VI08</button><br>
+            <button class="ApBtn" id="VI10btn" onclick="showPlan('VI10')">VI10</button>
+            <button class="ApBtn" id="VI11btn" onclick="showPlan('VI11')">VI11</button>
+            <button class="ApBtn" id="VI16btn" onclick="showPlan('VI16')">VI16</button><br>
+            <button class="ApBtn" id="VI17btn" onclick="showPlan('VI17')">VI17</button>
+            <button class="ApBtn" id="VI18btn" onclick="showPlan('VI18')">VI18</button>
+            <button class="ApBtn" id="VI19btn" onclick="showPlan('VI19')">VI19</button><br>
+            <button class="ApBtn" id="VI20btn" onclick="showPlan('VI20')">VI20</button>
+            <button class="ApBtn" id="VI22btn" onclick="showPlan('VI22')">VI22</button>
+            <button class="ApBtn" id="VI23btn" onclick="showPlan('VI23')">VI23</button>
+            <button class="empty ApBtn">   </button>
+
+        </div>
+        <div id="infoPart">
+
+
+        </div>
+
+    </div>
+
+
+    <div id="planimetrite">
+
+            <div id="shiturShkrimi" class="apartament-plan hidden">
+                SHITUR
+            </div>
+
+            <div id="rezervuarShkrimi" class="apartament-plan hidden">
+                REZERVUAR
+            </div>
+            <div id="printBtnContainer">
+                <button id="printButton" title="Print"><i class="fa-solid fa-print"></i></button>
+                <button id="fullScreenPlanBtn" title="Full Screen Plan"><i class="fa-solid fa-expand"></i></button>
+            </div>
+
+
+            <div class="apartament-plan hidden" id="VI03">
+                <img class="plan-image" src="VILAT/VILLA03_FULL-3.jpg" alt="Planimetria VI03">
+            </div>
+            <div class="apartament-plan hidden" id="VI04">
+                <img class="plan-image" src="VILAT/VILLA04_FULL-3.jpg" alt="Planimetria VI04">
+            </div>
+            <div class="apartament-plan hidden" id="VI05">
+                <img class="plan-image" src="VILAT/VILLA05_FULL-3.jpg" alt="Planimetria VI05">
+            </div>
+            <div class="apartament-plan hidden" id="VI06">
+                <img class="plan-image" src="VILAT/VILLA06_FULL-3.jpg" alt="Planimetria VI06">
+            </div>
+            <div class="apartament-plan hidden" id="VI07">
+                <img class="plan-image" src="VILAT/VILLA07_FULL-3.jpg" alt="Planimetria VI07">
+            </div>
+            <div class="apartament-plan hidden" id="VI08">
+                <img class="plan-image" src="VILAT/VILLA08_FULL-3.jpg" alt="Planimetria VI08">
+            </div>
+            <div class="apartament-plan hidden" id="VI10">
+                <img class="plan-image" src="VILAT/VILLA10_FULL-3.jpg" alt="Planimetria VI10">
+            </div>
+            <div class="apartament-plan hidden" id="VI11">
+                <img class="plan-image" src="VILAt/VILLA11_FULL-3.jpg" alt="Planimetria VI11">
+            </div>
+            <div class="apartament-plan hidden" id="VI16">
+                <img class="plan-image" src="VILAT/VILLA16_FULL-3.jpg" alt="Planimetria VI16">
+            </div>
+            <div class="apartament-plan hidden" id="VI17">
+                <img class="plan-image" src="VILAT/VILLA17_FULL-3.jpg" alt="Planimetria VI17">
+            </div>
+            <div class="apartament-plan hidden" id="VI18">
+                <img class="plan-image" src="VILAT/VILLA18_FULL-3.jpg" alt="Planimetria V18">
+            </div>
+            <div class="apartament-plan hidden" id="VI19">
+                <img class="plan-image" src="VILAT/VILLA19_FULL-3.jpg" alt="Planimetria VI19">
+            </div>
+            <div class="apartament-plan hidden" id="VI20">
+                <img class="plan-image" src="VILAT/VILLA20_FULL-3.jpg" alt="Planimetria VI20">
+            </div>
+            <div class="apartament-plan hidden" id="VI22">
+                <img class="plan-image" src="VILAT/VILLA22_FULL-3.jpg" alt="Planimetria VI22">
+            </div>
+            <div class="apartament-plan hidden" id="VI23">
+                <img class="plan-image" src="VILAT/VILLA23_FULL-3.jpg" alt="Planimetria VI23">
+            </div>
+            <img id="SectorV-image" src="main images/Concept Design Submission Image[25].jpg" alt="Skice Sektori A Nukli JA">
+
+      
+    </div>
+
+    <div id="sidenav_r">
+      
+        <div id="groupApart">
+
+            <div class="apartBlock VI03">
+                <input type="checkbox" class="radioteDhena" id="checkboxVI03" name="VI03" value="VI03">
+                <label for="checkboxVI03" class="apLabel">VI03</label>
+            </div>
+            <div class="apartBlock VI04">
+                <input type="checkbox" class="radioteDhena" id="checkboxVI04" name="VI04" value="VI04">
+                <label for="checkboxVI04" class="apLabel">VI04</label>
+            </div>
+            <div class="apartBlock VI05">
+                <input type="checkbox" class="radioteDhena" id="checkboxVI05" name="VI05" value="VI05">
+                <label for="checkboxVI05" class="apLabel">VI05</label>
+            </div>
+            <div class="apartBlock VI06">
+                <input type="checkbox" class="radioteDhena" id="checkboxVI06" name="VI06" value="VI06">
+                <label for="checkboxVI06" class="apLabel">VI06</label>
+            </div>
+            <div class="apartBlock VI07">
+                <input type="checkbox" class="radioteDhena" id="checkboxVI07" name="VI07" value="VI07">
+                <label for="checkboxVI07" class="apLabel">VI07</label>
+            </div>
+            <div class="apartBlock VI08">
+                <input type="checkbox" class="radioteDhena" id="checkboxVI08" name="VI08" value="VI08">
+                <label for="checkboxVI08" class="apLabel">VI08</label>
+            </div>
+            <div class="apartBlock VI10">
+                <input type="checkbox" class="radioteDhena" id="checkboxVI10" name="VI10" value="VI10">
+                <label for="checkboxVI10" class="apLabel">VI10</label>
+            </div>
+            <div class="apartBlock VI11">
+                <input type="checkbox" class="radioteDhena" id="checkboxVI11" name="VI11" value="VI11">
+                <label for="checkboxVI11" class="apLabel">VI11</label>
+            </div>
+            <div class="apartBlock VI16">
+                <input type="checkbox" class="radioteDhena" id="checkboxVI16" name="VI16" value="VI16">
+                <label for="checkboxVI16" class="apLabel">CA16</label>
+            </div>
+            <div class="apartBlock VI17">
+                <input type="checkbox" class="radioteDhena" id="checkboxVI17" name="VI17" value="VI17">
+                <label for="checkboxVI17" class="apLabel">VI17</label>
+            </div>
+            <div class="apartBlock VI18">
+                <input type="checkbox" class="radioteDhena" id="checkboxVI18" name="VI18" value="VI18">
+                <label for="checkboxVI18" class="apLabel">VI18</label>
+            </div>
+
+            <div class="apartBlock VI19">
+                <input type="checkbox" class="radioteDhena" id="checkboxCA08" name="VI19" value="VI19">
+                <label for="checkboxVI19" class="apLabel">VI19</label>
+            </div>
+            <div class="apartBlock VI20">
+                <input type="checkbox" class="radioteDhena" id="checkboxVI20" name="VI20" value="VI20">
+                <label for="checkboxVI20" class="apLabel">VI20</label>
+            </div>
+
+            <div class="apartBlock VI22">
+                <input type="checkbox" class="radioteDhena" id="checkboxVI22" name="VI22" value="VI22">
+                <label for="checkboxVI22" class="apLabel">VI22</label>
+            </div>
+            <div class="apartBlock VI23">
+                <input type="checkbox" class="radioteDhena" id="checkboxVI23" name="VI23" value="VI23">
+                <label for="checkboxVI23" class="apLabel">VI23</label>
+            </div>
+
+
+        </div>
+
+        <img id="vetemVilat" src="VILAT/Vetem Vilat.jpg" alt="Vilat">
+    </div>
+
+    <div id="fullscreenContainer" class="hidden">
+        <img id="fullscreenImage" src="" alt="Full Screen View">
+    </div>
+
+    <script src="JS/villas.js"></script>
+
+</body>
+	</html>

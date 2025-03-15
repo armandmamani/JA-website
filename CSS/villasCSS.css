@@ -1,0 +1,688 @@
+
+
+
+
+
+/*OLD CODE*/
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --myrtle-green: #4B787Bff; /* Blue */
+    --drab-dark-brown: #454326ff; /* Dark brown */
+    --desert-sand: #D6BFAFff; /* Sand */
+    --text-color: #ddd; /* Dark Gray */
+    --background-color-beaver: #AC9682ff; /* Light Gray */
+    --primary-blue: #003b6f; /* Deep Sea Blue */
+    --secondary-gold: #ffd700; /* Luxurious Gold */
+    --accent-white: #ffffff; /* White Accent */
+    --background-gradient: linear-gradient(to bottom, #87cefa, #4682b4); /* Sky to Ocean Gradient */
+    --button-hover: #ffa500; /* Warm Glow */
+    --seaside-villa: #e8d6cb;
+    --butter-cup: #f39c12;
+    --saffron-mango: #fabe58;
+    --merino: #f7efe8;
+}
+
+
+body {
+    background-color:var(--seaside-villa);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position-x: 200px;
+    background-size: 90% 100%;
+    color: var(--accent-white);
+    font-family: Arial;
+    font-size: 20px;
+}
+
+header {
+    text-align: center;
+    width: 100%;
+
+    height: 4rem;
+    display: block;
+    text-align: center;
+    box-shadow: 0px 5px 2px rgba(0, 0, 0, 0.5);
+    background-color: var(--accent-white);
+    color: var(--accent-white);
+    font-size: 2.5rem;
+    font-weight: bold;
+    z-index: 5;
+    position:fixed;
+}
+
+.column {
+    float: left;
+    text-align:center;
+    padding: 10px;
+    height: 100px; /* Should be removed. Only for demonstration */
+}
+
+    /* Left and right column */
+    .column.side {
+        width: 35%;
+
+    }
+
+    /* Middle column */
+    .column.middle {
+        width: 30%;
+    }
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.topnav {
+    background-color: none;
+}
+
+    /* Style the topnav links */
+    .topnav a {
+        float: RIGHT;
+        display: block;
+        color: #111;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        background-color: rgba(214, 191, 175, 0.1);
+        border: none;
+    }
+
+        /* Change color on hover */
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: var(--drab-dark-brown);
+    text-align:left;
+}
+
+h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+#green_coast_logo {
+    width: 80px;
+    z-index: 1;
+    display: block;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+a {
+    background-color: var(--seaside-villa);
+    border: 1px solid grey;
+}
+
+/* Style the menu navigation */
+
+#mainMenu {
+    display: block;
+    height: 40px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    text-align: right;
+    text-decoration: none;
+    color: var(--drab-dark-brown);
+    background-color: transparent;
+}
+
+.dropbtn {
+    color: var(--drab-dark-brown);
+    background-color: transparent;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    width: 130px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 200;
+    border: none;
+}
+
+    .dropbtn a:hover {
+        background-color: var(--butter-cup);
+        color: var(--accent-white);
+    }
+
+.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    width: 130px;
+    background-color: var(--seaside-villa);
+    font-size: 0.7rem;
+    font-style: oblique;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+    .dropdown-content a {
+        color: black;
+        padding: 5px 10px;
+        text-decoration: none;
+        display: block;
+    }
+
+        .dropdown-content a:hover {
+            background-color: var(--merino);
+            color: var(--drab-dark-brown);
+        }
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: var(--butter-cup);
+    color: var(--accent-white);
+}
+
+
+
+.hidden {
+    visibility: hidden;
+}
+
+/*--------------   Ana e majte   -------------*/
+
+.sidenav {
+    display: flex;
+    flex-direction:column;
+    align-items: flex-start;
+    height: 100%;
+    width: 280px;
+    text-align: center;
+    position: fixed;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    padding-left: 20px;
+    background-color: var(--seaside-villa);
+    z-index: 4;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+
+
+/*-------- Tabela me te dhenat --------*/
+
+#apNameTable {
+    position:absolute;
+    top: 3rem;
+    min-height: 5rem;
+    display: block;
+    padding-top: 3.5rem;
+    text-align: center;
+    z-index: 10;
+    font-size: 5rem;
+    border: none;
+}
+
+
+
+#apartmentDetailsTable {
+    margin-top: 1rem;
+    position: absolute;
+    bottom: 30vh;
+    width: 80%;
+}
+
+table, th, td {
+    border: none;
+    border-collapse: collapse;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: left;
+    width: fit-content;
+    height: 15px;
+    padding-top: 10px;
+}
+
+
+
+th {
+    background-color: var(--drab-dark-brown);
+    color: white;
+    padding: 2px;
+}
+
+td {
+    background-color: transparent;
+    color: black;
+    padding: 2px;
+}
+
+.aparttId {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.vleraSip {
+    text-align: right;
+}
+
+vleraFin {
+}
+
+
+
+/*butonat e vilave*/
+
+.button-container {
+    position: absolute;
+    bottom: 30px;
+    left: 10px;
+    width: 100%;
+    height: 150px;
+    text-align: left;
+    z-index: 5;
+    background-color: var(--seaside-villa); /* Ensure it remains visible */
+}
+
+
+
+/*planimetrite--------------------*/
+
+
+#planimetrite {
+    position: fixed;
+    display: block;
+    top: 4rem;
+    width: 73%;
+    height: auto;
+    left: 280px;
+    z-index: 1;
+}
+
+#printBtnContainer {
+    position: absolute;
+    width: 90px;
+    height:90px;
+    left: 67vw;
+    top: 5vh;
+    opacity: 0;
+    z-index: 10;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: opacity 1s ease-in-out;
+    background-color: var(--accent-white);
+}
+
+.apartament-plan:not(.hidden) {
+    opacity: 1;
+}
+
+
+#fullScreenPlanBtn {
+    display: inline-block;
+    font-size: 40px;
+    background-color: transparent;
+    color: gray;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+
+#fullscreen-btn:hover {
+    background-color: #45a049;
+}
+
+#printButton {
+    display: inline-block;
+    font-size: 40px;
+    color: grey;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+
+@media print {
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .apartament-plan {
+        display: block !important;
+        width: 100% !important;
+        height: auto !important;
+        max-width: 100vw !important; /* Ensure it takes full page width */
+        max-height: 100vh !important; /* Ensure it takes full page height */
+        position: fixed !important; /* Prevents shifting */
+        top: 0;
+        left: 0;
+    }
+
+    /* Hide unnecessary elements */
+    header, nav, .sidenav, #sidenav_r, .controls, #printBtnContainer,
+    #sideImage, .sidebar, #shiturShkrimi, #rezervuarShkrimi,
+    #SectorV-image, #printButton {
+        display: none !important;
+    }
+}
+
+
+.plan-image {
+    width: 100%;
+    height: auto
+}
+
+.apartament-plan {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+    .apartament-plan:not(.hidden) {
+        opacity: 1;
+    }
+
+.page-break {
+    page-break-before: always; /* Forces a new page */
+}
+
+
+#shiturShkrimi {
+    position: absolute;
+    top: 200px;
+    left: 500px;
+    opacity: 0.5;
+    z-index: 5;
+    color: red;
+    font-weight: bold;
+    font-size: 10rem;
+    font-family: 'Arial Rounded MT';
+}
+
+#rezervuarShkrimi {
+    position: absolute;
+    opacity: 0.5;
+    z-index: 5;
+    height: 100%;
+    text-align: center;
+    padding-top: 20rem;
+    color: red;
+    font-weight: bold;
+    font-size: 10rem;
+    font-family: 'Arial Rounded MT';
+}
+
+
+
+#SectorV-image {
+    display: flex;
+    width: 90%;
+    z-index: -1;
+}
+
+
+/*Full screen*/
+
+#fullscreenContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px;
+}
+
+#fullscreenImage {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border: 5px solid white;
+    border-radius: 10px;
+    background: white;
+}
+
+
+/*Ana e djathte*/
+#sidenav_r {
+    top: 35rem;
+    left:65vw;
+    position: fixed;
+    width: 35vw;
+    display:block;
+    background-color: var(--seaside-villa);
+    z-index: 10;
+}
+
+#vetemVilat {
+    border: 5px solid var(--drab-dark-brown);
+    width: 100%;
+}
+/*--- Butona me checkbox---------*/
+#groupApart {
+    position:absolute;
+    display: block;
+    text-align: center;
+    z-index: 10;
+    background-color: transparent;
+    width: fit-content;
+}
+
+
+.apartBlock {  
+    position: relative;
+    display:inline-flex;
+    width: 50px;
+}
+
+
+.radioteDhena {
+    display: flex;
+    width: 10px;
+    padding: 0;
+}
+
+
+.apLabel {
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center;
+    padding-top: 10px;
+    width: 40px;
+    height: 40px;
+    display: block;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: #b5a58d;
+    color: var(--accent-white);
+    margin: 2px;
+}
+
+    .apLabel:hover {
+        background-color: #9f8b6f;
+        color: var(--accent-white);
+    }
+
+
+/* place the buttons over image*/
+
+.VI03 {
+    top: 140px;
+    left: 120px;
+}
+
+.VI04 {
+    top: 100px;
+    left: 90px;
+}
+.VI05 {
+    top: 80px;
+    left: 70px;
+}
+.VI06 {
+    top: 60px;
+    left: 80px;
+}
+.VI07 {
+    top: 30px;
+    left: 60px;
+}
+
+.VI08 {
+    top: 10px;
+    left: 50px;
+}
+
+.VI10 {
+    top: 0px;
+    left: 80px;
+}
+.VI11 {
+    top: 0;
+    left: 70px;
+}
+
+
+.VI16 {
+    top: 120px;
+    left: -180px;
+}
+.VI17 {
+    top: 120px;
+    left: -190px;
+}
+
+.VI18 {
+    top: 120px;
+    left: -200px;
+}
+
+.VI19 {
+    top: 240px;
+    left: -480px;
+}
+
+.VI20 {
+    top: 220px;
+    left: -80px;
+}
+
+.VI22 {
+    top: 180px;
+    left: -30px;
+}
+
+.VI23 {
+    top: 180px;
+    left: -40px;
+}
+
+
+#BolvLogoBW {
+width: 70%;
+display: block;
+margin-left: 15%;
+
+}
+/*Imazhi me zoom*/
+#sideImage {
+    display: block;
+    position: absolute;
+    width: 50vw;
+    left: 45vw;
+    border: 5px solid var(--seaside-villa);
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+    z-index: 10;
+    opacity: 0;
+}
+
+
+
+/* Format buttons */
+/*------- Pjesa poshte ---------*/
+
+
+.ApBtn {
+
+    padding: 4px;
+    width: 60px;
+    height: 30px;
+    color: #ffffff;
+    background-color: #b5a58d;
+    border: 1px solid;
+    border-radius: 3px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+    .ApBtn:hover {
+        background-color: #9f8b6f;
+    }
+
+
+.empty {
+    opacity: 0;
+}
+
+#sideImage1 {
+    position: absolute;
+    width: 100%;
+    }
+
+
+.aptId {
+    font-size: 4rem;
+    color: var(--drab-dark-brown);
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+
+}
+
+    .aptId:not(.hidden) {
+        opacity: 1;
+    }
+
+#btnImageA {
+    position:absolute;
+    height: 80px;
+    
+}
+
+

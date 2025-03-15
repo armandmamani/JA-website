@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="CSS/apartmentsCSS.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Sektori B</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="row">
+            <div class="column side">
+                <h1>SEKTORI B</h1>
+            </div>
+
+            <div class="column middle">
+
+                <!--  <img id="green_coast_logo" src="Green-coast-logo3.png" />-->
+
+            </div>
+            <div class="column side">
+                <div id="mainMenu">
+                    <div class="dropdown">
+                        <a class="dropbtn" href="index Projekti.html">Projekti</a>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">Apartamente</button>
+                        <div class="dropdown-content">
+                            <a href="SektoriA.html">SEKTORI A</a>
+                            <a href="SektoriB.html">SEKTORI B </a>
+                            <a href="SektoriC.html">SEKTORI C</a>
+                            <a href="SektoriD.html">SEKTORI D</a>
+                            <a href="SektoriE.html">SEKTORI E </a>
+
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a class="dropbtn" href="Vilat.html">Vila</a>
+                    </div>
+                    <div class="dropdown">
+                        <a class="dropbtn" href="LoginPage.html">Log in</a>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+    </header>
+    <div id="fullscreenContainer" class="hidden">
+        <img id="fullscreenImage" src="" alt="Full Screen View">
+    </div>
+    <div id="sideImageB">
+        <img class="zoomed" src="SEKTORI_B/VetemB.jpg" alt="Sektori A zoomed">
+
+    </div>
+
+
+
+    <div class="sidenav">
+
+        <div id="apNameTable">
+            <p class="aparttId aptId" id="aptId"></p>
+        </div>
+
+        <div id="cmimetPart">
+            <p id="formSubtitle">ÇMIMET</p>
+            <label for="cmimsNeto" class="cmimeLabel">Sip. neto:</label>
+            <input type="number" class="cmimeInput" id="cmimsNeto" name="cmimsNeto" pattern="[0-9]" + value=0>
+            <span class="currency">&euro;</span><br>
+            <label for="cmimsPerb" class="cmimeLabel">Sip. Përbashkët:</label>
+            <input type="number" class="cmimeInput" id="cmimsPerb" name="cmimsPerb" value=0>
+            <span class="currency">&euro;</span><br>
+            <label for="cmimsVerande" class="cmimeLabel">Sip. verande:</label>
+            <input type="number" class="cmimeInput" id="cmimsVerande" name="cmimsVerande" value=0>
+            <span class="currency">&euro;</span><br>
+            <label for="cmimsTerrace" class="cmimeLabel">Sip. Terrace:</label>
+            <input type="number" class="cmimeInput" id="cmimsTerrace" name="cmimsTerrace" value=0>
+            <span class="currency">&euro;</span><br>
+            <label for="cmimsOborr" class="cmimeLabel">Sip. Oborri:</label>
+            <input type="number" class="cmimeInput" id="cmimsOborr" name="cmimsOborr" value=0>
+            <span class="currency">&euro;</span><br>
+            <label for="cmimsDepo" class="cmimeLabel">Sip. Depo:</label>
+            <input type="number" class="cmimeInput" id="cmimsDepo" name="cmimsDepo" value=0>
+            <span class="currency">&euro;</span><br>
+            <label for="cmimParking" class="cmimeLabel">Parkimi:</label>
+            <input type="number" class="cmimeInput" id="cmimParking" name="cmimParking" value=0>
+            <span class="currency">&euro;</span><br>
+            <label for="cmimPishine" class="cmimeLabel">Pishina:</label>
+            <input type="number" class="cmimeInput" id="cmimPishine" name="cmimPishine" value=0>
+            <span class="currency">&euro;</span><br><br>
+        </div>
+        <table id="apartmentDetailsTable" border="1">
+            <thead>
+
+
+                <tr>
+                    <td class="aparttId">Sektori</td>
+                    <td class="vleraSip" id="aptSector"></td>
+                    <td class="vleraFin"></td>
+                </tr>
+                <tr>
+                    <td class="aparttId">Kati</td>
+                    <td class="vleraSip" id="aptFloor"></td>
+                    <td class="vleraFin"></td>
+                </tr>
+                <tr>
+                    <td class="aparttId">Tipologjia</td>
+                    <td class="vleraSip" id="aptTypology"></td>
+                    <td class="vleraFin"></td>
+                </tr>
+
+                <tr>
+                    <td class="aparttId">Shkalla</td>
+                    <td class="vleraSip" id="aptScale"></td>
+                    <td class="vleraFin"></td>
+                </tr>
+
+                <tr>
+                    <td class="aparttId">Siperfaqe e banueshme</td>
+                    <td class="vleraSip" id="aptNetArea"></td>
+                    <td class="vleraFin"></td>
+                </tr>
+                <tr>
+                    <td class="aparttId">Llozha</td>
+                    <td class="vleraSip" id="aptLoggiaArea"></td>
+                    <td class="vleraFin"></td>
+                </tr>
+
+                <tr>
+                    <td class="aparttId">Siperfaqe Neto</td>
+                    <td class="vleraSip" id="aptTotalNetArea"></td>
+                    <td class="vleraFin"></td>
+                </tr>
+                <tr>
+                    <td class="aparttId">Siperfaqe e perbashket</td>
+                    <td class="vleraSip" id="aptCommonArea"></td>
+                    <td class="vleraFin"></td>
+                </tr>
+                <tr>
+                    <td class="aparttId">Siperfaqe totale</td>
+                    <td class="vleraSip" id="aptTotalArea"></td>
+                    <td class="vleraFin"></td>
+                </tr>
+                <tr>
+                    <td class="aparttId">Siperfaqe verande</td>
+                    <td class="vleraSip" id="aptVerandaArea"></td>
+                    <td class="vleraFin"></td>
+                </tr>
+
+                <tr>
+                    <td class="aparttId">Terrace e gjebert</td>
+                    <td class="vleraSip" id="aptgreenTerraceArea"></td>
+                    <td class="vleraFin"></td>
+                </tr>
+                <tr>
+                    <td class="aparttId">Terrace e shfrytezueshme</td>
+                    <td class="vleraSip" id="aptusableTerrace"></td>
+                    <td class="vleraFin"></td>
+                </tr>
+                <tr>
+
+                    <td class="aparttId">Oborr i gjebert</td>
+                    <td class="vleraSip" id="aptplotArea"></td>
+                    <td class="vleraFin"></td>
+                </tr>
+                <tr>
+                    <td class="aparttId">Siperfaqe pishine</td>
+                    <td class="vleraSip" id="aptPoolArea"></td>
+                    <td class="vleraFin"></td>
+                </tr>
+
+
+                <tr>
+                    <td class="aparttId">Parking</td>
+                    <td class="vleraSip" id="aptParking"></td>
+                    <td class="vleraFin"></td>
+                </tr>
+                <tr>
+                    <td class="aparttId">Statusi</td>
+                    <td class="vleraSip" id="aptStatus"></td>
+                    <td class="vleraFin"></td>
+                </tr>
+
+            </thead>
+
+        </table>
+        <div class="hidden">
+            <p class="vleraSip" id="areaFloor0"></p>
+            <p class="vleraSip" id="areaFloor1"></p>
+
+
+        </div>
+    </div>
+
+
+    <div id="planimetrite">
+
+
+        <div id="shiturShkrimi" class="apartament-plan hidden">
+            SHITUR
+        </div>
+
+        <div id="rezervuarShkrimi" class="apartament-plan hidden">
+            REZERVUAR
+        </div>
+        <div id="printBtnContainer" class="hidden">
+            <button id="printButton" title="Print"><i class="fa-solid fa-print"></i></button>
+            <button id="fullScreenPlanBtn" title="Full Screen Plan"><i class="fa-solid fa-expand"></i></button>
+        </div>
+
+        <div class="apartament-plan hidden" id="CB02">
+            <img class="plan-image" src="SEKTORI_B/CB02_FULL-3.jpg" alt="Planimetria CB02">
+        </div>
+        <div class="apartament-plan hidden" id="CB03">
+            <img class="plan-image" src="SEKTORI_B/CB03_FULL-3.jpg" alt="Planimetria CB03">
+        </div>
+        <div class="apartament-plan hidden" id="CB04">
+            <img class="plan-image" src="SEKTORI_B/CB04_FULL-3.jpg" alt="Planimetria CB04">
+        </div>
+        <div class="apartament-plan hidden" id="CB05">
+            <img class="plan-image" src="SEKTORI_B/CB05_FULL-3.jpg" alt="Planimetria CB05">
+        </div>
+        <div class="apartament-plan hidden" id="CB07">
+            <img class="plan-image" src="SEKTORI_B/CB07_FULL-3.jpg" alt="Planimetria CB07">
+        </div>
+        <div class="apartament-plan hidden" id="CB08">
+            <img class="plan-image" src="SEKTORI_B/CB08_FULL-3.jpg" alt="Planimetria CB08">
+        </div>
+        <div class="apartament-plan hidden" id="CB09">
+            <img class="plan-image" src="SEKTORI_B/CB09_FULL-3.jpg" alt="Planimetria CB09">
+        </div>
+        <div class="apartament-plan hidden" id="CB12">
+            <img class="plan-image" src="SEKTORI_B/CB12_FULL-3.jpg" alt="Planimetria CB12">
+        </div>
+        <div class="apartament-plan hidden" id="CB13">
+            <img class="plan-image" src="SEKTORI_B/CB13_FULL-3.jpg" alt="Planimetria CB13">
+        </div>
+        <div class="apartament-plan hidden" id="CB14">
+            <img class="plan-image" src="SEKTORI_B/CB14_FULL-3.jpg" alt="Planimetria CB14">
+        </div>
+        <div class="apartament-plan hidden" id="CB15">
+            <img class="plan-image" src="SEKTORI_B/CB15_FULL-3.jpg" alt="Planimetria CB15">
+        </div>
+        <div class="apartament-plan hidden" id="CB18">
+            <img class="plan-image" src="SEKTORI_B/CB18_FULL-3.jpg" alt="Planimetria CB18">
+        </div>
+        <div class="apartament-plan hidden" id="CB21">
+            <img class="plan-image" src="SEKTORI_B/CB21_FULL-3.jpg" alt="Planimetria CB21">
+        </div>
+        <div class="apartament-plan hidden" id="CB22">
+            <img class="plan-image" src="SEKTORI_B/CB22_FULL-3.jpg" alt="Planimetria CB22">
+        </div>
+        <div class="apartament-plan hidden" id="CB23">
+            <img class="plan-image" src="SEKTORI_B/CB23_FULL-3.jpg" alt="Planimetria CB23">
+        </div>
+        <div class="apartament-plan hidden" id="CB24">
+            <img class="plan-image" src="SEKTORI_B/CB24_FULL-3.jpg" alt="Planimetria CB24">
+        </div>
+        <div class="apartament-plan hidden" id="CB25">
+            <img class="plan-image" src="SEKTORI_B/CB25_FULL-3.jpg" alt="Planimetria CB25">
+        </div>
+        <div class="apartament-plan hidden" id="CB27">
+            <img class="plan-image" src="SEKTORI_B/CB27_FULL-3.jpg" alt="Planimetria CB27">
+        </div>
+        <div class="apartament-plan hidden" id="CB29">
+            <img class="plan-image" src="SEKTORI_B/CB29_FULL-3.jpg" alt="Planimetria CB29">
+        </div>
+        <div class="apartament-plan hidden" id="CB31">
+            <img class="plan-image" src="SEKTORI_B/CB31_FULL-3.jpg" alt="Planimetria CB31">
+        </div>
+        <div class="apartament-plan hidden" id="CB34">
+            <img class="plan-image" src="SEKTORI_B/CB34_FULL-3.jpg" alt="Planimetria CB34">
+        </div>
+        <div class="apartament-plan hidden" id="CB35">
+            <img class="plan-image" src="SEKTORI_B/CB35_FULL-3.jpg" alt="Planimetria CB35">
+        </div>
+        <div class="apartament-plan hidden" id="CB36">
+            <img class="plan-image" src="SEKTORI_B/CB36_FULL-3.jpg" alt="Planimetria CB36">
+        </div>
+        <div class="apartament-plan hidden" id="CB37">
+            <img class="plan-image" src="SEKTORI_B/CB37_FULL-3.jpg" alt="Planimetria CB37">
+        </div>
+        <div class="apartament-plan hidden" id="CB39">
+            <img class="plan-image" src="SEKTORI_B/CB39_FULL-3.jpg" alt="Planimetria CB39">
+        </div>
+        <div class="apartament-plan hidden" id="CB41">
+            <img class="plan-image" src="SEKTORI_B/CB41_FULL-3.jpg" alt="Planimetria CB41">
+        </div>
+        <div class="apartament-plan hidden" id="CB42">
+            <img class="plan-image" src="SEKTORI_B/CB42_FULL-3.jpg" alt="Planimetria CB42">
+        </div>
+        <div class="apartament-plan hidden" id="CB44">
+            <img class="plan-image" src="SEKTORI_B/CB44_FULL-3.jpg" alt="Planimetria CB44">
+        </div>
+
+
+        <img id="SectorA-image" src="main images/SektorB Presantim.jpg" alt="Skice Sektori A Nukli JA">
+
+
+    </div>
+
+
+    <div class="sidenav_r">
+
+        <div id="infoPart">
+
+            <div id="tabelaVlerave">
+
+                <div class="detailContainer">
+                    <label for="sNeto" class="infoLabel">Siperfaqe neto:</label>
+                    <input type="text" class="teDhena" id="sNetoEDhene" name="sNeto" value=0 readonly>
+                    <input type="text" class="cmimeOutput" id="sNeto" name="sNeto" value=0 readonly>
+                    <span class="currency">&euro;</span>
+                </div><br>
+
+                <div class="detailContainer">
+                    <label for="sPerb" class="infoLabel">Sip. Përbashkët:</label>
+                    <input type="text" class="teDhena" id="sPerbEDhene" name="sPerbEDhene" value=0 readonly>
+                    <input type="text" class="cmimeOutput" id="sPerb" name="sPerb" value=0 readonly>
+                    <span class="currency">&euro;</span>
+                </div><br>
+
+                <div class="detailContainer">
+                    <label for="sNeto" class="infoLabel">Siperfaqe Toale:</label>
+                    <input type="text" class="teDhena" id="sTotaleEDhene" name="sTotale" value=0 readonly>
+                    <input type="text" class="cmimeOutput" id="sTotale" name="sTotale" value=0 readonly>
+                    <span class="currency">&euro;</span>
+                </div><br>
+
+                <div class="detailContainer">
+                    <label for="sVerande" class="infoLabel">Siperfaqe verande:</label>
+                    <input type="text" class="teDhena" id="sVerandeEDhene" name="sVerande" value=0 readonly>
+                    <input type="text" class="cmimeOutput" id="sVerande" name="sVerande" value=0 readonly>
+                    <span class="currency">&euro;</span>
+                </div><br>
+
+                <div class="detailContainer">
+                    <label for="sVerande" class="infoLabel">Siperfaqe Terrace:</label>
+                    <input type="text" class="teDhena" id="sTerraceEDhene" name="sTerrace" value=0 readonly>
+                    <input type="text" class="cmimeOutput" id="sTerrace" name="sTerrace" value=0 readonly>
+                    <span class="currency">&euro;</span>
+                </div><br>
+
+                <div class="detailContainer">
+                    <label for="sOborr" class="infoLabel">Siperfaqe Oborri:</label>
+                    <input type="text" class="teDhena" id="sOborrEDhene" name="sOborrEDhene" value=0 readonly>
+                    <input type="text" class="cmimeOutput" id="sOborr" name="sOborr" value=0 readonly>
+                    <span class="currency">&euro;</span>
+                </div><br>
+
+                <div class="detailContainer">
+                    <label for="sDepo" class="infoLabel">Siperfaqe Depo:</label>
+                    <input type="text" class="teDhena" id="sDepoEDhene" name="sDepoEDhene" value=0 readonly>
+                    <input type="text" class="cmimeOutput" id="sDepo" name="sDepo" value=0 readonly>
+                    <span class="currency">&euro;</span>
+                </div><br>
+
+                <div class="detailContainer">
+                    <label for="Parking" class="infoLabel">Parkimi:</label>
+                    <input type="number" id="nrParkimEDhene" name="nrParkimEDhene" value=0>
+                    <input type="text" class="cmimeOutput" id="Parking" name="Parking" value=0 readonly>
+                    <span class="currency">&euro;</span>
+                </div><br>
+
+                <div class="detailContainer">
+                    <label for="Pishine" class="infoLabel">Pishina:</label>
+                    <input type="number" id="PishineEDhene" name="PishineEDhene" value=0>
+                    <input type="text" class="cmimeOutput" id="Pishine" name="Pishine" value=0 readonly>
+                    <span class="currency">&euro;</span>
+                </div><br>
+                <div class="detailContainer">
+
+                    <label for="total" class="infoLabel">TOTALI:</label>
+                    <input type="text" class="totalOutput" id="total" name="total" value=0 readonly>
+                    <span class="currency">&euro;</span>
+                </div>
+
+
+            </div>
+
+            <div id="groupApart">
+                <div class="shkalla">
+                    <h5>A</h5>
+                    <div class="apartBlock">
+                        <input type="checkbox" class="radioteDhena" id="checkboxCB03" name="CB03" value="CB03">
+                        <label for="checkboxCB03" class="apLabel">CB03</label>
+                    </div>
+                    <div class="apartBlock">
+                        <input type="checkbox" class="radioteDhena" id="checkboxCB02" name="CB02" value="CB02">
+                        <label for="checkboxCB02" class="apLabel">CB02</label>
+                    </div>
+                    <div class="apartBlock">
+                        <input type="checkbox" class="radioteDhena" id="checkboxCB05" name="CB05" value="CB05">
+                        <label for="checkboxCB05" class="apLabel">CB05</label>
+                    </div>
+
+                    <div class="apartBlock">
+                        <input type="checkbox" class="radioteDhena" id="checkboxCB04" name="CB04" value="CB04">
+                        <label for="checkboxCB04" class="apLabel">CB04</label>
+                    </div>
+
+
+
+                </div>
+                <div class="shkalla">
+                    <h5>B</h5>
+
+                    <div class="apartBlock">
+                        <input type="checkbox" class="radioteDhena" id="checkboxCB14" name="CB14" value="CB14">
+                        <label for="checkboxCB14" class="apLabel">CB14</label>
+                    </div>
+                    <div class="apartBlock">
+                        <input type="checkbox" class="radioteDhena" id="checkboxCB13" name="CB13" value="CB13">
+                        <label for="checkboxCB13" class="apLabel">CB13</label>
+                    </div>
+                    <div class="apartBlock">
+
+                        <input type="checkbox" class="radioteDhena" id="checkboxCB12" name="CB12" value="CB12">
+                        <label for="checkboxCB12" class="apLabel">CB12</label>
+                    </div>
+                    <div class="apartBlock">
+
+                        <input type="checkbox" class="radioteDhena" id="checkboxCB24" name="CB24" value="CB24">
+                        <label for="checkboxCB24" class="apLabel">CB24</label>
+                    </div>
+                    <div class="apartBlock">
+
+                        <input type="checkbox" class="radioteDhena" id="checkboxCB23" name="CB23" value="CB23">
+                        <label for="checkboxCB23" class="apLabel">CB23</label>
+                    </div>
+                    <div class="apartBlock">
+                        <input type="checkbox" class="radioteDhena" id="checkboxCB22" name="CB22" value="CB22">
+                        <label for="checkboxCB22" class="apLabel">CB22</label>
+                    </div>
+
+                </div>
+                <div class="shkalla">
+
+                    <h5>C</h5>
+                    <div class="apartBlock">
+                        <input type="checkbox" class="radioteDhena" id="checkboxCB07" name="CB07" value="CB07">
+                        <label for="checkboxCB07" class="apLabel">CB07</label>
+                    </div>
+                    <div class="apartBlock">
+                        <input type="checkbox" class="radioteDhena" id="checkboxCB08" name="CB08" value="CB08">
+                        <label for="checkboxCB08" class="apLabel">CB08</label>
+                    </div>
+
+                    <div class="apartBlock">
+                        <input type="checkbox" class="radioteDhena" id="checkboxCB09" name="CB09" value="CB09">
+                        <label for="checkboxCB09" class="apLabel">CB09</label>
+                    </div>
+
+
+                    <div class="apartBlock">
+                        <input type="checkbox" class="radioteDhena" id="checkboxCB15" name="CB15" value="CB15">
+                        <label for="checkboxCB15" class="apLabel">CB15</label>
+                    </div>
+
+                    <div class="apartBlock">
+                        <input type="checkbox" class="radioteDhena" id="checkboxCB25" name="CB25" value="CB25">
+                        <label for="checkboxCB25" class="apLabel">CB25</label>
+                    </div>
+                    <div class="apartBlock">
+                        <input type="checkbox" class="radioteDhena" id="checkboxCB27" name="CB27" value="CB27">
+                        <label for="checkboxCB27" class="apLabel">CB27</label>
+                    </div>
+
+                    <div class="apartBlock">
+                        <input type="checkbox" class="radioteDhena" id="checkboxCB34" name="CB34" value="CB34">
+                        <label for="checkboxCB34" class="apLabel">CB34</label>
+                    </div>
+
+                </div>
+
+                <div class="shkalla">
+                    <h5>C</h5>
+                    <div class="apartBlock">
+                        <input type="checkbox" class="radioteDhena" id="checkboxCB18" name="CB18" value="CB18">
+                        <label for="checkboxCB18" class="apLabel">CB18</label>
+                    </div>
+
+                    <div class="apartBlock">
+                        <input type="checkbox" class="radioteDhena" id="checkboxCB29" name="CB29" value="CB29">
+                        <label for="checkboxCB29" class="apLabel">CB29</label>
+                    </div>
+                    <div class="apartBlock">
+                        <input type="checkbox" class="radioteDhena" id="checkboxCB35" name="CB35" value="CB35">
+                        <label for="checkboxCB35" class="apLabel">CB35</label>
+                    </div>
+
+                </div>
+                    <div class="shkalla">
+                        <h5>D</h5>
+                        <div class="apartBlock">
+                            <input type="checkbox" class="radioteDhena" id="checkboxCB21" name="CB21" value="CB21">
+                            <label for="checkboxCB21" class="apLabel">CB21</label>
+                        </div>
+
+                        <div class="apartBlock">
+                            <input type="checkbox" class="radioteDhena" id="checkboxCB31" name="CB31" value="CB31">
+                            <label for="checkboxCB31" class="apLabel">CB31</label>
+                        </div>
+                        <div class="apartBlock">
+                            <input type="checkbox" class="radioteDhena" id="checkboxCB36" name="CB36" value="CB36">
+                            <label for="checkboxCB36" class="apLabel">CB36</label>
+                        </div>
+                        <div class="apartBlock">
+                            <input type="checkbox" class="radioteDhena" id="checkboxCB37" name="CB37" value="CB37">
+                            <label for="checkboxCB37" class="apLabel">CB37</label>
+                        </div>
+
+                    </div>
+
+
+                    <div class="shkalla">
+                        <h5>D</h5>
+                        <div class="apartBlock">
+                            <input type="checkbox" class="radioteDhena" id="checkboxCB39" name="CB39" value="CB39">
+                            <label for="checkboxCB39" class="apLabel">CB39</label>
+                        </div>
+
+                        <div class="apartBlock">
+                            <input type="checkbox" class="radioteDhena" id="checkboxCB41" name="CB41" value="CB41">
+                            <label for="checkboxCB41" class="apLabel">CB41</label>
+                        </div>
+                        <div class="apartBlock">
+                            <input type="checkbox" class="radioteDhena" id="checkboxCB42" name="CB42" value="CB42">
+                            <label for="checkboxCB42" class="apLabel">CB42</label>
+                        </div>
+                        <div class="apartBlock">
+                            <input type="checkbox" class="radioteDhena" id="checkboxCB44" name="CB44" value="CB44">
+                            <label for="checkboxCB44" class="apLabel">CB44</label>
+                        </div>
+
+
+                    </div>
+                    <input type="submit" id="llogApBtn" value="llogarit">
+                </div>
+
+            </div>
+
+
+            <img id="btnImageB" src="SEKTORI_B/VetemB.jpg" alt="Main Image">
+            <img id="BolvLogoBW" src="main images/Bolv logo bw.png" alt="Bolv Group Logo">
+
+        </div>
+
+
+    <div class="footer">
+
+
+        <div class="button-container">
+            <div class="floor">
+                <button class="empty ApBtn">   </button>
+                <button class="empty ApBtn">   </button>
+                <button class="empty ApBtn">   </button>
+                <button class="empty ApBtn">   </button>
+                <button class="empty ApBtn">   </button>
+                <button class="empty ApBtn">   </button>
+                <button class="empty ApBtn">   </button>
+                <button class="empty ApBtn">   </button>
+                <button class="empty ApBtn">   </button>
+                <button class="empty ApBtn">   </button>
+                <button class="empty ApBtn">   </button>
+                <button class="empty ApBtn">   </button>
+                <button class="ApBtn" id="CB44btn" onclick="showPlan('CB44')">CB44</button>
+
+            </div>
+
+            <div class="floor">
+                <button class="empty ApBtn">   </button>
+                <button class="empty ApBtn">   </button>
+                <button class="empty ApBtn">   </button>
+                <button class="empty ApBtn">   </button>
+                <button class="empty ApBtn">   </button>
+                <button class="empty ApBtn">   </button>
+                <button class="empty ApBtn">   </button>
+                <button class="empty ApBtn">   </button>
+                <button class="empty ApBtn">   </button>
+                <button class="empty ApBtn">   </button>
+                <button class="empty ApBtn">   </button>
+                <button class="ApBtn" id="CB41btn" onclick="showPlan('CB41')">CB41</button>
+
+                <button class="ApBtn" id="CB42btn" onclick="showPlan('CB42')">CB42</button>
+
+            </div>
+
+            <div class="floor">
+
+                <button class="empty ApBtn">   </button>
+                <button class="empty ApBtn">   </button>
+                <button class="empty ApBtn">   </button>
+                <button class="empty ApBtn">   </button>
+                <button class="ApBtn" id="CB34btn" onclick="showPlan('CB34')">CB34</button>
+                <button class="empty ApBtn">   </button>
+                <button class="empty ApBtn">   </button>
+                <button class="ApBtn" id="CB35btn" onclick="showPlan('CB35')">CB35</button>
+                <button class="ApBtn" id="CB36btn" onclick="showPlan('CB36')">CB36</button>
+                <button class="ApBtn" id="CB37btn" onclick="showPlan('CB37')">CB37</button>
+                <button class="empty ApBtn">   </button>
+                <button class="ApBtn" id="CB39btn" onclick="showPlan('CB39')">CB39</button>
+            </div>
+            <div class="floor">
+                <button class="ApBtn" id="CB22btn" onclick="showPlan('CB22')">CB22</button>
+                <button class="ApBtn" id="CB23btn" onclick="showPlan('CB23')">CB23</button>
+                <button class="ApBtn" id="CB24btn" onclick="showPlan('CB24')">CB24</button>
+                <button class="ApBtn" id="CB25btn" onclick="showPlan('CB25')">CB25</button>
+                <button class="empty ApBtn">   </button>
+                <button class="ApBtn" id="CB27btn" onclick="showPlan('CB27')">CB27</button>
+                <button class="empty ApBtn">   </button>
+                <button class="ApBtn" id="CB29btn" onclick="showPlan('CB29')">CB29</button>
+                <button class="empty ApBtn">   </button>
+                <button class="ApBtn" id="CB31btn" onclick="showPlan('CB31')">CB31</button>
+                <button class="empty ApBtn">   </button>
+
+
+            </div>
+            <div class="floor">
+
+                <button class="ApBtn" id="CB12btn" onclick="showPlan('CB12')">CB12</button>
+                <button class="ApBtn" id="CB13btn" onclick="showPlan('CB13')">CB13</button>
+                <button class="ApBtn" id="CB14btn" onclick="showPlan('CB14')">CB14</button>
+                <button class="ApBtn" id="CB15btn" onclick="showPlan('CB15')">CB15</button>
+                <button class="empty ApBtn">   </button>
+                <button class="empty ApBtn">   </button>
+                <button class="ApBtn" id="CB18btn" onclick="showPlan('CB18')">CB18</button>
+                <button class="empty ApBtn">   </button>
+                <button class="empty ApBtn">   </button>
+                <button class="ApBtn" id="CB21btn" onclick="showPlan('CB21')">CB21</button>
+            </div>
+            <div class="floor">
+                <button class="ApBtn" id="CB04btn" onclick="showPlan('CB04')">CB04</button>
+                <button class="ApBtn" id="CB05btn" onclick="showPlan('CB05')">CB05</button>
+                <button class="empty ApBtn">   </button>
+                <button class="ApBtn" id="CB07btn" onclick="showPlan('CB07')">CB07</button>
+                <button class="ApBtn" id="CB08btn" onclick="showPlan('CB08')">CB08</button>
+                <button class="ApBtn" id="CB09btn" onclick="showPlan('CB09')">CB09</button>
+            </div>
+            <div class="floor">
+                <button class="empty ApBtn">   </button>
+                <button class="ApBtn" id="CB03btn" onclick="showPlan('CB03')">CB03</button>
+                <button class="ApBtn" id="CB02btn" onclick="showPlan('CB02')">CB02</button>
+                <button class="empty ApBtn">   </button>
+
+                <button class="empty ApBtn">   </button>
+            </div>
+
+        </div>
+            <img id="sideImage1B" src="SEKTORI_B/Sektori B Grafik.png" alt="Skice Sektori B Nukli JA">
+
+        </div>
+
+    <script src="JS/apartments.js"></script>
+
+</body>
+	</html>

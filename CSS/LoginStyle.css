@@ -1,0 +1,373 @@
+/*
+ * Use this CSS to learn some intersting techniques,
+ * in case you're wondering how I built the UI.
+ * Have fun! 😁
+ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+
+
+body {
+    background-color: var(--seaside-villa);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position-x: 200px;
+    background-size: 90% 100%;
+    color: var(--accent-white);
+    font-family: Arial;
+    font-size: 20px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.welcome {
+  font-size: 1.9rem;
+  font-weight: 500;
+}
+
+.logo {
+  width: 15.25rem;
+}
+
+.login {
+  display: flex;
+}
+
+.login__input {
+  border: none;
+  padding: 0.5rem 2rem;
+  font-size: 1.6rem;
+  font-family: inherit;
+  text-align: center;
+  width: 12rem;
+  border-radius: 10rem;
+  margin-right: 1rem;
+  color: inherit;
+  border: 1px solid #fff;
+  transition: all 0.3s;
+}
+
+.login__input:focus {
+  outline: none;
+  border: 1px solid #ccc;
+}
+
+.login__input::placeholder {
+  color: #bbb;
+}
+
+.login__btn {
+  border: none;
+  background: none;
+  font-size: 2.2rem;
+  color: inherit;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.login__btn:hover,
+.login__btn:focus,
+.btn--sort:hover,
+.btn--sort:focus {
+  outline: none;
+  color: #777;
+}
+
+/* MAIN */
+.app {
+  position: absolute;
+  max-width: 100%;
+  margin: 4rem auto;
+  display: none;
+  grid-template-columns: 4fr 3fr;
+  grid-template-rows: auto repeat(3, 15rem) auto;
+  gap: 2rem;
+
+  /* NOTE This creates the fade in/out anumation */
+  opacity: 1;
+  transition: all 1s;
+}
+.space {
+    width: 30vw;
+}
+
+
+:root {
+    --myrtle-green: #4B787Bff; /* Blue */
+    --drab-dark-brown: #454326ff; /* Dark brown */
+    --desert-sand: #D6BFAFff; /* Sand */
+    --text-color: #ddd; /* Dark Gray */
+    --background-color-beaver: #AC9682ff; /* Light Gray */
+    --primary-blue: #003b6f; /* Deep Sea Blue */
+    --secondary-gold: #ffd700; /* Luxurious Gold */
+    --accent-white: #ffffff; /* White Accent */
+    --background-gradient: linear-gradient(to bottom, #87cefa, #4682b4); /* Sky to Ocean Gradient */
+    --button-hover: #ffa500; /* Warm Glow */
+    --seaside-villa: #e8d6cb;
+    --butter-cup: #f39c12;
+    --saffron-mango: #fabe58;
+    --merino: #f7efe8;
+}
+
+header {
+    text-align: center;
+    width: 100%;
+    height: 4rem;
+    display: block;
+    text-align: center;
+    box-shadow: 0px 5px 2px rgba(0, 0, 0, 0.5);
+    background-color: var(--accent-white);
+    color: var(--accent-white);
+    font-size: 2.5rem;
+    font-weight: bold;
+    z-index: 5;
+    position: fixed;
+}
+
+.column {
+    float: left;
+    text-align: center;
+    padding: 10px;
+    height: 100px; /* Should be removed. Only for demonstration */
+}
+
+    /* Left and right column */
+    .column.side {
+        width: 25%;
+    }
+
+    /* Middle column */
+    .column.middle {
+        width: 50%;
+    }
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.topnav {
+    background-color: none;
+}
+
+    /* Style the topnav links */
+    .topnav a {
+        float: RIGHT;
+        display: block;
+        color: #111;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        background-color: rgba(214, 191, 175, 0.1);
+        border: none;
+    }
+
+        /* Change color on hover */
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: var(--drab-dark-brown);
+    text-align: left;
+}
+
+h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+
+a {
+    background-color: var(--seaside-villa);
+    border: 1px solid grey;
+}
+
+/* Style the menu navigation */
+.sidenav {
+    height: 100%;
+    width: 280px;
+    text-align: center;
+    position: fixed;
+    justify-content: center;
+    top: 4rem;
+    left: 0;
+    background-color: var(--seaside-villa);
+    z-index: 4;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: block;
+}
+
+    /* Side navigation links */
+    .sidenav a {
+        background-color: var(--accent-white);
+        width: 100%;
+        padding: 10px;
+        text-align: left;
+        text-decoration: none;
+        display: grid;
+        float: right;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: var(--primary-blue);
+        border-radius: 5px;
+    }
+
+        /* Change color on hover */
+        .sidenav a:hover {
+            background-color: var(--button-hover);
+            color: var(--accent-white);
+        }
+
+#mainMenu {
+    display: block;
+    height: 40px;
+    cursor: pointer;
+    font-size: 2.5rem;
+    text-align: right;
+    text-decoration: none;
+    color: var(--drab-dark-brown);
+    background-color: transparent;
+}
+
+.dropbtn {
+    color: var(--drab-dark-brown);
+    background-color: transparent;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    width: 130px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    border: none;
+}
+
+    .dropbtn a:hover {
+        background-color: var(--butter-cup);
+        color: var(--accent-white);
+    }
+
+.dropdown {
+    display: inline-block;
+
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    width: 130px;
+    background-color: var(--seaside-villa);
+    font-size: 1rem;
+    font-style: oblique;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+    .dropdown-content a {
+        color: black;
+        padding: 5px 10px;
+        text-decoration: none;
+        display: block;
+    }
+
+        .dropdown-content a:hover {
+            background-color: var(--merino);
+            color: var(--drab-dark-brown);
+        }
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: var(--butter-cup);
+    color: var(--accent-white);
+}
+
+
+
+.hidden {
+    visibility: hidden;
+}
+
+
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+/* General table styling for a modern look */
+#sektoriAtable {
+    display: none;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    color: black;
+}
+
+th, td {
+    border: 1px solid #fff;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+/* Example column classes for custom styling */
+.col1 { /* For the ID column */
+}
+
+.col2 { /* For the Sector column */
+}
+
+.col3 { /* For the Floor column */
+}
+
+.col4 { /* For the Typology column */
+}
+
+.col5 { /* For the Net Area column */
+}
+
+.col6 { /* For the Status column */
+}
+
+/*////////*/
+
+footer {
+    position: fixed;
+    bottom:0;
+    text-align: center;
+    color: black;
+    font-size: 12px;
+}

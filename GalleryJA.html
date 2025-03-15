@@ -1,0 +1,528 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ja Gallery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+            text-decoration: none;
+        }
+
+        body {
+            background: #eaeaea;
+            overflow: hidden;
+        }
+
+            .container .slide .item {
+                width: 200px;
+                height: 50%;
+                position: absolute;
+                top: 50%;
+                transform: translate(-20%, -50%);
+                border: 5px double white;
+                border-radius: 20px;
+                display: inline-block;
+                background-size: cover !important;
+                background-position: center !important;
+                background-repeat: no-repeat !important;
+                transition: .5s;
+            }
+
+        .slide .item:nth-child(1), .slide .item:nth-child(2) {
+            top: 10%;
+            left: 15%;
+            transform: translate(0, 0);
+            border-radius: 0;
+            box-shadow: 0 30px 50px #505050;
+            width: 75%;
+            height: 75%;
+        }
+
+            .slide .item:nth-child(2) .content {
+                display: block;
+            }
+
+        .slide .item:nth-child(3) {
+            left: 90%;
+        }
+
+        .slide .item:nth-child(4) {
+            left: calc(90% + 20px);
+        }
+        .slide .item:nth-child(5) {
+            left: calc(90% + 40px);
+        }
+        .slide .item:nth-child(6) {
+            left: calc(90% + 60px);
+        }
+
+        .slide .item:nth-child(7) {
+            left: calc(90% + 80px);
+        }
+
+        .slide .item:nth-child(8) {
+            left: calc(90% + 100px);
+        }
+
+        .slide .item:nth-child(9) {
+            left: calc(90% + 100px);
+        }
+
+        .slide .item:nth-child(10) {
+            left: calc(90% + 100px);
+        }
+
+        .slide .item:nth-child(11) {
+            left: calc(90% + 100px);
+        }
+
+        .slide .item:nth-child(12) {
+            left: calc(90% + 100px);
+        }
+
+        .slide .item:nth-child(13) {
+            left: calc(90% + 100px);
+        }
+        .slide .item:nth-child(14) {
+            left: calc(90% + 100px);
+        }
+
+        .slide .item:nth-child(15) {
+            left: calc(90% + 100px);
+        }
+
+        .slide .item:nth-child(16) {
+            left: calc(90% + 100px);
+        }
+
+        .slide .item:nth-child(17) {
+            left: calc(90% + 100px);
+        }
+
+        .slide .item:nth-child(18) {
+            left: calc(90% + 100px);
+        }
+
+        .slide .item:nth-child(19) {
+            left: calc(90% + 100px);
+        }
+
+        .slide .item:nth-child(20) {
+            left: calc(90% + 100px);
+        }
+
+        .slide .item:nth-child(21) {
+            left: calc(90% + 100px);
+        }
+
+        .slide .item:nth-child(22) {
+            left: calc(90% + 100px);
+        }
+
+        .slide .item:nth-child(23) {
+            left: calc(90% + 100px);
+        }
+
+        .slide .item:nth-child(24) {
+            left: calc(90% + 100px);
+        }
+
+        .slide .item:nth-child(25) {
+            left: calc(90% + 100px);
+        }
+
+        .slide .item:nth-child(26) {
+            left: calc(90% + 100px);
+        }
+        
+        .slide .item:nth-child(27) {
+            left: calc(90% + 100px);
+        }
+
+        .slide .item:nth-child(28) {
+            left: calc(90% + 100px);
+        }
+        .slide .item:nth-child(29) {
+            left: calc(90% + 100px);
+        }
+        .slide .item:nth-child(30) {
+            left: calc(90% + 100px);
+        }
+        .slide .item:nth-child(31) {
+            left: calc(90% + 100px);
+        }
+        .slide .item:nth-child(32) {
+            left: calc(90% + 100px);
+        }
+        .slide .item:nth-child(33) {
+            left: calc(90% + 100px);
+        }
+        .slide .item:nth-child(34) {
+            left: calc(90% + 100px);
+        }
+
+        
+        .item {
+            position: absolute;
+            top: 50%;
+            left: 100px;
+            width: 300px;
+            text-align: left;
+            color: #eee;
+            transform: translate(0, -50%);
+            font-family: system-ui;
+            display: none;
+        }
+
+        @keyframes animate {
+            from {
+                opacity: 0;
+                transform: translate(0, 100px);
+                filter: blur(33px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translate(0);
+                filter: blur(0);
+            }
+        }
+
+        .button {
+            width: 100%;
+            text-align: center;
+            position: absolute;
+            bottom: 20px;
+        }
+
+            .button button {
+                width: 40px;
+                height: 35px;
+                border-radius: 8px;
+                border: none;
+                cursor: pointer;
+                margin: 0 5px;
+                border: 1px solid #000;
+                transition: .3s;
+            }
+
+                .button button:hover {
+                    background: #ababab;
+                    color: #fff;
+                }
+        /* repairs*/
+        .main-button {
+            position: absolute;
+            text-align: center;
+        }
+
+        #mainMenu {
+            display: block;
+            height: 40px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            text-align: right;
+            text-decoration: none;
+            color: var(--drab-dark-brown);
+            background-color: transparent;
+        }
+
+        .dropbtn {
+            color: var(--drab-dark-brown);
+            background-color: transparent;
+            padding: 10px;
+            text-align: center;
+            text-decoration: none;
+            width: 130px;
+            height: 40px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            font-weight: 200;
+            border: none;
+        }
+
+            .dropbtn a:hover {
+                background-color: var(--butter-cup);
+                color: var(--accent-white);
+            }
+
+        .dropdown {
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            width: 130px;
+            background-color: var(--seaside-villa);
+            font-size: 0.7rem;
+            font-style: oblique;
+            font-weight: 600;
+            text-decoration: none;
+            text-align: center;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+            .dropdown-content a {
+                color: black;
+                padding: 5px 10px;
+                text-decoration: none;
+                display: block;
+            }
+
+                .dropdown-content a:hover {
+                    background-color: var(--merino);
+                    color: var(--drab-dark-brown);
+                }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: var(--butter-cup);
+            color: var(--accent-white);
+        }
+
+
+
+        .hidden {
+            visibility: hidden;
+        }
+        header {
+            text-align: center;
+            width: 100%;
+            height: 4rem;
+            display: block;
+            text-align: center;
+            box-shadow: 0px 5px 2px rgba(0, 0, 0, 0.5);
+            background-color: var(--accent-white);
+            color: var(--accent-white);
+            font-size: 2.5rem;
+            font-weight: bold;
+            z-index: 5;
+            position: fixed;
+        }
+
+        .column {
+            float: left;
+            text-align: center;
+            padding: 10px;
+            height: 100px; /* Should be removed. Only for demonstration */
+        }
+
+            /* Left and right column */
+            .column.side {
+                width: 35%;
+            }
+
+            /* Middle column */
+            .column.middle {
+                width: 30%;
+            }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .topnav {
+            background-color: none;
+        }
+
+            /* Style the topnav links */
+            .topnav a {
+                float: RIGHT;
+                display: block;
+                color: #111;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                background-color: rgba(214, 191, 175, 0.1);
+                border: none;
+            }
+
+                /* Change color on hover */
+                .topnav a:hover {
+                    background-color: #ddd;
+                    color: black;
+                }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: var(--drab-dark-brown);
+            text-align: left;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+
+
+
+        a {
+            background-color: var(--seaside-villa);
+            border: 1px solid grey;
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <header>
+        <div class="row">
+            <div class="column side">
+            </div>
+
+            <div class="column middle">
+
+                <!--  <img id="green_coast_logo" src="Green-coast-logo3.png" />-->
+
+            </div>
+            <div class="column side">
+                <div id="mainMenu">
+                    <div class="dropdown">
+                        <a class="dropbtn" href="index Projekti.html">Projekti</a>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">Apartamente</button>
+                        <div class="dropdown-content">
+                            <a href="SektoriA.html">SEKTORI A</a>
+                            <a href="SektoriB.html">SEKTORI B </a>
+                            <a href="SektoriC.html">SEKTORI C</a>
+                            <a href="SektoriD.html">SEKTORI D</a>
+                            <a href="SektoriE.html">SEKTORI E </a>
+
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a class="dropbtn" href="Vilat.html">Vila</a>
+                    </div>
+                    <div class="dropdown">
+                        <a class="dropbtn" href="GalleryJA.html">JA gallery</a>
+                    </div>
+
+                    <div class="dropdown">
+                        <a class="dropbtn" href="LoginPage.html">Log in</a>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+    </header>
+
+    <div class="container">
+        <div class="slide">
+            <div class="item" style="background: url('main images/Concept Design Submission Image[24].jpg'); ">
+            </div>
+            <div class="item" style="background: url('main images/Concept Design Submission Image[25].jpg'); ">
+            </div>
+            <div class="item" style="background: url('Rendera/Rendera (1).jpeg'); ">
+            </div>
+            <div class="item" style="background: url('Rendera/Rendera (2).jpeg'); ">
+            </div>
+            <div class="item" style="background: url('Rendera/Rendera (3).jpeg'); ">
+            </div>
+            <div class="item" style="background: url('Rendera/Rendera (4).jpeg'); ">
+            </div>
+            <div class="item" style="background: url('main images/Concept Design Submission Image[30].jpg'); ">
+            </div>
+            <div class="item" style="background: url('Rendera/Rendera (5).jpeg'); ">
+            </div>
+            <div class="item" style="background: url('Rendera/Rendera (6).jpeg'); ">
+            </div>
+            <div class="item" style="background: url('Rendera/Rendera (7).jpeg'); ">
+            </div>
+            <div class="item" style="background: url('main images/Concept Design Submission Image[26].jpg'); ">
+            </div>
+            <div class="item" style="background: url('Rendera/Rendera (8).jpeg'); ">
+            </div>
+            <div class="item" style="background: url('Rendera/Rendera (9).jpeg'); ">
+            </div>
+            <div class="item" style="background: url('Rendera/Rendera (10).jpeg'); ">
+            </div>
+            <div class="item" style="background: url('Rendera/Rendera (11).jpeg'); ">
+            </div>
+            <div class="item" style="background: url('Rendera/Rendera (12).jpeg'); ">
+            </div>
+            <div class="item" style="background: url('Rendera/Rendera (13).jpeg'); ">
+            </div>
+            <div class="item" style="background: url('Rendera/Rendera (14).jpeg'); ">
+            </div>
+            <div class="item" style="background: url('Rendera/Rendera (15).jpeg'); ">
+            </div>
+            <div class="item" style="background: url('Rendera/Rendera (16).jpeg'); ">
+            </div>
+            <div class="item" style="background: url('Rendera/Rendera (17).jpeg'); ">
+            </div>
+            <div class="item" style="background: url('main images/Concept Design Submission Image[28].jpg'); ">
+            </div>
+            <div class="item" style="background: url('Rendera/Rendera (18).jpeg'); ">
+            </div>
+            <div class="item" style="background: url('Rendera/Rendera (19).jpeg'); ">
+            </div>
+            <div class="item" style="background: url('Rendera/Rendera (20).jpeg'); ">
+            </div>
+            <div class="item" style="background: url('Rendera/Rendera (21).jpeg'); ">
+            </div>
+            <div class="item" style="background: url('Rendera/Rendera (22).jpeg'); ">
+            </div>
+            <div class="item" style="background: url('Rendera/Rendera (23).jpeg'); ">
+            </div>
+            <div class="item" style="background: url('main images/Concept Design Submission Image[29].jpg'); ">
+            </div>
+            <div class="item" style="background: url('Rendera/Rendera (24).jpeg'); ">
+            </div>
+            <div class="item" style="background: url('Rendera/Rendera (25).jpeg'); ">
+            </div>
+            <div class="item" style="background: url('Rendera/Rendera (26).jpeg'); ">
+            </div>
+            <div class="item" style="background: url('Rendera/Rendera (27).jpeg'); ">
+            </div>
+            <div class="item" style="background: url('Rendera/Rendera (28).jpeg'); ">
+            </div>
+
+        </div>
+
+        <div class="button">
+            <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
+            <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+    </div>
+
+    <script>
+        let next = document.querySelector('.next');
+        let prev = document.querySelector('.prev');
+
+        next.addEventListener('click', function () {
+            let items = document.querySelectorAll('.item');
+            document.querySelector('.slide').appendChild(items[0]);
+        })
+
+        prev.addEventListener('click', function () {
+            let items = document.querySelectorAll('.item');
+            document.querySelector('.slide').prepend(items[items.length - 1]);
+        })
+    </script>
+</body>
+</html>

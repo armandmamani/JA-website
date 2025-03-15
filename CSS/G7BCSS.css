@@ -1,0 +1,818 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --myrtle-green: #0F4C4E; /* Green blue */
+    --olive-green: #BAB86C; /*gjelber ulliri */
+    --warm-white-Cornsilk: #FFF3DA; /*Bardhe e ngrohte */
+    --warm-white-floral: #FFFAED; /*Bardhe e ngrohte */
+    --silk: #FFF1E1; /*silk color */
+    --text-color: #ddd; /* Dark Gray */
+    --greiysh-turquoise: #5E7D7E; /* Light Gray */
+    --primary-blue: #003b6f; /* Deep Sea Blue */
+    --secondary-gold: #ffd700; /* Luxurious Gold */
+    --accent-white: #ffffff; /* White Accent */
+    --background-gradient: linear-gradient(to bottom, #87cefa, #4682b4); /* Sky to Ocean Gradient */
+    --button-hover: #ffa500; /* Warm Glow */
+    --seaside-villa: #e8d6cb;
+    --butter-cup: #f39c12;
+    --saffron-mango: #fabe58;
+    --merino: #f7efe8;
+}
+
+
+body {
+    background-color: var(--myrtle-green);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position-x: 200px;
+    background-size: 90% 100%;
+    color: var(--warm-white-floral);
+    font-family: Arial;
+    font-size: 20px;
+}
+
+
+.hidden {
+    visibility: hidden;
+}
+
+
+
+
+.sidenav {
+    height: 100%;
+    width: 40%;
+    text-align: left;
+    position: fixed;
+    justify-content: center;
+    left: 0;
+    z-index: 4;
+    background-color: var(--warm-white-Cornsilk);
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: block;
+}
+    /* Side navigation links */
+    .sidenav a {
+        background-color: var(--accent-white);
+        width: 100%;
+        padding: 10px;
+        text-align: left;
+        text-decoration: none;
+        display: grid;
+        float: right;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: var(--greiysh-turquoise);
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+        /* Change color on hover */
+        .sidenav a:hover {
+            background-color: var(--button-hover);
+            color: var(--accent-white);
+        }
+
+/*Tabela e cmimeve*/
+
+#cmimetPart {
+    display:inline-block;
+    width: max-content;
+    border: none;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 5px;
+    background: var(--myrtle-green);
+    text-align: right;
+    color: var(--drab-dark-brown)
+}
+
+
+.cmimeLabel {
+    font-weight: 500;
+    font-size: 1rem;
+    color: var(--warm-white-floral)
+}
+
+#formSubtitle {
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: var(--warm-white-floral);
+    text-align: center;
+    font-weight: 600;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.cmimeInput {
+    text-align: right;
+    padding: 2px;
+    padding-right: 5px;
+    font-weight: 600;
+    width: 100px;
+    margin-top: 2px;
+    width: 100px;
+    border-radius: 5px;
+    border: 1px solid var(--greiysh-turquoise);
+    background: var(--merino);
+}
+
+span {
+    color: var(--drab-dark-brown);
+    font-weight: 500;
+    font-size: 14px;
+}
+
+
+/*-------- Tabela me te dhenat --------*/
+#apartmentDetailsTable {
+    display:none;
+    margin-top: 30px;
+}
+
+table, th, td {
+    border: none;
+    border-collapse: collapse;
+    font-size: 14px;
+    font-weight: 200;
+    text-align: left;
+    width: fit-content;
+    height: 15px;
+    margin-top: 10px;
+}
+
+
+
+th {
+    background-color: var(--drab-dark-brown);
+    color: white;
+    padding: 2px;
+}
+
+td {
+    background-color: var(--myrtle-green);
+    color: var(--warm-white-floral);
+    padding: 2px;
+}
+
+.aparttId {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.vleraSip {
+    text-align: right;
+}
+
+vleraFin {
+}
+
+#apNameTable {
+    height: 5rem;
+    display: none;
+    padding-top: 3.5rem;
+    text-align: center;
+    z-index: 10;
+    font-size: 5rem;
+    border: none;
+}
+
+#aptStatus {
+    font: bold 16px red;
+}
+/*planimetrite--------------------*/
+#planimetrite {
+    position: fixed;
+    display: block;
+    top: 0;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+}
+
+#printBtnContainer {
+    position: absolute;
+    display: inline-block;
+    width: 50px;
+    left: 42vw;
+    top: 3vh;
+    z-index: 20;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: opacity 1s ease-in-out;
+    background-color: var(--accent-white);
+}
+.plan-image {
+    width: 100%;
+    height: auto
+}
+
+.apartament-plan {
+    position: absolute;
+    right: 0;
+    width: 60%;
+    height: auto;
+    z-index: 11;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+    .apartament-plan:not(.hidden) {
+        opacity: 1;
+    }
+
+
+
+#printButton {
+    display: inline-block;
+    font-size: 20px;
+    color: grey;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.apartament-plan {
+    page-break-inside: avoid; /* Prevents cutting tables across pages */
+    margin-bottom: 20px;
+}
+@media print {
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .apartament-plan {
+        display: block !important;
+        width: 100% !important;
+        height: auto !important;
+        object-fit: contain;
+        position: fixed !important; /* Prevents shifting */
+        top: 0;
+        left: 0;
+    }
+
+    header, nav, .sidenav, .sidenav_r, .footer, .controls, #printBtnContainer,
+    #sideImage, .sidebar, #shiturShkrimi, #rezervuarShkrimi, #fullscreenContainer, #SectorA-image
+    #SectorV-image, #printButton {
+        display: none !important;
+    }
+}
+
+
+            .apartament-plan:not(.hidden) {
+                opacity: 1;
+            }
+
+
+        #fullScreenPlanBtn {
+            display: inline-block;
+            font-size: 20px;
+            background-color: transparent;
+            color: gray;
+            border: none;
+            cursor: pointer;
+        }
+
+
+
+
+        #fullscreen-btn:hover {
+            background-color: #45a049;
+        }
+
+    
+
+    #Main-image {
+    position:fixed;
+    left:0;
+bottom:1rem;    width: 40%;
+    z-index: 30;
+}
+
+
+
+.sidenav_r {
+    height: 100%;
+    width: 300px;
+    text-align: center;
+    padding: 10px;
+    display: inline-block;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 10px;
+    background-color: var(--myrtle-green);
+    color: var(--accent-white);
+    overflow-x: hidden;
+}
+
+
+
+/*Full screen*/
+
+#fullscreenContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px;
+}
+
+#fullscreenImage {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    border: 5px solid white;
+    border-radius: 10px;
+    background: white;
+}
+
+
+
+
+/* Tabela e vlerave*/
+
+
+#infoPart {
+    display:inline-block;
+    border: 1px solid;
+    border-radius: 5px;
+    text-align: center;
+    padding: 5px;
+    background-color: var(--seaside-villa);
+    color: var(--myrtle-green);
+    width: max-content;
+}
+
+.infoLabel {
+    font-weight: 400;
+    font-size: 12px;
+    padding-right: 1px;
+    padding-top: 1px;
+    width: 250px;
+}
+
+#tabelaVlerave {
+    display: block;
+    text-align: right;
+  
+}
+
+.detailContainer {
+    display: inline-block;
+}
+
+.teDhena {
+    width: 100px;
+    background-color: transparent;
+    border: none;
+    text-align: right;
+    padding-right: 5px;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+#nrParkimEDhene {
+    width: 50px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
+    background-color: var(--accent-white);
+    font-weight: 500;
+    font-size: 12px;
+    text-align: right;
+}
+
+#PishineEDhene {
+    width: 50px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
+    background-color: var(--accent-white);
+    font-weight: 500;
+    font-size: 12px;
+    text-align: right;
+}
+
+
+.cmimeOutput {
+    text-align: right;
+    padding: 2px;
+    padding-right: 10px;
+    font-weight: 600;
+    width: 100px;
+    background-color: var(--accent-white);
+    color: black;
+}
+
+.totalOutput {
+    text-align: right;
+    padding: 3px;
+    padding-right: 10px;
+    width: 150px;
+    margin-top: 5px;
+    background-color: var(--drab-dark-brown);
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--myrtle-green);
+    border: 5px solid var(--desert-sand);
+}
+
+#llogApBtn {
+    width: 80px;
+    height: 30px;
+    margin-right: 20px;
+    background-color: #F88379;
+    color: var(--accent-white);
+}
+
+
+
+/*--- Butona me checkbox---------*/
+
+
+#groupApart {
+    display: flex;
+    text-align: center;
+    z-index: 10;
+    background-color: var(--seaside-villa);
+    width: 600px;
+}
+
+h5 {
+    padding: 3px;
+}
+
+.shkalla {
+    text-align: center;
+    background-color: var( --warm-white-Cornsilk);
+    color: var(--myrtle-green);
+    border: 1px solid grey;
+    padding-left:10px;
+    width: 100px;
+}
+
+.apartBlock {
+    display: block;
+    width: 60px;
+    text-align: left;
+}
+
+
+.radioteDhena {
+    display: inline-flex;
+    width: 10px;
+    padding: 0;
+}
+
+
+.apLabel {
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center;
+    padding: 1px;
+    width: 40px;
+    display: inline-flex;
+    border: 1px solid black;
+    background-color: #b5a58d;
+    color: var(--accent-white);
+    margin: 2px;
+}
+
+    .apLabel:hover {
+        background-color: #9f8b6f;
+        color: var(--accent-white);
+    }
+
+
+
+
+.sekShkalle {
+    border: 1px solid;
+    border-radius: 5px;
+    height: min-content;
+}
+
+#BolvLogoBW {
+    position:absolute;
+    top:50%;
+    width: 50%;
+    display: block;
+    margin-left: 15%;
+}
+
+
+
+.zoomed {
+    width: 100%;
+}
+
+.footer {
+    background-color:var(--greiysh-turquoise);
+    width: 100%;
+    height:150px;
+    position: fixed;
+    bottom:0;
+
+}
+#shiturShkrimi {
+    position: absolute;
+    top: 200px;
+    left: 500px;
+    opacity: 0.5;
+    z-index: 15;
+    color: red;
+    font-weight: bold;
+    font-size: 10rem;
+    font-family: 'Arial Rounded MT';
+}
+.shiturG7B {
+    height: 100%;
+    text-align: center;
+    font-size: 8rem;
+}
+#rezervuarShkrimi {
+    position: absolute;
+    opacity: 0.5;
+    z-index: 15;
+    height: 100%;
+    text-align: center;
+    padding-top: 20rem;
+    color: red;
+    font-weight: bold;
+    font-size: 10rem;
+    font-family: 'Arial Rounded MT';
+}
+.rezervuarG7B {
+    font-size: 8rem;
+    left: 700px;
+}
+    
+    .ApBtn {
+    position:absolute;
+    padding: 4px;
+    width: 60px;
+    height: 30px;
+    color: var(--myrtle-green);
+    background-color: var(--warm-white-floral);
+    border: 1px solid;
+    border-radius: 3px;
+    cursor: pointer;
+    z-index:25;
+    opacity:0.3;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+    .ApBtn:hover {
+        background-color: #9f8b6f;
+        opacity: 1;
+    }
+#OC_06btn {
+    bottom: 150px;
+    left: 640px;
+}
+
+#OC_04btn {
+    bottom: 100px;
+    left: 490px;
+}
+
+#OC_03btn {
+    bottom: 80px;
+    left: 390px;
+}
+#OC_02btn {
+    bottom: 65px;
+    left: 300px;
+}
+
+#A1_01btn {
+    bottom: 110px;
+    left: 190px;
+}
+
+#A1_02btn {
+    bottom: 120px;
+    left: 250px;
+}
+#A1_03btn {
+    bottom: 140px;
+    left: 370px;
+}
+
+#B1_01btn {
+    bottom: 150px;
+    left: 430px;
+}
+#B1_03btn {
+    bottom: 170px;
+    left: 500px;
+}
+
+#B1_04btn {
+    bottom: 180px;
+    left: 600px;
+}
+
+#A2_03btn {
+    bottom: 190px;
+    left: 240px;
+}
+
+#A2_04btn {
+    bottom: 200px;
+    left: 300px;
+}
+#B2_03btn {
+    bottom: 210px;
+    left: 530px;
+}
+#B2_04btn {
+    bottom: 215px;
+    left: 590px;
+}
+#B2_06btn {
+    bottom: 220px;
+    left: 650px;
+}
+
+#A3_01btn {
+    bottom: 220px;
+    left: 140px;
+}
+
+#A3_04btn {
+    bottom: 220px;
+    left: 240px;
+}
+
+#A3_05btn {
+    bottom: 230px;
+    left: 300px;
+}
+
+#B3_02btn {
+    bottom: 240px;
+    left: 480px;
+}
+#B3_03btn {
+    bottom: 240px;
+    left: 540px;
+}
+#B3_04btn {
+    bottom: 240px;
+    left: 600px;
+}
+#B3_06btn {
+    bottom: 240px;
+    left: 600px;
+}
+#A4_01btn {
+    bottom: 260px;
+    left: 230px;
+}
+#A4_02btn {
+    bottom: 260px;
+    left: 290px;
+}
+#A4_03btn {
+    bottom: 260px;
+    left: 350px;
+}
+
+#B4_02btn {
+    bottom: 260px;
+    left: 490px;
+}
+
+#B4_03btn {
+    bottom: 260px;
+    left: 550px;
+}
+#A5_01btn {
+    bottom: 300px;
+    left: 230px;
+}
+
+#B5_01btn {
+    bottom: 290px;
+    left: 550px;
+}
+#B5_02btn {
+    bottom: 290px;
+    left: 600px;
+}
+
+
+
+#GreenCoast {
+    position: absolute;
+    right: 10px;
+    width: 60%;
+    z-index:-5;
+}
+
+/* Menuja*/
+
+    /* Side navigation links */
+a {
+        background-color: var(--accent-white);
+        width: 100%;
+        padding: 10px;
+        text-align: left;
+        text-decoration: none;
+        display: grid;
+        float: right;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: var(--primary-blue);
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+        /* Change color on hover */
+a:hover {
+            background-color: var(--button-hover);
+            color: var(--accent-white);
+        }
+
+#mainMenu {
+    display: block;
+    height: 40px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    text-align: right;
+    text-decoration: none;
+    color: var(--drab-dark-brown);
+    background-color: transparent;
+}
+.G7BmainMenu{
+    padding-top: 100px;
+}
+
+
+.dropbtn {
+    color: var(--drab-dark-brown);
+    background-color: transparent;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    width: 130px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 200;
+    border: none;
+}
+
+    .dropbtn a:hover {
+        background-color: var(--butter-cup);
+        color: var(--accent-white);
+    }
+
+.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    width: 130px;
+    background-color: var(--seaside-villa);
+    font-size: 0.7rem;
+    font-style: oblique;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+    .dropdown-content a {
+        color: black;
+        padding: 5px 10px;
+        text-decoration: none;
+        display: block;
+    }
+
+        .dropdown-content a:hover {
+            background-color: var(--merino);
+            color: var(--drab-dark-brown);
+        }
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: var(--butter-cup);
+    color: var(--accent-white);
+}
+

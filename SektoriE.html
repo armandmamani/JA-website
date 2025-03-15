@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="CSS/apartmentsCSS.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Sektori E</title>
+</head>
+
+<body>
+    <header>
+        <div class="row">
+            <div class="column side">
+                <h1>SEKTORI E</h1>
+            </div>
+            <div class="column middle">
+
+                <!--  <img id="green_coast_logo" src="Green-coast-logo3.png" />-->
+
+            </div>
+            <div class="column side">
+                <div id="mainMenu">
+                    <div class="dropdown">
+                        <a class="dropbtn" href="index Projekti.html">Projekti</a>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">Apartamente</button>
+                        <div class="dropdown-content">
+                            <a href="SektoriA.html">SEKTORI A</a>
+                            <a href="SektoriB.html">SEKTORI B </a>
+                            <a href="SektoriC.html">SEKTORI C</a>
+                            <a href="SektoriD.html">SEKTORI D</a>
+                            <a href="SektoriE.html">SEKTORI E </a>
+
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a class="dropbtn" href="Vilat.html">Vila</a>
+                    </div>
+                    <div class="dropdown">
+                        <a class="dropbtn" href="LoginPage.html">Log in</a>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+    </header>
+    <div id="fullscreenContainer" class="hidden">
+        <img id="fullscreenImage" src="" alt="Full Screen View">
+    </div>
+    <div id="sideImageE">
+        <img class="zoomed" src="SEKTORI_E/VetemE.jpg" alt="Sektori A zoomed">
+
+    </div>
+
+    <div class="sidenav">
+
+        <div id="apNameTable">
+            <p class="aparttId aptId" id="aptId"></p>
+        </div>
+
+        <div id="cmimetPart">
+            <p id="formSubtitle">ÇMIMET</p>
+            <label for="cmimsNeto" class="cmimeLabel">Sip. neto:</label>
+            <input type="number" class="cmimeInput" id="cmimsNeto" name="cmimsNeto" pattern="[0-9]" + value=0>
+            <span class="currency">&euro;</span><br>
+            <label for="cmimsPerb" class="cmimeLabel">Sip. Përbashkët:</label>
+            <input type="number" class="cmimeInput" id="cmimsPerb" name="cmimsPerb" value=0>
+            <span class="currency">&euro;</span><br>
+            <label for="cmimsVerande" class="cmimeLabel">Sip. verande:</label>
+            <input type="number" class="cmimeInput" id="cmimsVerande" name="cmimsVerande" value=0>
+            <span class="currency">&euro;</span><br>
+            <label for="cmimsTerrace" class="cmimeLabel">Sip. Terrace:</label>
+            <input type="number" class="cmimeInput" id="cmimsTerrace" name="cmimsTerrace" value=0>
+            <span class="currency">&euro;</span><br>
+            <label for="cmimsOborr" class="cmimeLabel">Sip. Oborri:</label>
+            <input type="number" class="cmimeInput" id="cmimsOborr" name="cmimsOborr" value=0>
+            <span class="currency">&euro;</span><br>
+            <label for="cmimsDepo" class="cmimeLabel">Sip. Depo:</label>
+            <input type="number" class="cmimeInput" id="cmimsDepo" name="cmimsDepo" value=0>
+            <span class="currency">&euro;</span><br>
+            <label for="cmimParking" class="cmimeLabel">Parkimi:</label>
+            <input type="number" class="cmimeInput" id="cmimParking" name="cmimParking" value=0>
+            <span class="currency">&euro;</span><br>
+            <label for="cmimPishine" class="cmimeLabel">Pishina:</label>
+            <input type="number" class="cmimeInput" id="cmimPishine" name="cmimPishine" value=0>
+            <span class="currency">&euro;</span><br><br>
+        </div>
+        <table id="apartmentDetailsTable" border="1">
+            <thead>
+
+
+                <tr>
+                    <td class="aparttId">Sektori</td>
+                    <td class="vleraSip" id="aptSector"></td>
+                    <td class="vleraFin"></td>
+                </tr>
+                <tr>
+                    <td class="aparttId">Kati</td>
+                    <td class="vleraSip" id="aptFloor"></td>
+                    <td class="vleraFin"></td>
+                </tr>
+                <tr>
+                    <td class="aparttId">Tipologjia</td>
+                    <td class="vleraSip" id="aptTypology"></td>
+                    <td class="vleraFin"></td>
+                </tr>
+
+                <tr>
+                    <td class="aparttId">Shkalla</td>
+                    <td class="vleraSip" id="aptScale"></td>
+                    <td class="vleraFin"></td>
+                </tr>
+
+                <tr>
+                    <td class="aparttId">Siperfaqe e banueshme</td>
+                    <td class="vleraSip" id="aptNetArea"></td>
+                    <td class="vleraFin"></td>
+                </tr>
+                <tr>
+                    <td class="aparttId">Llozha</td>
+                    <td class="vleraSip" id="aptLoggiaArea"></td>
+                    <td class="vleraFin"></td>
+                </tr>
+
+                <tr>
+                    <td class="aparttId">Siperfaqe Neto</td>
+                    <td class="vleraSip" id="aptTotalNetArea"></td>
+                    <td class="vleraFin"></td>
+                </tr>
+                <tr>
+                    <td class="aparttId">Siperfaqe e perbashket</td>
+                    <td class="vleraSip" id="aptCommonArea"></td>
+                    <td class="vleraFin"></td>
+                </tr>
+                <tr>
+                    <td class="aparttId">Siperfaqe totale</td>
+                    <td class="vleraSip" id="aptTotalArea"></td>
+                    <td class="vleraFin"></td>
+                </tr>
+                <tr>
+                    <td class="aparttId">Siperfaqe verande</td>
+                    <td class="vleraSip" id="aptVerandaArea"></td>
+                    <td class="vleraFin"></td>
+                </tr>
+
+                <tr>
+                    <td class="aparttId">Terrace e gjebert</td>
+                    <td class="vleraSip" id="aptgreenTerraceArea"></td>
+                    <td class="vleraFin"></td>
+                </tr>
+                <tr>
+                    <td class="aparttId">Terrace e shfrytezueshme</td>
+                    <td class="vleraSip" id="aptusableTerrace"></td>
+                    <td class="vleraFin"></td>
+                </tr>
+                <tr>
+
+                    <td class="aparttId">Oborr i gjebert</td>
+                    <td class="vleraSip" id="aptplotArea"></td>
+                    <td class="vleraFin"></td>
+                </tr>
+                <tr>
+                    <td class="aparttId">Siperfaqe pishine</td>
+                    <td class="vleraSip" id="aptPoolArea"></td>
+                    <td class="vleraFin"></td>
+                </tr>
+
+
+                <tr>
+                    <td class="aparttId">Parking</td>
+                    <td class="vleraSip" id="aptParking"></td>
+                    <td class="vleraFin"></td>
+                </tr>
+                <tr>
+                    <td class="aparttId">Statusi</td>
+                    <td class="vleraSip" id="aptStatus"></td>
+                    <td class="vleraFin"></td>
+                </tr>
+
+            </thead>
+
+        </table>
+        <div class="hidden">
+            <p class="vleraSip" id="areaFloor0"></p>
+            <p class="vleraSip" id="areaFloor1"></p>
+
+
+        </div>
+    </div>
+
+
+    <div id="planimetrite">
+
+
+        <div id="shiturShkrimi" class="apartament-plan hidden">
+            SHITUR
+        </div>
+
+        <div id="rezervuarShkrimi" class="apartament-plan hidden">
+            REZERVUAR
+        </div>
+        <div id="printBtnContainer" class="hidden">
+            <button id="printButton" title="Print"><i class="fa-solid fa-print"></i></button>
+            <button id="fullScreenPlanBtn" title="Full Screen Plan"><i class="fa-solid fa-expand"></i></button>
+        </div>
+
+        <div class="apartament-plan hidden" id="CE02">
+            <img class="plan-image" src="SEKTORI_E/CE02_FULL-3.jpg" alt="Planimetria CE02">
+        </div>
+        <div class="apartament-plan hidden" id="CE02">
+            <img class="plan-image" src="SEKTORI_E/CE02_FULL-3.jpg" alt="Planimetria CE02">
+        </div>
+        <div class="apartament-plan hidden" id="CE03">
+            <img class="plan-image" src="SEKTORI_E/CE03_FULL-3.jpg" alt="Planimetria CE03">
+        </div>
+        <div class="apartament-plan hidden" id="CE04">
+            <img class="plan-image" src="SEKTORI_E/CE04_FULL-3.jpg" alt="Planimetria CE04">
+        </div>
+        <div class="apartament-plan hidden" id="CE05">
+            <img class="plan-image" src="SEKTORI_E/CE05_FULL-3.jpg" alt="Planimetria CE05">
+        </div>
+        <div class="apartament-plan hidden" id="CE07">
+            <img class="plan-image" src="SEKTORI_E/CE07_FULL-3.jpg" alt="Planimetria CE07">
+        </div>
+        <div class="apartament-plan hidden" id="CE09">
+            <img class="plan-image" src="SEKTORI_E/CE09_FULL-3.jpg" alt="Planimetria CE09">
+        </div>
+        <div class="apartament-plan hidden" id="CE10">
+            <img class="plan-image" src="SEKTORI_E/CE10_FULL-3.jpg" alt="Planimetria CE10">
+        </div>
+
+
+        <img id="SectorA-image" src="main images/SektorE Presantim.jpg" alt="Skice Sektori A Nukli JA">
+    </div>
+
+    <div class="sidenav_r">
+
+        <div id="infoPart">
+
+            <div id="tabelaVlerave">
+
+                <div class="detailContainer">
+                    <label for="sNeto" class="infoLabel">Siperfaqe neto:</label>
+                    <input type="text" class="teDhena" id="sNetoEDhene" name="sNeto" value=0 readonly>
+                    <input type="text" class="cmimeOutput" id="sNeto" name="sNeto" value=0 readonly>
+                    <span class="currency">&euro;</span>
+                </div><br>
+
+                <div class="detailContainer">
+                    <label for="sPerb" class="infoLabel">Sip. Përbashkët:</label>
+                    <input type="text" class="teDhena" id="sPerbEDhene" name="sPerbEDhene" value=0 readonly>
+                    <input type="text" class="cmimeOutput" id="sPerb" name="sPerb" value=0 readonly>
+                    <span class="currency">&euro;</span>
+                </div><br>
+
+                <div class="detailContainer">
+                    <label for="sNeto" class="infoLabel">Siperfaqe Toale:</label>
+                    <input type="text" class="teDhena" id="sTotaleEDhene" name="sTotale" value=0 readonly>
+                    <input type="text" class="cmimeOutput" id="sTotale" name="sTotale" value=0 readonly>
+                    <span class="currency">&euro;</span>
+                </div><br>
+
+                <div class="detailContainer">
+                    <label for="sVerande" class="infoLabel">Siperfaqe verande:</label>
+                    <input type="text" class="teDhena" id="sVerandeEDhene" name="sVerande" value=0 readonly>
+                    <input type="text" class="cmimeOutput" id="sVerande" name="sVerande" value=0 readonly>
+                    <span class="currency">&euro;</span>
+                </div><br>
+
+                <div class="detailContainer">
+                    <label for="sVerande" class="infoLabel">Siperfaqe Terrace:</label>
+                    <input type="text" class="teDhena" id="sTerraceEDhene" name="sTerrace" value=0 readonly>
+                    <input type="text" class="cmimeOutput" id="sTerrace" name="sTerrace" value=0 readonly>
+                    <span class="currency">&euro;</span>
+                </div><br>
+
+                <div class="detailContainer">
+                    <label for="sOborr" class="infoLabel">Siperfaqe Oborri:</label>
+                    <input type="text" class="teDhena" id="sOborrEDhene" name="sOborrEDhene" value=0 readonly>
+                    <input type="text" class="cmimeOutput" id="sOborr" name="sOborr" value=0 readonly>
+                    <span class="currency">&euro;</span>
+                </div><br>
+
+                <div class="detailContainer">
+                    <label for="sDepo" class="infoLabel">Siperfaqe Depo:</label>
+                    <input type="text" class="teDhena" id="sDepoEDhene" name="sDepoEDhene" value=0 readonly>
+                    <input type="text" class="cmimeOutput" id="sDepo" name="sDepo" value=0 readonly>
+                    <span class="currency">&euro;</span>
+                </div><br>
+
+                <div class="detailContainer">
+                    <label for="Parking" class="infoLabel">Parkimi:</label>
+                    <input type="number" id="nrParkimEDhene" name="nrParkimEDhene" value=0>
+                    <input type="text" class="cmimeOutput" id="Parking" name="Parking" value=0 readonly>
+                    <span class="currency">&euro;</span>
+                </div><br>
+
+                <div class="detailContainer">
+                    <label for="Pishine" class="infoLabel">Pishina:</label>
+                    <input type="number" id="PishineEDhene" name="PishineEDhene" value=0>
+                    <input type="text" class="cmimeOutput" id="Pishine" name="Pishine" value=0 readonly>
+                    <span class="currency">&euro;</span>
+                </div><br>
+                <div class="detailContainer">
+
+                    <label for="total" class="infoLabel">TOTALI:</label>
+                    <input type="text" class="totalOutput" id="total" name="total" value=0 readonly>
+                    <span class="currency">&euro;</span>
+                </div>
+
+
+            </div>
+
+            <div id="groupApart">
+                <div class="shkalla">
+                    <h5>A</h5>
+
+                    <div class="apartBlock">
+                        <input type="checkbox" class="radioteDhena" id="checkboxCE02" name="CE02" value="CE02">
+                        <label for="checkboxCE02" class="apLabel">CE02</label>
+                    </div>
+                    <div class="apartBlock">
+                        <input type="checkbox" class="radioteDhena" id="checkboxCE03" name="CE03" value="CE03">
+                        <label for="checkboxCE03" class="apLabel">CE03</label>
+                    </div>
+
+                    <div class="apartBlock">
+                        <input type="checkbox" class="radioteDhena" id="checkboxCE02" name="CE02" value="CE02">
+                        <label for="checkboxCE02" class="apLabel">CE02</label>
+                    </div>
+
+
+
+                </div>
+                <div class="shkalla">
+                    <h5>B</h5>
+                    <div class="apartBlock">
+                        <input type="checkbox" class="radioteDhena" id="checkboxCE04" name="CE04" value="CE04">
+                        <label for="checkboxCE04" class="apLabel">CE04</label>
+                    </div>
+                    <div class="apartBlock">
+                        <input type="checkbox" class="radioteDhena" id="checkboxCE05" name="CE05" value="CE05">
+                        <label for="checkboxCE05" class="apLabel">CE05</label>
+                    </div>
+
+                    <div class="apartBlock">
+                        <input type="checkbox" class="radioteDhena" id="checkboxCE07" name="CE07" value="CE07">
+                        <label for="checkboxCE07" class="apLabel">CE07</label>
+                    </div>
+
+                    <div class="apartBlock">
+                        <input type="checkbox" class="radioteDhena" id="checkboxCE09" name="CE09" value="CE09">
+                        <label for="checkboxCE09" class="apLabel">CE09</label>
+                    </div>
+
+                    <div class="apartBlock">
+
+                        <input type="checkbox" class="radioteDhena" id="checkboxCE10" name="CE10" value="CE10">
+                        <label for="checkboxCE10" class="apLabel">CE10</label>
+                    </div>
+
+                </div>
+                <input type="submit" id="llogApBtn" value="llogarit">
+            </div>
+
+        </div>
+
+
+
+
+        <img id="btnImageB" src="SEKTORI_E/VetemE.jpg" alt="Main Image">
+        <img id="BolvLogoBW" src="main images/Bolv logo bw.png" alt="Bolv Group Logo">
+
+
+
+
+    </div>
+    <div class="footer">
+
+
+        <div class="button-container btnConE">
+            <div class="floor">
+                <button class="empty ApBtn">   </button>
+            </div>
+
+            <div class="floor">
+                <button class="ApBtn" id="CE04btn" onclick="showPlan('CE04')">CE04</button>
+                <button class="ApBtn" id="CE05btn" onclick="showPlan('CE05')">CE05</button>
+                <button class="empty ApBtn">   </button>
+                <button class="ApBtn" id="CE07btn" onclick="showPlan('CE07')">CE07</button>
+                <button class="empty ApBtn">   </button>
+                <button class="ApBtn" id="CE09btn" onclick="showPlan('CE09')">CE09</button>
+                <button class="ApBtn" id="CE10btn" onclick="showPlan('CE10')">CE10</button>
+            </div>
+            <div class="floor">
+                <button class="empty ApBtn">   </button>
+                <button class="ApBtn" id="CE02btn" onclick="showPlan('CE02')">CE02</button>
+                <button class="ApBtn" id="CE03btn" onclick="showPlan('CE03')">CE03</button>
+
+
+            </div>
+        </div>
+            <img id="sideImage1" src="SEKTORI_E/Sektori E Grafik.png" alt="Skice Sektori B Nukli JA">
+
+        </div>
+
+    <script src="JS/apartments.js"></script>
+
+</body>
+	</html>
