@@ -34,8 +34,9 @@ body, html {
 .backgroundImage {
     position: absolute;
     top:0;
-    left:0;
-    width: 100vw;
+    right:0;
+    width: 100%;
+    height: 100vh;
     z-index:-1;
 
 }
@@ -51,9 +52,8 @@ body, html {
 .hero-content {
     position: relative;
     top:-20%;
-    left: -20%;
     z-index: 2;
-    max-width: 800px;
+    max-width: 100%;
 }
 
 h1 {
@@ -78,18 +78,45 @@ h1 {
 }
 
 #bigText {
-    font-size: 90px;
-    text-shadow: 10px 10px 80px rgba(255,255,255,.8) !important;
+    font-family: 'arial';
+    font-weight: bolder;
+    color: rgba(60, 60, 60,0.7);
+    font-size: 120px;
+    text-shadow: 5px 5px 3px rgba(60,60,60,.8) !important;
+    background: -webkit-linear-gradient(left,#FFD700,rgb(0, 136, 255), #FFD700);
+    background-size: 1600px 200px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation-duration: 3s;
+    animation-name: animationgradienttitle;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
 }
 
+@keyframes animationgradienttitle {
+    0% {
+        background-position: 0 1600px;
+    }
 
+    100% {
+        background-position: 1600px 0;
+    }
+}
 p {
-    font-size: 18px;
+    font-size: 35px;
     color: rgb(235, 168,0);
+    background: url(https://i.ibb.co/RDTnNrT/animated-text-fill.png) repeat-y;
+    -webkit-background-clip: text;
+    background-clip: text;
+    /* Animate Background Image */
+
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: aitf 80s linear infinite;
+    /* Activate hardware acceleration for smoother animations */
+
+    -webkit-transform: translate3d(0,0,0);
+    -webkit-backface-visibility: hidden;
 }
-
-
-
 
 
 
@@ -105,167 +132,164 @@ p {
     }
 }
 
+    .cta-button {
+        margin-top: 20px;
+        padding: 12px 24px;
+        font-size: 18px;
+        background: gold;
+        color: black;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
 
-.cta-button {
-    margin-top: 20px;
-    padding: 12px 24px;
-    font-size: 18px;
-    background: gold;
-    color: black;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
+        .cta-button:hover {
+            background: #e6c200;
+        }
 
-    .cta-button:hover {
-        background: #e6c200;
+
+
+    .container {
+        position: absolute;
+        padding: 150px 0px;
+        height: 100vh;
+        display: flex;
+        justify-content: flex-start;
+        align-items: end;
+        flex-wrap: wrap;
+    }
+
+    .parent {
+        height: 300px;
+        width: 300px;
+        padding: 20px;
+        perspective: 1000px;
+    }
+
+    .card {
+        padding-top: 0px;
+        transform-style: preserve-3d;
+        width: 100%;
+        box-shadow: rgba(220, 220, 255, 0.925) 20px 20px 50px -25px;
+        transition: all 0.5s ease-in-out;
+        border-radius: 10px;
+    }
+
+        .card:hover {
+            background-position: 80% 20%;
+            transform: rotate3d(0.5, 1, 0, 30deg);
+        }
+
+
+    .content-box {
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.811);
+        border-radius: 0px 0px 10px 10px;
+        box-shadow: rgba(0, 115, 255, 0.925) 0px 20px 50px -25px,;
+        transition: all .5s ease-in-out;
+        padding: 50px 25px 25px 25px;
+        transform-style: preserve-3d;
+    }
+
+    .card-title {
+        color: #a9a9a9;
+        font-size: 25px;
+        font-weight: 900;
+        transition: all 0.5s ease-in-out;
+        transform: translate3d(0px, 0px, 20px);
+    }
+
+    card-title:hover {
+        transform: translate3d(0px, 0px, 50px);
     }
 
 
 
-.container {
-    position:absolute;
-    left:0;
-    padding: 150px 0px;
-    height: 100vh;
-    display: flex;
-    justify-content: flex-start;
-    align-items: end;
-    flex-wrap: wrap;
-}
-
-.parent {
-    height: 300px;
-    width: 300px;
-    padding: 20px;
-    perspective: 1000px;
-}
-.card {
-    padding-top: 0px;
-    transform-style: preserve-3d;
-    width: 100%;
-    box-shadow: rgba(220, 220, 255, 0.925) 20px 20px 50px -25px;
-    transition: all 0.5s ease-in-out;
-    border-radius: 10px;
-}
-    .card:hover
-
-{
-    background-position: 80% 20%;
-    transform: rotate3d(0.5, 1, 0, 30deg);
-}
-
-
-.content-box {
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.811);
-    border-radius: 0px 0px 10px 10px;
-    box-shadow: rgba(0, 115, 255, 0.925) 0px 20px 50px -25px,;
-    transition: all .5s ease-in-out;
-    padding: 50px 25px 25px 25px;
-    transform-style: preserve-3d;
-}
-.card-title {
-    color: #a9a9a9;
-    font-size: 25px;
-    font-weight: 900;
-    transition: all 0.5s ease-in-out;
-    transform: translate3d(0px, 0px, 20px);
-}
-    card-title:hover
-
-{
-    transform: translate3d(0px, 0px, 50px);
-}
-
-
-
-.card-content {
-    padding-top: 10px;
-    font-size: 12px;
-    text-align: justify;
-    color: rgb(185, 185, 185);
-    transition: all 0.5s ease-in-out;
-    transform: translate3d(0px, 0px, 20px);
-}
-    .card-content:hover
-
-{
-    transform: translate3d(0px, 0px, 50px);
-}
-
-
-
-.see-more {
-    cursor: pointer;
-    background: none;
-    border: none;
-    width: 80px;
-    font-weight: 900;
-    font-size: 12px;
-    text-transform: uppercase;
-    color: rgb(0, 136, 255);
-    padding-top: 15px;
-    transition: all 0.5s ease-in-out;
-    transform: translate3d(0px, 0px, 20px);
-}
-    .see-more :hover
-
-{
-    transform: translate3d(0px, 0px, 50px);
-    color:white;
-}
-
-
-
-.date-box {
-    position: absolute;
-    top: 140px;
-    left: 25px;
-    height: 60px;
-    width: 60px;
-    background-color: rgb(0, 0, 0);
-    border-radius: 10px;
-    padding: 10px;
-    box-shadow: rgb(0, 102, 255) 0px 20px 60px 0px, rgb(0, 200, 255) 0px 18px 36px -18px;
-    transform: translate3d(0px, 0px, 50px);
-}
-    .date-box span {
-        display: block;
-        text-align: center;
+    .card-content {
+        padding-top: 10px;
+        font-size: 12px;
+        text-align: justify;
+        color: rgb(185, 185, 185);
+        transition: all 0.5s ease-in-out;
+        transform: translate3d(0px, 0px, 20px);
     }
 
-.month {
-    color: white;
-    font-size: 11px;
-    font-weight: 600;
-}
+        .card-content:hover {
+            transform: translate3d(0px, 0px, 50px);
+        }
 
-.date {
-    font-size: 20px;
-    font-weight: 900;
-    color: rgb(0, 136, 255);
-}
 
-#tulipan {
-    width: 100%;
-    height:150px;
-}
 
-#g7bPalase {
-    width: 100%;
-    height: 150px;
-}
+    .see-more {
+        cursor: pointer;
+        background: none;
+        border: none;
+        width: 80px;
+        font-weight: 900;
+        font-size: 12px;
+        text-transform: uppercase;
+        color: rgb(0, 136, 255);
+        padding-top: 15px;
+        transition: all 0.5s ease-in-out;
+        transform: translate3d(0px, 0px, 20px);
+    }
 
-#jaPalase {
-    width: 100%;
-    height: 150px;
-}
+        .see-more :hover {
+            transform: translate3d(0px, 0px, 50px);
+            color: white;
+        }
 
-#laprake {
-    width: 100%;
-    height: 150px;
-}
+
+
+    .date-box {
+        position: absolute;
+        top: 140px;
+        left: 25px;
+        height: 60px;
+        width: 60px;
+        background-color: rgb(0, 0, 0);
+        border-radius: 10px;
+        padding: 10px;
+        box-shadow: rgb(0, 102, 255) 0px 20px 60px 0px, rgb(0, 200, 255) 0px 18px 36px -18px;
+        transform: translate3d(0px, 0px, 50px);
+    }
+
+        .date-box span {
+            display: block;
+            text-align: center;
+        }
+
+    .month {
+        color: white;
+        font-size: 11px;
+        font-weight: 600;
+    }
+
+    .date {
+        font-size: 20px;
+        font-weight: 900;
+        color: rgb(0, 136, 255);
+    }
+
+    #tulipan {
+        width: 100%;
+        height: 150px;
+    }
+
+    #g7bPalase {
+        width: 100%;
+        height: 150px;
+    }
+
+    #jaPalase {
+        width: 100%;
+        height: 150px;
+    }
+
+    #laprake {
+        width: 100%;
+        height: 150px;
+    }
 
