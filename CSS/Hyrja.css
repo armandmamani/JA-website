@@ -7,39 +7,126 @@
     font-family: 'Nunito', sans-serif;
 }
 
-body {
-    background-image: url("Rendera (14).jpeg");
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('background_image.jpeg');
+    background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-repeat: no-repeat;
-    padding: 0px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
 }
 
-#firstWords {
+.backgroundImage {
     position: absolute;
+    top:0;
+    left:0;
+    width: 100vw;
+    z-index:-1;
+
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    top: 18%;
-    color: #333;
-    text-align: center;
+    height: 100%;
+    background-color: transparent;
 }
 
-h2 {
-    text-align: center;
-    font:bolder 60px arial, verdana;
+.hero-content {
+    position: relative;
+    top:-20%;
+    left: -20%;
+    z-index: 2;
+    max-width: 800px;
 }
-h3 {
-    font: 600 25px lato;
+
+h1 {
+    font-family: 'Playfair Display';
+    letter-spacing: 0;
+    padding: .25em 0 .325em;
+    display: block;
+    margin: 0 auto;
+    text-shadow: 0 0 80px rgba(255,255,255,.5);
+    /* Clip Background Image */
+    background: url(https://i.ibb.co/RDTnNrT/animated-text-fill.png) repeat-y;
+    -webkit-background-clip: text;
+    background-clip: text;
+    /* Animate Background Image */
+
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: aitf 80s linear infinite;
+    /* Activate hardware acceleration for smoother animations */
+
+    -webkit-transform: translate3d(0,0,0);
+    -webkit-backface-visibility: hidden;
 }
-span {
-    font-weight:600;
+
+#bigText {
+    font-size: 90px;
+    text-shadow: 10px 10px 80px rgba(255,255,255,.8) !important;
 }
-#mainDescription {
-    text-align: justify;
-    font: 200 18px lato;
-    padding: 10px 330px;
-    color: #111;
+
+
+p {
+    font-size: 18px;
+    color: rgb(235, 168,0);
 }
+
+
+
+
+
+
+/* Animate Background Image */
+
+@-webkit-keyframes aitf {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+
+.cta-button {
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 18px;
+    background: gold;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+    .cta-button:hover {
+        background: #e6c200;
+    }
+
+
+
 .container {
+    position:absolute;
+    left:0;
     padding: 150px 0px;
     height: 100vh;
     display: flex;
@@ -55,11 +142,8 @@ span {
     perspective: 1000px;
 }
 .card {
-    padding-top: 200px;
+    padding-top: 0px;
     transform-style: preserve-3d;
-    background-image: url("Rendera (14).jpeg");
-    background-position: center center;
-    background-size: cover;
     width: 100%;
     box-shadow: rgba(220, 220, 255, 0.925) 20px 20px 50px -25px;
     transition: all 0.5s ease-in-out;
@@ -138,7 +222,7 @@ span {
 
 .date-box {
     position: absolute;
-    top: 180px;
+    top: 140px;
     left: 25px;
     height: 60px;
     width: 60px;
@@ -165,16 +249,23 @@ span {
     color: rgb(0, 136, 255);
 }
 
-
-
-.card2 {
-    filter: hue-rotate(150deg);
+#tulipan {
+    width: 100%;
+    height:150px;
 }
 
-.card3 {
-    filter: hue-rotate(300deg);
+#g7bPalase {
+    width: 100%;
+    height: 150px;
 }
 
-.card4 {
-    filter: hue-rotate(90deg);
+#jaPalase {
+    width: 100%;
+    height: 150px;
 }
+
+#laprake {
+    width: 100%;
+    height: 150px;
+}
+
