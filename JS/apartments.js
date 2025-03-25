@@ -265,7 +265,6 @@ document.addEventListener("DOMContentLoaded", function () {
             const apartmentId = button.id.replace("btn", ""); // Extract apartment ID from button ID
 
             if (apartmentId) {
-                console.log(apartmentId)
                 checkLinkedRadio(apartmentId);
                 showApartmentDetails(apartmentId);
                 showPlan(apartmentId)
@@ -293,7 +292,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // Add event listeners to labels "ith class 'apLabel'
+    // Add event listeners to labels with class 'apLabel'
     document.querySelectorAll(".apLabel").forEach(label => {
         label.addEventListener("click", function (event) {
             event.preventDefault(); // Prevent default label click behavior
@@ -365,7 +364,6 @@ document.addEventListener("DOMContentLoaded", function () {
         const fulScreenPlan = document.getElementById("printBtnContainer");
         const shiturShkrimi = document.getElementById("shiturShkrimi");
         const rezervuarShkrimi = document.getElementById("rezervuarShkrimi");
-        console.log(selectedPlan)
         if (selectedPlan) {
             selectedPlan.classList.remove("hidden");
             fulScreenPlan.classList.remove("hidden");
@@ -431,57 +429,22 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
+
+ 
 document.getElementById('llogApBtn').addEventListener('click', function (event) {
-    event.preventDefault(); // Prevent the default form submission or other default behavior
-
-
-    const apartmentId = this.dataset.apartmentId;
-    if (apartmentId) {
-
-        const totalNetArea = document.getElementById('sNetoEDhene').value;
-        const commonArea = document.getElementById('sPerbEDhene').value;
-        const totalArea = document.getElementById('sTotaleEDhene').value;
-        const TotalVerandArea = document.getElementById('sVerandeEDhene').value;
-        const plotArea = document.getElementById('sOborrEDhene').value;
-        const storeArea = document.getElementById('sDepoEDhene').value;
-        const parkingCount = document.getElementById('nrParkimEDhene').value;
-        let poolCount = 0;
-        if (document.getElementById('PishineEDhene').value > 0) poolCount++;
-
-
-        const cmimsNeto =  document.getElementById('cmimsNeto').value;
-        const cmimsPerb =  document.getElementById('cmimsPerb').value;
-        const cmimsVerande =  document.getElementById('cmimsVerande').value;
-        const cmimsOborr =  document.getElementById('cmimsOborr').value;
-        const cmimsDepo =  document.getElementById('cmimsDepo').value;
-        const cmimParking = document.getElementById('cmimParking').value;
-        const CmimPishine = document.getElementById('cmimPishine').value;
-
-        const vlereSNeto = totalNetArea * cmimsNeto;
-        const vlereSPerb = commonArea * cmimsPerb;
-        const vlereTotale = vlereSNeto + vlereSPerb;
-        const vlereVerande = TotalVerandArea * cmimsVerande;
-        const vlereOborr = plotArea * cmimsOborr;
-        const vlereDepo = storeArea * cmimsDepo;
-        const vlereParking = parkingCount * cmimParking;
-        const vlerePishine = poolCount * CmimPishine;
-        const total = vlereSNeto + vlereSPerb + vlereVerande + vlereOborr + vlereParking + vlerePishine;
-        console.log(vlereDepo) ;
-
-        document.getElementById('sNeto').value = formatNumber(vlereSNeto);
-        document.getElementById('sPerb').value = formatNumber(vlereSPerb);
-        document.getElementById('sTotale').value = formatNumber(vlereTotale);
-        document.getElementById('sVerande').value = formatNumber(vlereVerande);
-        document.getElementById('sOborr').value = formatNumber(vlereOborr);
-        document.getElementById('sDepo').value = formatNumber(vlereDepo);
-        document.getElementById('Parking').value = formatNumber(vlereParking);
-        document.getElementById('Pishine').value = formatNumber(vlerePishine);
-        document.getElementById('total').value = formatNumber(total);
-
-
-
-    }
+    event.preventDefault(); // Prevent default form submission
+    updateForm();
 });
+
+document.getElementById('nrParkimEDhene').addEventListener('input', updateForm);
+
+document.querySelectorAll('input').forEach(input => {
+    input.addEventListener('change', updateForm);
+});
+
+function formatNumber(value) {
+    return new Intl.NumberFormat('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(value);
+}
 
     // Function to update form calculations
     function updateForm() {
