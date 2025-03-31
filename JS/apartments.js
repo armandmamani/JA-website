@@ -156,7 +156,7 @@ const apartmentDetails = [
 
 //Vilat =====
 
-    { id: "VI03", sector: "Villa", typology: "TWIN", Kat0Area: 96.44, Kati1Area: 91.4, verandaArea: 23.63, poolArea: 27.8, plotArea: 365.21, TotalArea: 187.84, status: "bolv", floor: "1", scale: "A", netArea: 0, loggiaArea: 0, totalNetArea: 0, commonArea: 0, terraceArea: 0, usableTerrace: 0, storeArea: 8.72, statusi: "Shitur" },
+    { id: "VI03", sector: "Villa", typology: "TWIN", Kat0Area: 96.44, Kati1Area: 91.4, verandaArea: 23.63, poolArea: 27.8, plotArea: 365.21, TotalArea: 187.84, status: "bolv", floor: "1", scale: "A", netArea: 0, loggiaArea: 0, totalNetArea: 0, commonArea: 0, terraceArea: 0, usableTerrace: 0, storeArea: 8.72, statusi: "Rezervuar" },
     { id: "VI04", sector: "Villa", typology: "TWIN", Kat0Area: 96.44, Kati1Area: 91.4, verandaArea: 23.63, poolArea: 27.8, plotArea: 365.21, TotalArea: 187.84, status: "bolv", floor: "1", scale: "A", netArea: 0, loggiaArea: 0, totalNetArea: 0, commonArea: 0, terraceArea: 0, usableTerrace: 0, storeArea: 8.72, statusi: "Per shitje" },
     { id: "VI05", sector: "Villa", typology: "INDIVUDUAL", Kat0Area: 92.53, Kati1Area: 71.12, verandaArea: 23.63, poolArea: 27.8, plotArea: 549.85, TotalArea: 163.65, status: "bolv", floor: "1", scale: "A", netArea: 0, loggiaArea: 0, totalNetArea: 0, commonArea: 0, terraceArea: 0, usableTerrace: 0, storeArea: 8.72, statusi: "Per shitje" },
     { id: "VI06", sector: "Villa", typology: "TWIN", Kat0Area: 92.53, Kati1Area: 71.12, verandaArea: 23.63, poolArea: 27.8, plotArea: 666.88, TotalArea: 163.65, status: "bolv", floor: "1", scale: "A", netArea: 0, loggiaArea: 0, totalNetArea: 0, commonArea: 0, terraceArea: 0, usableTerrace: 0, storeArea: 8.72, statusi: "Rezervuar" },
