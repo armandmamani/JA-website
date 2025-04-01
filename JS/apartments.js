@@ -192,11 +192,11 @@ const apartmentDetails = [
 { id: "B23", sector: "0", floor: "2", typology: "2+1", scale: "B", netArea:0, loggiaArea: 0, totalNetArea: 99.79, commonArea: 42.33, totalArea: 142.12, verandaArea: 70.82, poolArea:0, greenTerraceArea: 0, usableTerrace:0, plotArea:0,storeArea :20.25, statusi: "Shitur", shenime: "0" },
 { id: "B33", sector: "0", floor: "3", typology: "2+1", scale: "B", netArea:0, loggiaArea: 0, totalNetArea: 95.58, commonArea: 40.55, totalArea: 136.13, verandaArea: 66.68, poolArea:0, greenTerraceArea: 0, usableTerrace:0, plotArea:0,storeArea :15.87, statusi: "Shitur", shenime: "0" },
 { id: "C06", sector: "0", floor: "0", typology: "2+1", scale: "C", netArea:0, loggiaArea: 0, totalNetArea: 112.25, commonArea: 47.62, totalArea: 159.87, verandaArea: 16.03, poolArea:0, greenTerraceArea: 0, usableTerrace:0, plotArea:0,storeArea :17.03, statusi: "Shitur", shenime: "0" },
-{ id: "A42", sector: "0", floor: "4", typology: "1+1", scale: "A", netArea:0, loggiaArea: 0, totalNetArea: 68.23, commonArea: 28.94, totalArea: 97.17, verandaArea: 6.99, poolArea:0, greenTerraceArea: 0, usableTerrace:0, plotArea:0,storeArea :14.85, statusi: "Lori", shenime: "0" },
-{ id: "B24", sector: "0", floor: "2", typology: "2+1", scale: "B", netArea:0, loggiaArea: 0, totalNetArea: 87.4, commonArea: 37.08, totalArea: 124.48, verandaArea: 4.18, poolArea:0, greenTerraceArea: 0, usableTerrace:0, plotArea:0,storeArea :15.45, statusi: "Lori", shenime: "0" },
-{ id: "B34", sector: "0", floor: "3", typology: "2+1", scale: "B", netArea:0, loggiaArea: 0, totalNetArea: 94.22, commonArea: 39.97, totalArea: 134.19, verandaArea: 18.9, poolArea:0, greenTerraceArea: 0, usableTerrace:0, plotArea:0,storeArea :0, statusi: "Lori", shenime: "0" },
-{ id: "B42", sector: "0", floor: "4", typology: "2+1", scale: "B", netArea:0, loggiaArea: 0, totalNetArea: 93.9, commonArea: 39.83, totalArea: 133.73, verandaArea: 0, poolArea:0, greenTerraceArea: 0, usableTerrace:0, plotArea:0,storeArea :26.08, statusi: "Lori", shenime: "0" },
-{ id: "C02", sector: "0", floor: "0", typology: "1+1", scale: "C", netArea:0, loggiaArea: 0, totalNetArea: 69.75, commonArea: 29.59, totalArea: 99.34, verandaArea: 18.57, poolArea:0, greenTerraceArea: 0, usableTerrace:0, plotArea:0,storeArea :17.03, statusi: "Lori", shenime: "0" },
+{ id: "A42", sector: "0", floor: "4", typology: "1+1", scale: "A", netArea:0, loggiaArea: 0, totalNetArea: 68.23, commonArea: 28.94, totalArea: 97.17, verandaArea: 6.99, poolArea:0, greenTerraceArea: 0, usableTerrace:0, plotArea:0,storeArea :14.85, statusi: "Lori", shenime: "Lori" },
+{ id: "B24", sector: "0", floor: "2", typology: "2+1", scale: "B", netArea:0, loggiaArea: 0, totalNetArea: 87.4, commonArea: 37.08, totalArea: 124.48, verandaArea: 4.18, poolArea:0, greenTerraceArea: 0, usableTerrace:0, plotArea:0,storeArea :15.45, statusi: "Lori", shenime: "Lori" },
+{ id: "B34", sector: "0", floor: "3", typology: "2+1", scale: "B", netArea:0, loggiaArea: 0, totalNetArea: 94.22, commonArea: 39.97, totalArea: 134.19, verandaArea: 18.9, poolArea:0, greenTerraceArea: 0, usableTerrace:0, plotArea:0,storeArea :0, statusi: "Lori", shenime: "Lori" },
+{ id: "B42", sector: "0", floor: "4", typology: "2+1", scale: "B", netArea:0, loggiaArea: 0, totalNetArea: 93.9, commonArea: 39.83, totalArea: 133.73, verandaArea: 0, poolArea:0, greenTerraceArea: 0, usableTerrace:0, plotArea:0,storeArea :26.08, statusi: "Lori", shenime: "Lori" },
+{ id: "C02", sector: "0", floor: "0", typology: "1+1", scale: "C", netArea:0, loggiaArea: 0, totalNetArea: 69.75, commonArea: 29.59, totalArea: 99.34, verandaArea: 18.57, poolArea:0, greenTerraceArea: 0, usableTerrace:0, plotArea:0,storeArea :17.03, statusi: "Lori", shenime: "Lori" },
 { id: "A34", sector: "0", floor: "3", typology: "1+1", scale: "A", netArea:0, loggiaArea: 0, totalNetArea: 71.77, commonArea: 30.45, totalArea: 102.22, verandaArea: 21.64, poolArea:0, greenTerraceArea: 0, usableTerrace:0, plotArea:0,storeArea :12.58, statusi: "Shitur", shenime: "0" },
 { id: "B43", sector: "0", floor: "4", typology: "2+1", scale: "B", netArea:0, loggiaArea: 0, totalNetArea: 91.64, commonArea: 38.87, totalArea: 130.51, verandaArea: 0, poolArea:0, greenTerraceArea: 0, usableTerrace:0, plotArea:0,storeArea :15.85, statusi: "Shitur", shenime: "0" },
 { id: "B32", sector: "0", floor: "3", typology: "1+1", scale: "B", netArea:0, loggiaArea: 0, totalNetArea: 71.26, commonArea: 30.23, totalArea: 101.49, verandaArea: 11.17, poolArea:0, greenTerraceArea: 0, usableTerrace:0, plotArea:0,storeArea :13.02, statusi: "Shitur", shenime: "0" },
@@ -217,6 +217,7 @@ function showPlan(apartmentId) {
    
    
     if (selectedImage) {
+        selectedImage.style.width = "90%";
         selectedImage.classList.remove('hidden');
         selectedImage.classList.add('selectedApartment')
 
