@@ -209,7 +209,7 @@ a, img, button, span, ion-icon, label, input, textarea {
 }
 
 #sectorC-main-button {
-    top: 25vh;
+    top: 27vh;
     left: 45vw;
     animation: fadeIn 1s ease-out forwards;
     animation: slideDown 1s ease-out forwards;
@@ -218,7 +218,7 @@ a, img, button, span, ion-icon, label, input, textarea {
 }
 
 #sectorD-main-button {
-    top: 35vh;
+    top: 39vh;
     left: 40vw;
     animation: fadeIn 1s ease-out forwards;
     animation: slideDown 1s ease-out forwards;
@@ -227,7 +227,7 @@ a, img, button, span, ion-icon, label, input, textarea {
 }
 
 #sectorE-main-button {
-    top: 50vh;
+    top: 53vh;
     left: 39vw;
     color: var(--drab-dark-brown);
     animation: fadeIn 1s ease-out forwards;
