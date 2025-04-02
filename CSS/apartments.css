@@ -387,10 +387,13 @@ a {
     animation-delay: 0s;
     opacity: 0
 }
-
-#mainMenu, .dropbtn {
+#mainMenu {
+    width:100%;
+}
+.dropbtn {
     color: var(--drab-dark-brown);
     height: 40px;
+    border-radius: 5px;
     font-size: 1.2rem;
     cursor: pointer
 }
@@ -429,7 +432,7 @@ a {
 }
 
 #mainMenu {
-    text-align: right;
+    text-align: left;
     text-decoration: none
 }
 
@@ -438,6 +441,22 @@ a {
     font-weight: 200;
     border: none
 }
+#PdfBtn {
+    background-color: transparent;
+    color: var(--primary-blue);
+    border: 1px solid var(--primary-blue);
+    border-radius: 5px;
+    padding: 3px;
+    font-size: 0.8rem;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transition: background-color .3s
+}
+    #PdfBtn:hover {
+        background-color: var(--drab-dark-brown);
+        color: var(--accent-white)
+    }
 
 #formSubtitle, .dropdown-content {
     font-weight: 600;
