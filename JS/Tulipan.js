@@ -228,7 +228,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         imageButtons.forEach(button => {
             button.addEventListener("click", function () {
-                const imageSrc = `Planet_tulipan/${button.id}.jpg`;
+                const imageSrc = `Planet_tulipan/${button.id}.webp`;
                 const project = document.getElementById('ProjectBackground')
                 const printBtn = document.getElementById("printBtnContainer")
                 displayImage.src = imageSrc;
