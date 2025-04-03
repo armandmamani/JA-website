@@ -443,12 +443,12 @@ function formatNumber(value) {
  
             }
         });
-        document.getElementById('sNetoEDhene').value = totalNetArea;
-        document.getElementById('sPerbEDhene').value = commonArea;
-        document.getElementById('sTotaleEDhene').value = totalArea;
-        document.getElementById('sVerandeEDhene').value = TotalVerandArea;
-        document.getElementById('sOborrEDhene').value = plotArea;
-        document.getElementById('sDepoEDhene').value = storeArea;
+        document.getElementById('sNetoEDhene').value = formatNumber(totalNetArea);
+        document.getElementById('sPerbEDhene').value = formatNumber(commonArea);
+        document.getElementById('sTotaleEDhene').value = formatNumber(totalArea);
+        document.getElementById('sVerandeEDhene').value = formatNumber(TotalVerandArea);
+        document.getElementById('sOborrEDhene').value = formatNumber(plotArea);
+        document.getElementById('sDepoEDhene').value = formatNumber(storeArea);
         document.getElementById('nrParkimEDhene').value = parkingCount;
         document.getElementById('PishineEDhene').value = poolCount;
         const scaleFactor = 1; // Apply this only if needed
