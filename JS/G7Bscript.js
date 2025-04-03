@@ -123,7 +123,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Function to select an apartment
 
     document.getElementById("printButton").addEventListener("click", function () {
-        const elementsToHide = document.querySelectorAll("header, video, nav, .sidenav,.sidenav_r, .controls, .footer,#fullScreenPlanBtn,#sideImage, .sidebar,#shiturShkrimi, #rezervuarShkrimi, #fullscreenContainer, #SectorA-image, #printButton");// Hide unnecessary elements
+        const elementsToHide = document.querySelectorAll("header, video, nav, .sidenav,.sidenav_r, .controls,.button-container, .footer, #fullScreenPlanBtn,#sideImage, .sidebar,#shiturShkrimi, #rezervuarShkrimi, #fullscreenContainer, #SectorA-image, #printButton");// Hide unnecessary elements
         elementsToHide.forEach(el => el.style.display = "none");
         // Ensure only the correct image is visible
         document.querySelectorAll(".apartament-plan").forEach(plan => {
