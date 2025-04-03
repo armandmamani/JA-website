@@ -131,7 +131,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         // Print the document
-        "indo".print();
+        window.print();
 
         // Restore elements after printing
         setTimeout(() => {
