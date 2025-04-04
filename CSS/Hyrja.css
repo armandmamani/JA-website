@@ -20,7 +20,7 @@ body, html {
     position: relative;
     width: 100%;
     height: 100vh;
-    background-image: url('background_image.jpeg');
+    background-image: linear-gradient(rgba(80,80,80,0.7) 0% 20%,rgba(80,80,80,0.5) 30% 67%, rgba(235,168,0,0.8) 72% 100%);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -57,80 +57,28 @@ body, html {
 }
 
 h1 {
-    font-family: 'Playfair Display';
-    letter-spacing: 0;
-    padding: .25em 0 .325em;
+    font-family: 'Cantata One';
+    color: rgb(235, 168, 0);
     display: block;
     margin: 0 auto;
     text-shadow: 0 0 80px rgba(255,255,255,.5);
-    /* Clip Background Image */
-    background: url(https://i.ibb.co/RDTnNrT/animated-text-fill.png) repeat-y;
-    -webkit-background-clip: text;
-    background-clip: text;
-    /* Animate Background Image */
-
-    -webkit-text-fill-color: transparent;
-    -webkit-animation: aitf 80s linear infinite;
-    /* Activate hardware acceleration for smoother animations */
-
-    -webkit-transform: translate3d(0,0,0);
-    -webkit-backface-visibility: hidden;
 }
 
 #bigText {
-    font-family: 'arial';
+    font-family: 'Cantata One';
     font-weight: bolder;
-    color: rgba(60, 60, 60,0.7);
+    color: rgba(10, 10, 10,1);
     font-size: 120px;
-    text-shadow: 5px 5px 3px rgba(60,60,60,.8) !important;
-    background: -webkit-linear-gradient(left,#FFD700,rgb(0, 136, 255), #FFD700);
-    background-size: 1600px 200px;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation-duration: 3s;
-    animation-name: animationgradienttitle;
-    animation-iteration-count: infinite;
-    animation-fill-mode: forwards;
-}
-
-@keyframes animationgradienttitle {
-    0% {
-        background-position: 0 1600px;
-    }
-
-    100% {
-        background-position: 1600px 0;
-    }
+    margin-top: -150px;
+    text-shadow: 5px 5px 3px rgba(235,168,0,.5) !important;
 }
 p {
-    font-size: 35px;
-    color: rgb(235, 168,0);
-    background: url(https://i.ibb.co/RDTnNrT/animated-text-fill.png) repeat-y;
-    -webkit-background-clip: text;
-    background-clip: text;
-    /* Animate Background Image */
-
-    -webkit-text-fill-color: transparent;
-    -webkit-animation: aitf 80s linear infinite;
-    /* Activate hardware acceleration for smoother animations */
-
-    -webkit-transform: translate3d(0,0,0);
-    -webkit-backface-visibility: hidden;
+    font-size: 37px;
+    color: rgba(10, 10, 10,1);
+    text-shadow: 5px 5px 3px rgba(235,168,0,.5) !important;
 }
 
 
-
-/* Animate Background Image */
-
-@-webkit-keyframes aitf {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    100% {
-        background-position: 100% 50%;
-    }
-}
 
     .cta-button {
         margin-top: 20px;
@@ -167,14 +115,15 @@ p {
         perspective: 1000px;
     }
 
-    .card {
-        padding-top: 0px;
-        transform-style: preserve-3d;
-        width: 100%;
-        box-shadow: rgba(220, 220, 255, 0.925) 20px 20px 50px -25px;
-        transition: all 0.5s ease-in-out;
-        border-radius: 10px;
-    }
+.card {
+    padding-top: 0px;
+    transform-style: preserve-3d;
+    width: 100%;
+    border: 5px solid rgba(235, 168, 0, 0.8);
+    box-shadow: rgba(80, 80, 80, 0.98) 20px 20px 50px -15px;
+    transition: all 0.5s ease-in-out;
+    border-radius: 10px;
+}
 
         .card:hover {
             background-position: 80% 20%;
@@ -194,7 +143,7 @@ p {
     }
 
     .card-title {
-        color: #a9a9a9;
+        color: white;
         font-size: 25px;
         font-weight: 900;
         transition: all 0.5s ease-in-out;
@@ -230,7 +179,7 @@ p {
         font-weight: 900;
         font-size: 12px;
         text-transform: uppercase;
-        color: rgb(0, 136, 255);
+        color: rgb(235, 168, 0);
         padding-top: 15px;
         transition: all 0.5s ease-in-out;
         transform: translate3d(0px, 0px, 20px);
@@ -252,7 +201,7 @@ p {
         background-color: rgb(0, 0, 0);
         border-radius: 10px;
         padding: 10px;
-        box-shadow: rgb(0, 102, 255) 0px 20px 60px 0px, rgb(0, 200, 255) 0px 18px 36px -18px;
+        box-shadow: rgb(235, 168, 0) 0px 20px 60px 0px, rgb(0, 200, 255) 0px 18px 36px -18px;
         transform: translate3d(0px, 0px, 50px);
     }
 
@@ -270,7 +219,7 @@ p {
     .date {
         font-size: 20px;
         font-weight: 900;
-        color: rgb(0, 136, 255);
+        color: rgb(235, 186, 0);
     }
 
     #tulipan {
@@ -293,3 +242,7 @@ p {
         height: 150px;
     }
 
+span {
+    color: white;
+    font-weight: 400;
+}
