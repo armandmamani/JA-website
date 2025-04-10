@@ -4,7 +4,7 @@ const apartmentDetails = [
 { id: "A12", floor: "1", typology: "2+1", scale: "A", totalNetArea: 118.46, commonArea: 50.25, totalArea: 168.71, verandaArea: 175.56, plotArea: 0, storeArea : 16.44, statusi: "Per shitje", shenime: "0" },
 { id: "A13", floor: "1", typology: "2+1", scale: "A", totalNetArea: 104.43, commonArea: 44.3, totalArea: 148.73, verandaArea: 165.08, plotArea: 0, storeArea : 25.61, statusi: "Per shitje", shenime: "0" },
 { id: "A31", floor: "3", typology: "Studio", scale: "A", totalNetArea: 53.51, commonArea: 22.7, totalArea: 76.21, verandaArea: 0, plotArea: 0, storeArea : 12.69, statusi: "Per shitje", shenime: "0" },
-{ id: "A35", floor: "3", typology: "2+1", scale: "A", totalNetArea: 90.94, commonArea: 38.58, totalArea: 129.52, verandaArea: 36.79, plotArea: 0, storeArea : 11.05, statusi: "Per shitje", shenime: "0" },
+    { id: "A35", floor: "3", typology: "2+1", scale: "A", totalNetArea: 90.94, commonArea: 38.58, totalArea: 129.52, verandaArea: 36.79, plotArea: 0, storeArea: 11.05, statusi: "Rezervuar", shenime: "Anglezi" },
 { id: "A41", floor: "4", typology: "1+1", scale: "A", totalNetArea: 71.57, commonArea: 30.36, totalArea: 101.93, verandaArea: 0, plotArea: 0, storeArea : 11.05, statusi: "Rezervuar", shenime: "0" },
 { id: "A43", floor: "4", typology: "2+1", scale: "A", totalNetArea: 90.75, commonArea: 38.5, totalArea: 129.25, verandaArea: 0, plotArea: 0, storeArea : 15.75, statusi: "Rezervuar", shenime: "0" },
 { id: "A51", floor: "5", typology: "1+1", scale: "A", totalNetArea: 69.28, commonArea: 29.39, totalArea: 98.67, verandaArea: 27.2, plotArea: 0, storeArea : 15, statusi: "Rezervuar", shenime: "0" },
