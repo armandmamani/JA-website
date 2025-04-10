@@ -461,7 +461,6 @@ h5 {
 .apartBlock {
     display: block;
     width: 60px;
-    text-align: left;
 }
 
 
@@ -473,15 +472,15 @@ h5 {
 
 
 .apLabel {
-    font-size: 12px;
-    font-weight: 500;
-    text-align: center;
-    padding: 1px;
-    width: 40px;
     display: inline-flex;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+    padding-left: 7px;
+    width: 40px;
     border: 1px solid black;
-    background-color: #b5a58d;
-    color: var(--accent-white);
+    background-color: var(--warm-white-Cornsilk);
+    color: var(--primary-blue);
     margin: 2px;
 }
 
