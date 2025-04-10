@@ -28,8 +28,8 @@ const apartmentDetails = [
 { id: "B43", floor: "4", typology: "2+1", scale: "B", totalNetArea: 91.64, commonArea: 38.87, totalArea: 130.51, verandaArea: 0, plotArea: 0, storeArea : 15.85, statusi: "Shitur", shenime: "0" },
 { id: "B32", floor: "3", typology: "1+1", scale: "B", totalNetArea: 71.26, commonArea: 30.23, totalArea: 101.49, verandaArea: 11.17, plotArea: 0, storeArea : 13.02, statusi: "Shitur", shenime: "0" },
 { id: "B52", floor: "5", typology: "2+1", scale: "B", totalNetArea: 88.61, commonArea: 37.59, totalArea: 126.2, verandaArea: 4.45, plotArea: 0, storeArea : 25.57, statusi: "Shitur", shenime: "0" },
-{ id: "A23", floor: "2", typology: "1+1", scale: "A", totalNetArea: 65.92, commonArea: 27.96, totalArea: 93.88, verandaArea: 38.21, plotArea: 0, storeArea : 13.62, statusi: "Rezervuar", shenime: "0" },
-{ id: "A24", floor: "2", typology: "1+1", scale: "A", totalNetArea: 67.79, commonArea: 28.76, totalArea: 96.55, verandaArea: 4.35, plotArea: 0, storeArea : 14.85, statusi: "Rezervuar", shenime: "0" },
+    { id: "A23", floor: "2", typology: "1+1", scale: "A", totalNetArea: 65.92, commonArea: 27.96, totalArea: 93.88, verandaArea: 38.21, plotArea: 0, storeArea: 13.62, statusi: "Per shitje", shenime: "0" },
+    { id: "A24", floor: "2", typology: "1+1", scale: "A", totalNetArea: 67.79, commonArea: 28.76, totalArea: 96.55, verandaArea: 4.35, plotArea: 0, storeArea: 14.85, statusi: "Per shitje", shenime: "0" },
 
 ]
 function showPlan(apartmentId) {
