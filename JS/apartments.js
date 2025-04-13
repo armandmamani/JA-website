@@ -185,8 +185,7 @@ function showPlan(apartmentId) {
    
    
     if (selectedImage) {
-        selectedImage.classList.contains('G7B') ? selectedImage.style.width = "60%" : selectedImage.style.width = "90%";
-       
+       document.getElementById("SectorA-image").classList.add('hidden');
         selectedImage.classList.remove('hidden');
         selectedImage.classList.add('selectedApartment')
 
