@@ -250,6 +250,12 @@ span {
 @media (max-width: 800px) {
     body {
         padding: 5px;
+        background-image: linear-gradient(rgb(235, 168, 0) rgb(80, 80, 80));
+        )
+    }
+    .backgroundImage {
+display: none;
+
     }
     .container {
         padding: 70px 0px;
@@ -296,11 +302,12 @@ span {
 
     #bigText {
         display: block;
+        margin-top: -50px;
         font-family: 'Cantata One';
         font-weight: bolder;
         color: rgba(10, 10, 10,1);
         font-size: 30px;
-        text-shadow: 5px 5px 3px rgba(235,168,0,.5) !important;
+        text-shadow: 2px 2px 3px rgba(235,168,0,.5) !important;
     }
     .date-box {
         height: 30px;
