@@ -1020,7 +1020,7 @@ h5 {
 #btnImageA, #btnImageB {
     height: 80px
 }
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     body {
         padding: 5px;
     }
@@ -1049,11 +1049,10 @@ h5 {
 
     .dropdown {
         display: flex;
-        background-color: var(--seaside-villa);
-        border: solid 1px var(--drab-dark-brown);
         font-size: 15px;
         padding: 2px;
         width: 100%;
+        height: 30px;
     }
     .mainMenu {
         display: flex;
@@ -1064,6 +1063,7 @@ h5 {
     .dropbtn {
         background-color: var(--drab-dark-brown);
         color: var(--seaside-villa);
+        border: solid 2px var(--seaside-villa);
         padding: 2px;
         margin: 0;
         width: 100%;
@@ -1097,7 +1097,7 @@ h5 {
     }
 
     .sidenav {
-        top: 55vh;
+        top: 50vh;
         z-index: 0;
     }
 
@@ -1107,7 +1107,7 @@ h5 {
     }
 
     .sidenav_r {
-        top: 270px;
+        top: 25vh;
     }
     #planimetrite {
         width: 100%;
