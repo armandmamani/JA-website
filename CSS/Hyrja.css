@@ -279,7 +279,7 @@ span {
         border-radius: 5px;
     }
     .card-title {
-        font-size: 18px;
+        font-size: 15px;
     }
 
     h1 {
@@ -299,7 +299,7 @@ span {
         font-family: 'Cantata One';
         font-weight: bolder;
         color: rgba(10, 10, 10,1);
-        font-size: 40px;
+        font-size: 30px;
         text-shadow: 5px 5px 3px rgba(235,168,0,.5) !important;
     }
     .date-box {
