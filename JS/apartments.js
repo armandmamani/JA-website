@@ -402,10 +402,10 @@ document.addEventListener("DOMContentLoaded", function () {
                         
                 } else if (checkbox.checked) {
                     if (label) {
-                        label.style.backgroundColor = "#8d7655";
+                        label.style.backgroundColor = "#544632";
                         label.style.color = "#ffffff"}
                     if (button) {
-                        button.style.backgroundColor = "#8d7655";
+                        button.style.backgroundColor = "#544632";
                         button.style.color = "#ffffff";
                     }
                 }
