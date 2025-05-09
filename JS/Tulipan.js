@@ -48,7 +48,7 @@ const apartmentDetails = [
     { id: "A10HA2", Tipology: "A", building: "A10", floor: 0, netArea: 100.92, comonArea: 19.95, TotalArea: 120.87, greenArea: 79, terraceArea: 26, parkingNumber: "P07 02 14", statusi: "Shitur" },
     { id: "A10HA3", Tipology: "A", building: "A10", floor: 1, netArea: 76, comonArea: 15.03, TotalArea: 91.03, greenArea: 0, terraceArea: 0 , parkingNumber: "P07 02 10", statusi: "Shitur" },
     { id: "A10HA4", Tipology: "A", building: "A10", floor: 1, netArea: 125.24, comonArea: 24.76, TotalArea: 150, greenArea: 0, terraceArea: 0 , parkingNumber: "P07 02 11", statusi: "Shitur" },
-    { id: "A10HA5", Tipology: "A", building: "A10", floor: 2, netArea: 194.54, comonArea: 38.47, TotalArea: 233.01, greenArea: 0, terraceArea: 0 , parkingNumber: "", statusi: "Per shitje" },
+    { id: "A10HA5", Tipology: "A", building: "A10", floor: 2, netArea: 194.54, comonArea: 38.47, TotalArea: 233.01, greenArea: 0, terraceArea: 0, parkingNumber: "", statusi: "Shitur" },
     { id: "A11HA1", Tipology: "A", building: "A11", floor: 0, netArea: 72.48, comonArea: 14.33, TotalArea: 86.81, greenArea: 0 , terraceArea: 50, parkingNumber: "BLLOKUAR", statusi: "Rezervuar" },
     { id: "A11HA2", Tipology: "A", building: "A11", floor: 0, netArea: 100.92, comonArea: 19.95, TotalArea: 120.87, greenArea: 44.8, terraceArea: 18.9, parkingNumber: "BLLOKUAR", statusi: "Rezervuar" },
     { id: "A11HA3", Tipology: "A", building: "A11", floor: 1, netArea: 76, comonArea: 15.03, TotalArea: 91.03, greenArea: 0, terraceArea: 0 , parkingNumber: "BLLOKUAR", statusi: "Rezervuar" },
