@@ -1,4 +1,4 @@
-// JavaScript source code
+﻿// JavaScript source code
 const apartmentDetails = [
 { id: "C02", floor: "0", typology: "1+1", scale: "C", totalNetArea: 69.75, commonArea: 29.59, totalArea: 99.34, verandaArea: 18.57, plotArea: 0, storeArea: 17.03, statusi: "Shitur", shenime: "Lori" },
 { id: "C03", floor: "0", typology: "1+1", scale: "C", totalNetArea: 70.29, commonArea: 29.82, totalArea: 100.11, verandaArea: 30.98, plotArea: 0, storeArea: 17.03, statusi: "Shitur", shenime: "Renato" },
