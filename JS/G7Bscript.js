@@ -8,7 +8,7 @@ const apartmentDetails = [
 { id: "A12", floor: "1", typology: "2+1", scale: "A", totalNetArea: 118.46, commonArea: 50.25, totalArea: 168.71, verandaArea: 175.56, plotArea: 0, storeArea : 16.44, statusi: "Per shitje", shenime: "0" },
 { id: "A13", floor: "1", typology: "2+1", scale: "A", totalNetArea: 104.43, commonArea: 44.3, totalArea: 148.73, verandaArea: 165.08, plotArea: 0, storeArea : 25.61, statusi: "Per shitje", shenime: "0" },
 { id: "A24", floor: "2", typology: "1+1", scale: "A", totalNetArea: 67.79, commonArea: 28.76, totalArea: 96.55, verandaArea: 4.35, plotArea: 0, storeArea: 14.85, statusi: "Per shitje", shenime: "0" },
-{ id: "A23", floor: "2", typology: "1+1", scale: "A", totalNetArea: 65.92, commonArea: 27.96, totalArea: 93.88, verandaArea: 38.21, plotArea: 0, storeArea: 13.62, statusi: "Per shitje", shenime: "0" },
+    { id: "A23", floor: "2", typology: "1+1", scale: "A", totalNetArea: 65.92, commonArea: 27.96, totalArea: 93.88, verandaArea: 38.21, plotArea: 0, storeArea: 13.62, statusi: "Rezervuar", shenime: "Iliri" },
 { id: "A31", floor: "3", typology: "Studio", scale: "A", totalNetArea: 53.51, commonArea: 22.7, totalArea: 76.21, verandaArea: 0, plotArea: 0, storeArea : 12.69, statusi: "Shitur", shenime: "Shefi" },
 { id: "A34", floor: "3", typology: "1+1", scale: "A", totalNetArea: 71.77, commonArea: 30.45, totalArea: 102.22, verandaArea: 21.64, plotArea: 0, storeArea : 12.58, statusi: "Shitur", shenime: "Mark Pjetergjoka" },
 { id: "A35", floor: "3", typology: "2+1", scale: "A", totalNetArea: 90.94, commonArea: 38.58, totalArea: 129.52, verandaArea: 36.79, plotArea: 0, storeArea: 11.05, statusi: "Per shitje", shenime: "0" },
