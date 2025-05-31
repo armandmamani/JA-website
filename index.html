@@ -9,12 +9,25 @@
 </head>
 <body>
     <section class="hero">
+        <button class="LogInBtn" id="LogInBtn">Log In</button>
+
         <div class="overlay"></div>
         <div class="hero-content">
             <p id="bigText">BOLV CONSTRUCTION</p>
             <p>Premium residential developments designed for quality, comfort, and elegance.</p>
-
         </div>
+        <div id="login-container">
+            <div id="loginMessage"></div>
+            <form id="loginForm">
+                <label for="username">Username:</label><br />
+                <input type="text" id="username" name="username" placeholder="Username" required />
+                <label for="password">Password:</label><br />
+                <input type="password" name="password" id="password" placeholder="Password" required />
+                <button class="LogInBtn" type="submit">Login</button>
+            </form>
+        </div>
+
+
         <div class="container">
             <div class="parent card1">
                 <div class="card">
@@ -35,7 +48,7 @@
 
             <div class="parent card2">
                 <div class="card">
-                    <img src="G7B_main/G7B image (5).webp"  id="g7bPalase"/>
+                    <img src="G7B_main/G7B image (5).webp" id="g7bPalase" />
                     <div class="content-box">
                         <h1 class="card-title">G7B PALASË</h1>
                         <p class="card-content">
@@ -89,6 +102,6 @@
         <img src="Webidea3.jpg" class="backgroundImage" />
     </section>
 
-
+    <script src="JS/Hyrja.js"></script>
 </body>
 </html>

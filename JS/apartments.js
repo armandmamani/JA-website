@@ -219,9 +219,16 @@ function showApartmentDetails(apartmentId) {
         document.getElementById('aptusableTerrace').textContent = details.usableTerrace;
         document.getElementById('aptplotArea').textContent = details.plotArea;
         document.getElementById('aptstoreArea').textContent = details.storeArea;
+        // In dashboard.js or apartments.js
+if (sessionStorage.getItem('loggedIn') == 'true') {
         document.getElementById('aptStatus').textContent = details.statusi;
+        document.getElementById('aptBuyer').textContent = details.shenime;
+
+}
+
         document.getElementById('areaFloor0').textContent = details.Kat0Area;
         document.getElementById('areaFloor1').textContent = details.Kati1Area;
+
         // Store the apartmentId to be used when the button is clicked
         document.getElementById('llogApBtn').dataset.apartmentId = apartmentId;
     }
@@ -337,19 +344,21 @@ document.addEventListener("DOMContentLoaded", function () {
             selectedPlan.classList.remove("hidden");
             fulScreenPlan.classList.remove("hidden");
         }
+        if (sessionStorage.getItem('loggedIn') == 'true') {
 
-        const apartment = apartmentDetails.find(apartment => apartment.id === apartmentId);
-        if (apartment && apartment.statusi === "Shitur") {
-            shiturShkrimi.classList.remove("hidden");
-        }
-       else if (apartment && apartment.statusi === "Rezervuar") {
-            rezervuarShkrimi.classList.remove("hidden");
-        }
+            const apartment = apartmentDetails.find(apartment => apartment.id === apartmentId);
+            if (apartment && apartment.statusi === "Shitur") {
+                shiturShkrimi.classList.remove("hidden");
+            }
+            else if (apartment && apartment.statusi === "Rezervuar") {
+                rezervuarShkrimi.classList.remove("hidden");
+            }
 
-        else {
-            shiturShkrimi.classList.add("hidden");
-            rezervuarShkrimi.classList.add("hidden");
+            else {
+                shiturShkrimi.classList.add("hidden");
+                rezervuarShkrimi.classList.add("hidden");
 
+            }
         }
     }
 
@@ -364,22 +373,24 @@ document.addEventListener("DOMContentLoaded", function () {
             const apartment = apartmentDetails.find(apartment => apartment.id === checkbox.value);
             const label = document.querySelector(`label[for='${checkbox.id}']`);
             const button = document.querySelector(`.ApBtn[id='${checkbox.value}btn']`);
+            console.log(sessionStorage.getItem('loggedIn'))
 
-            if (apartment) {
+            if (sessionStorage.getItem('loggedIn') == 'true') {
+                if (apartment) {
 
-                if (apartment.statusi === "Shitur") {
-                    if (label) {
-                        label.style.backgroundColor = "#cc5c5c";
-                        label.style.color = "#ffffff";
+                    if (apartment.statusi === "Shitur") {
+                        if (label) {
+                            label.style.backgroundColor = "#cc5c5c";
+                            label.style.color = "#ffffff";
+                        }
+                        if (button) {
+                            button.style.backgroundColor = "#cc5c5c";
+                            button.style.color = "#ffffff";
+                        }
                     }
-                    if (button) {
-                        button.style.backgroundColor = "#cc5c5c";
-                        button.style.color = "#ffffff";
-                    }
-                }
                     else if (apartment.statusi === "Rezervuar") {
                         if (label) {
-                                                        console.log(label)
+                            console.log(label)
 
                             label.style.backgroundColor = "#f4c95d";
                             label.style.color = "ffffff";
@@ -388,8 +399,8 @@ document.addEventListener("DOMContentLoaded", function () {
                             button.style.backgroundColor = "#f4c95d";
                             button.style.color = "ffffff";
                         }
-                        }
-                          else if (apartment.statusi === "Balfin") {
+                    }
+                    else if (apartment.statusi === "Balfin") {
                         if (label) {
                             label.style.backgroundColor = "#003b6f";
                             label.style.color = "ffffff";
@@ -398,17 +409,19 @@ document.addEventListener("DOMContentLoaded", function () {
                             button.style.backgroundColor = "#003b6f";
                             button.style.color = "ffffff";
                         }
-                        
-                } else if (checkbox.checked) {
-                    if (label) {
-                        label.style.backgroundColor = "#544632";
-                        label.style.color = "#ffffff"}
-                    if (button) {
-                        button.style.backgroundColor = "#544632";
-                        button.style.color = "#ffffff";
+
+                    } else if (checkbox.checked) {
+                        if (label) {
+                            label.style.backgroundColor = "#544632";
+                            label.style.color = "#ffffff"
+                        }
+                        if (button) {
+                            button.style.backgroundColor = "#544632";
+                            button.style.color = "#ffffff";
+                        }
                     }
+
                 }
-               
             }
         });
     }
@@ -528,10 +541,6 @@ function formatInputsAsMoney() {
 }
 
 
-
-function formatNumber(value) {
-    return value.toLocaleString('de-DE', { maximumFractionDigits :0}); // Format number "ith period as thousands separator
-}
 // Add event listeners to toggle state
 document.querySelectorAll('input[type="checkbox"].radioteDhena').forEach(checkbox => {
     checkbox.addEventListener('click', function (event) {
