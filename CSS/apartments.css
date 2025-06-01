@@ -311,11 +311,11 @@ header {
 }
 
     .column.side {
-        width: 35%
+        width: 30%
     }
 
     .column.middle {
-        width: 30%
+        width: 40%
     }
 
 .row:after {
@@ -498,6 +498,9 @@ a {
 
 #formSubtitle {
     padding-top: 1rem;
+    padding-right: 1rem;
+    text-shadow: none;
+    color: var(--drab-dark-brown);
     font-family: 'Lucida Sans','Lucida Sans Regular','Lucida Grande','Lucida Sans Unicode',Geneva,Verdana,sans-serif
 }
 

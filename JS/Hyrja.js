@@ -1,4 +1,4 @@
-const loginBtn = document.getElementById('LogInBtn');
+﻿const loginBtn = document.getElementById('LogInBtn');
 const loginContainer = document.getElementById('login-container');
 const loginMessage = document.getElementById('loginMessage');
 console.log('Login script loaded');

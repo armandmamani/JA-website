@@ -821,10 +821,11 @@ a:hover {
     float: right;
 }
 
+
 #editBtn {
     position: fixed;
-    top: 10px;
-    right: 10px;
+    top: 80vh;
+    right: 170px;
     width: 150px;
     display: none;
     background-color: var(--butter-cup);

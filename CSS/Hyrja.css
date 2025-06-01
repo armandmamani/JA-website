@@ -136,12 +136,7 @@ h1 {
     float: right;
 }
 
-#LogInBtn {
-    position: fixed;
-    top: 20px;
-    right: 40px;
-    z-index: 1001;
-}
+
 .LogInBtn {
     width: 150px;
     padding: 10px 20px;
