@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <link rel="stylesheet" href="CSS/Hyrja.css">
     <link href="CSS/apartments.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <title>Sektori A</title>
@@ -45,17 +45,76 @@
                         <a class="dropbtn" href="GalleryJA.html">JA gallery</a>
                     </div>
                     <div class="dropdown">
-                        <a class="dropbtn" href="LoginPage.html">Log in</a>
+                        <button class="dropbtn" id="LogInBtn">Log In</button>
                     </div>
-
-
                 </div>
-
             </div>
         </div>
 
 
     </header>
+    <div id="login-container">
+        <div id="loginMessage"></div>
+        <form id="loginForm">
+            <label for="username">Username:</label><br />
+            <input type="text" id="username" name="username" placeholder="Username" required />
+            <label for="password">Password:</label><br />
+            <input type="password" name="password" id="password" placeholder="Password" required />
+            <button class="LogInBtn" type="submit">Login</button>
+        </form>
+    </div>
+    <button id="editBtn">Edit Apartment</button>
+
+    <div id="editFormContainer" style="display: none; margin-top: 20px;">
+        <form id="editForm">
+            <label>
+                Apartment ID:<br>
+                <input class="editInput" type="text" id="editId" required>
+            </label><br>
+
+            <label>
+                Siperfaqe banimi:<br>
+                <input class="editInput" type="text" id="editTotalNetArea">
+            </label><br>
+            <label>
+                Siperfaqe e perbashket:<br>
+                <input class="editInput" type="text" id="editCommonArea">
+            </label><br>
+            <label>
+                Siperfaqe Totale:
+                <input class="editInput" type="text" id="TotalArea">
+            </label><br>
+            <label>
+                Siperfaqe verande:<br>
+                <input class="editInput" type="text" id="editverandaArea">
+            </label><br>
+            <label>
+                Siperfaqe oborri:<br>
+                <input class="editInput" type="text" id="editPlotArea">
+            </label><br>
+            <label>
+                Siperfaqe depo:<br>
+                <input class="editInput" type="text" id="editStorageArea">
+            </label><br>
+            <label>
+                Poste Parkimi:<br>
+                <input class="editInput" type="number" id="editParking">
+            </label><br>
+
+            <label>
+                Status:<br>
+                <input class="editInput" type="text" id="editStatusi">
+            </label><br>
+
+            <label>
+                Bleresi:<br>
+                <input class="editInput" type="text" id="editBuyer">
+            </label><br>
+
+            <button id="updateApDetails" type="submit">Update Apartment</button>
+        </form>
+        <div id="editMessage" style="margin-top: 10px;"></div>
+    </div>
 
 
     <div id="fullscreenContainer" class="hidden">
@@ -176,16 +235,15 @@
                     <td class="vleraFin"></td>
                 </tr>
                 <tr>
-                    <td class="aparttId">Siperfaqe Depo</td>
-                    <td class="vleraSip" id="aptstoreArea"></td>
-                    <td class="vleraFin"></td>
-
-                <tr>
                     <td class="aparttId">Siperfaqe pishine</td>
                     <td class="vleraSip" id="aptPoolArea"></td>
                     <td class="vleraFin"></td>
                 </tr>
 
+                <tr>
+                    <td class="aparttId">Siperfaqe Depo</td>
+                    <td class="vleraSip" id="aptstoreArea"></td>
+                    <td class="vleraFin"></td>
 
                 <tr>
                     <td class="aparttId">Parking</td>
@@ -333,16 +391,11 @@
         </div>
 
 
-
-
-
         <img id="SectorA-image" src="main images/SektorA Presantim.webp" alt="Skice Sektori A Nukli JA">
-
 
     </div>
 
-
-    <div class="sidenav_r">
+     <div class="sidenav_r">
 
         <div id="infoPart">
 
@@ -721,6 +774,7 @@
     </div>
 
     <script src="JS/apartments.js"></script>
+    <script src="JS/Hyrja.js"></script>
 
 </body>
 	</html>

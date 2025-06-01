@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <link rel="stylesheet" href="CSS/Hyrja.css">
     <link href="CSS/apartments.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <title>Sektori C</title>
@@ -42,18 +42,77 @@
                     <div class="dropdown">
                         <a class="dropbtn" href="GalleryJA.html">JA gallery</a>
                     </div>
-
                     <div class="dropdown">
-                        <a class="dropbtn" href="LoginPage.html">Log in</a>
+                        <button class="dropbtn" id="LogInBtn">Log In</button>
                     </div>
-
                 </div>
 
             </div>
         </div>
-
-
     </header>
+
+    <div id="login-container">
+        <div id="loginMessage"></div>
+        <form id="loginForm">
+            <label for="username">Username:</label><br />
+            <input type="text" id="username" name="username" placeholder="Username" required />
+            <label for="password">Password:</label><br />
+            <input type="password" name="password" id="password" placeholder="Password" required />
+            <button class="LogInBtn" type="submit">Login</button>
+        </form>
+    </div>
+    <button id="editBtn">Edit Apartment</button>
+    <div id="editFormContainer" style="display: none; margin-top: 20px;">
+        <form id="editForm">
+            <label>
+                Apartment ID:
+                <input class="editInput" type="text" id="editId" required>
+            </label><br>
+
+            <label>
+                Siperfaqe banimi:
+                <input class="editInput" type="text" id="editTotalNetArea">
+            </label><br>
+            <label>
+                Siperfaqe e perbashket:
+                <input class="editInput" type="text" id="editCommonArea">
+            </label><br>
+            <label>
+                Siperfaqe Totale:
+                <input class="editInput" type="text" id="TotalArea">
+            </label><br>
+            <label>
+                Siperfaqe verande:
+                <input class="editInput" type="text" id="editverandaArea">
+            </label><br>
+            <label>
+                Siperfaqe oborri:
+                <input class="editInput" type="text" id="editPlotArea">
+            </label><br>
+            <label>
+                Siperfaqe depo:
+                <input class="editInput" type="text" id="editStorageArea">
+            </label><br>
+            <label>
+                Poste Parkimi:
+                <input type="number" id="editParking">
+            </label><br>
+
+            <label>
+                Status:
+                <input class="editInput" type="text" id="editStatusi">
+            </label><br>
+
+            <label>
+                Bleresi:
+                <input class="editInput" type="text" id="editBuyer">
+            </label><br>
+
+            <button  id="updateApDetails" type="submit">Update Apartment</button>
+        </form>
+        <div id="editMessage" style="margin-top: 10px;"></div>
+    </div>
+
     <div id="fullscreenContainer" class="hidden">
         <img id="fullscreenImage" src="" alt="Full Screen View">
     </div>
@@ -714,67 +773,67 @@
 
 
             </div>
-                <div class="floor">
-                    <button class="ApBtn narrowC" id="CC18btn" onclick="showPlan('CC18')">CC18</button>
-                    <button class="ApBtn narrowC" id="CC19btn" onclick="showPlan('CC19')">CC19</button>
-                    <button class="empty ApBtn narrowC">   </button>
-                    <button class="empty ApBtn narrowC">   </button>
-                    <button class="ApBtn narrowC" id="CC22btn" onclick="showPlan('CC22')">CC22</button>
-                    <button class="ApBtn narrowC" id="CC23btn" onclick="showPlan('CC23')">CC23</button>
-                    <button class="empty ApBtn narrowC">   </button>
-                    <button class="empty ApBtn narrowC">   </button>
-                    <button class="empty ApBtn narrowC">   </button>
-                    <button class="ApBtn narrowC" id="CC27btn" onclick="showPlan('CC27')">CC27</button>
-                    <button class="ApBtn narrowC" id="CC28btn" onclick="showPlan('CC28')">CC28</button>
-                    <button class="ApBtn narrowC" id="CC29btn" onclick="showPlan('CC29')">CC29</button>
-                    <button class="ApBtn narrowC" id="CC30btn" onclick="showPlan('CC30')">CC30</button>
-                    <button class="empty ApBtn narrowC">   </button>
-                    <button class="ApBtn narrowC" id="CC32btn" onclick="showPlan('CC32')">CC32</button>
-                    <button class="ApBtn narrowC" id="CC33btn" onclick="showPlan('CC33')">CC33</button>
-                    <button class="ApBtn narrowC" id="CC34btn" onclick="showPlan('CC34')">CC34</button>
-                    <button class="ApBtn narrowC" id="CC35btn" onclick="showPlan('CC35')">CC35</button>
-                    <button class="empty ApBtn narrowC">   </button>
-                    <button class="empty ApBtn narrowC">   </button>
-                    <button class="ApBtn narrowC" id="CC38btn" onclick="showPlan('CC38')">CC38</button>
-                    <button class="ApBtn narrowC" id="CC39btn" onclick="showPlan('CC39')">CC39</button>
+            <div class="floor">
+                <button class="ApBtn narrowC" id="CC18btn" onclick="showPlan('CC18')">CC18</button>
+                <button class="ApBtn narrowC" id="CC19btn" onclick="showPlan('CC19')">CC19</button>
+                <button class="empty ApBtn narrowC">   </button>
+                <button class="empty ApBtn narrowC">   </button>
+                <button class="ApBtn narrowC" id="CC22btn" onclick="showPlan('CC22')">CC22</button>
+                <button class="ApBtn narrowC" id="CC23btn" onclick="showPlan('CC23')">CC23</button>
+                <button class="empty ApBtn narrowC">   </button>
+                <button class="empty ApBtn narrowC">   </button>
+                <button class="empty ApBtn narrowC">   </button>
+                <button class="ApBtn narrowC" id="CC27btn" onclick="showPlan('CC27')">CC27</button>
+                <button class="ApBtn narrowC" id="CC28btn" onclick="showPlan('CC28')">CC28</button>
+                <button class="ApBtn narrowC" id="CC29btn" onclick="showPlan('CC29')">CC29</button>
+                <button class="ApBtn narrowC" id="CC30btn" onclick="showPlan('CC30')">CC30</button>
+                <button class="empty ApBtn narrowC">   </button>
+                <button class="ApBtn narrowC" id="CC32btn" onclick="showPlan('CC32')">CC32</button>
+                <button class="ApBtn narrowC" id="CC33btn" onclick="showPlan('CC33')">CC33</button>
+                <button class="ApBtn narrowC" id="CC34btn" onclick="showPlan('CC34')">CC34</button>
+                <button class="ApBtn narrowC" id="CC35btn" onclick="showPlan('CC35')">CC35</button>
+                <button class="empty ApBtn narrowC">   </button>
+                <button class="empty ApBtn narrowC">   </button>
+                <button class="ApBtn narrowC" id="CC38btn" onclick="showPlan('CC38')">CC38</button>
+                <button class="ApBtn narrowC" id="CC39btn" onclick="showPlan('CC39')">CC39</button>
 
-
-                </div>
-                <div class="floor">
-                    <button class="ApBtn narrowC" id="CC01btn" onclick="showPlan('CC01')">CC01</button>
-                    <button class="ApBtn narrowC" id="CC02btn" onclick="showPlan('CC02')">CC02</button>
-                    <button class="ApBtn narrowC" id="CC03btn" onclick="showPlan('CC03')">CC03</button>
-                    <button class="ApBtn narrowC" id="CC04btn" onclick="showPlan('CC04')">CC04</button>
-                    <button class="empty ApBtn narrowC">   </button>
-                    <button class="ApBtn narrowC" id="CC06btn" onclick="showPlan('CC06')">CC06</button>
-                    <button class="empty ApBtn narrowC">   </button>
-                    <button class="empty ApBtn narrowC">   </button>
-
-                    <button class="ApBtn narrowC" id="CC08btn" onclick="showPlan('CC08')">CC08</button>
-
-                    <button class="empty ApBtn narrowC">   </button>
-                    <button class="ApBtn narrowC" id="CC10btn" onclick="showPlan('CC10')">CC10</button>
-                    <button class="empty ApBtn narrowC">   </button>
-                    <button class="ApBtn narrowC" id="CC12btn" onclick="showPlan('CC12')">CC12</button>
-                    <button class="ApBtn narrowC" id="CC13btn" onclick="showPlan('CC13')">CC13</button>
-                    <button class="ApBtn narrowC" id="CC14btn" onclick="showPlan('CC14')">CC14</button>
-                    <button class="empty ApBtn narrowC">   </button>
-                    <button class="empty ApBtn narrowC">   </button>
-                    <button class="empty ApBtn narrowC">   </button>
-                    <button class="empty ApBtn narrowC">   </button>
-                    <button class="empty ApBtn narrowC">   </button>
-                    <button class="empty ApBtn narrowC">   </button>
-                    <button class="ApBtn narrowC" id="CC17btn" onclick="showPlan('CC17')">CC17</button>
-
-
-                </div>
 
             </div>
-            <img id="sideImage1C" src="SEKTORI_C/Sektori C Grafik.png" alt="Skice Sektori B Nukli JA">
+            <div class="floor">
+                <button class="ApBtn narrowC" id="CC01btn" onclick="showPlan('CC01')">CC01</button>
+                <button class="ApBtn narrowC" id="CC02btn" onclick="showPlan('CC02')">CC02</button>
+                <button class="ApBtn narrowC" id="CC03btn" onclick="showPlan('CC03')">CC03</button>
+                <button class="ApBtn narrowC" id="CC04btn" onclick="showPlan('CC04')">CC04</button>
+                <button class="empty ApBtn narrowC">   </button>
+                <button class="ApBtn narrowC" id="CC06btn" onclick="showPlan('CC06')">CC06</button>
+                <button class="empty ApBtn narrowC">   </button>
+                <button class="empty ApBtn narrowC">   </button>
+
+                <button class="ApBtn narrowC" id="CC08btn" onclick="showPlan('CC08')">CC08</button>
+
+                <button class="empty ApBtn narrowC">   </button>
+                <button class="ApBtn narrowC" id="CC10btn" onclick="showPlan('CC10')">CC10</button>
+                <button class="empty ApBtn narrowC">   </button>
+                <button class="ApBtn narrowC" id="CC12btn" onclick="showPlan('CC12')">CC12</button>
+                <button class="ApBtn narrowC" id="CC13btn" onclick="showPlan('CC13')">CC13</button>
+                <button class="ApBtn narrowC" id="CC14btn" onclick="showPlan('CC14')">CC14</button>
+                <button class="empty ApBtn narrowC">   </button>
+                <button class="empty ApBtn narrowC">   </button>
+                <button class="empty ApBtn narrowC">   </button>
+                <button class="empty ApBtn narrowC">   </button>
+                <button class="empty ApBtn narrowC">   </button>
+                <button class="empty ApBtn narrowC">   </button>
+                <button class="ApBtn narrowC" id="CC17btn" onclick="showPlan('CC17')">CC17</button>
+
+
+            </div>
 
         </div>
+        <img id="sideImage1C" src="SEKTORI_C/Sektori C Grafik.png" alt="Skice Sektori B Nukli JA">
+
+    </div>
 
     <script src="JS/apartments.js"></script>
-
+    <script src="JS/Hyrja.js"></script>
 </body>
 	</html>

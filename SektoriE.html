@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <link rel="stylesheet" href="CSS/Hyrja.css">
     <link href="CSS/apartments.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <title>Sektori E</title>
@@ -33,7 +33,6 @@
                             <a href="SektoriC.html">SEKTORI C</a>
                             <a href="SektoriD.html">SEKTORI D</a>
                             <a href="SektoriE.html">SEKTORI E </a>
-
                         </div>
                     </div>
                     <div class="dropdown">
@@ -42,18 +41,77 @@
                     <div class="dropdown">
                         <a class="dropbtn" href="GalleryJA.html">JA gallery</a>
                     </div>
-
                     <div class="dropdown">
-                        <a class="dropbtn" href="LoginPage.html">Log in</a>
+                        <button class="dropbtn" id="LogInBtn">Log In</button>
                     </div>
-
                 </div>
-
             </div>
         </div>
-
-
     </header>
+
+    <div id="login-container">
+        <div id="loginMessage"></div>
+        <form id="loginForm">
+            <label for="username">Username:</label><br />
+            <input type="text" id="username" name="username" placeholder="Username" required />
+            <label for="password">Password:</label><br />
+            <input type="password" name="password" id="password" placeholder="Password" required />
+            <button class="LogInBtn" type="submit">Login</button>
+        </form>
+    </div>
+    <button id="editBtn">Edit Apartment</button>
+
+    <div id="editFormContainer" style="display: none; margin-top: 20px;">
+        <form id="editForm">
+            <label>
+                Apartment ID:
+                <input class="editInput" type="text" id="editId" required>
+            </label><br>
+
+            <label>
+                Siperfaqe banimi:
+                <input class="editInput" type="text" id="editTotalNetArea">
+            </label><br>
+            <label>
+                Siperfaqe e perbashket:
+                <input class="editInput" type="text" id="editCommonArea">
+            </label><br>
+            <label>
+                Siperfaqe Totale:
+                <input class="editInput" type="text" id="TotalArea">
+            </label><br>
+            <label>
+                Siperfaqe verande:
+                <input class="editInput" type="text" id="editverandaArea">
+            </label><br>
+            <label>
+                Siperfaqe oborri:
+                <input class="editInput" type="text" id="editPlotArea">
+            </label><br>
+            <label>
+                Siperfaqe depo:
+                <input class="editInput" type="text" id="editStorageArea">
+            </label><br>
+            <label>
+                Poste Parkimi:
+                <input type="number" id="editParking">
+            </label><br>
+
+            <label>
+                Status:
+                <input class="editInput" type="text" id="editStatusi">
+            </label><br>
+
+            <label>
+                Bleresi:
+                <input class="editInput" type="text" id="editBuyer">
+            </label><br>
+
+            <button id="updateApDetails" type="submit">Update Apartment</button>
+        </form>
+        <div id="editMessage" style="margin-top: 10px;"></div>
+    </div>
+
     <div id="fullscreenContainer" class="hidden">
         <img id="fullscreenImage" src="" alt="Full Screen View">
     </div>
@@ -383,9 +441,6 @@
 
         </div>
 
-
-
-
         <img id="btnImageB" src="SEKTORI_E/VetemE.jpg" alt="Main Image">
         <img id="BolvLogoBW" src="main images/Bolv logo bw.png" alt="Bolv Group Logo">
         <div class="dropdown">
@@ -399,9 +454,6 @@
                 <button id="PdfBtn">Shkarko Katalogun</button>
             </a>
         </div>
-
-
-
 
     </div>
     <div class="footer">
@@ -429,11 +481,12 @@
 
             </div>
         </div>
-            <img id="sideImage1" src="SEKTORI_E/Sektori E Grafik.png" alt="Skice Sektori B Nukli JA">
+        <img id="sideImage1" src="SEKTORI_E/Sektori E Grafik.png" alt="Skice Sektori B Nukli JA">
 
-        </div>
+    </div>
 
     <script src="JS/apartments.js"></script>
+    <script src="JS/Hyrja.js"></script>
 
 </body>
 	</html>

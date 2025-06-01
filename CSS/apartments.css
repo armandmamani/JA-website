@@ -387,16 +387,21 @@ a {
     animation-delay: 0s;
     opacity: 0
 }
-#mainMenu {
-    width:100%;
-}
+
 .dropbtn {
     color: var(--drab-dark-brown);
     height: 40px;
+    padding: 10px;
+    font-weight: 200;
+    border: none;
     border-radius: 5px;
     font-size: 1.2rem;
     cursor: pointer
 }
+    .dropbtn a:hover, .dropdown:hover .dropbtn {
+        background-color: var(--butter-cup);
+        color: var(--accent-white)
+    }
 
 .dropbtn, .dropdown-content {
     width: 130px;
@@ -407,6 +412,45 @@ a {
     background-color: transparent
 }
 
+
+#mainMenu {
+    text-align: left;
+    text-decoration: none;
+    width:100%;
+}
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--seaside-villa);
+    font-size: .7rem;
+    font-style: oblique;
+    z-index: 1
+}
+
+.dropdown-content a {
+    color: #000;
+    padding: 5px 10px;
+    text-decoration: none;
+    display: block
+}
+
+    .dropdown-content a:hover {
+        background-color: var(--merino)
+    }
+
+    #cmimetPart, #infoPart, .cmimeLabel, .dropdown-content a:hover, .sector_name, span {
+        color: var(--drab-dark-brown)
+    }
+
+#cmimetPart, .cmimeInput, .vleraSip {
+    text-align: right
+}
+
+.hidden {
+    visibility: hidden
+}
 #printBtnContainer, .detailContainer, .dropdown {
     display: inline-block
 }
@@ -429,75 +473,6 @@ a {
 .sidenav a:hover {
     background-color: var(--button-hover);
     color: var(--accent-white)
-}
-
-#mainMenu {
-    text-align: left;
-    text-decoration: none
-}
-
-.dropbtn {
-    padding: 10px;
-    font-weight: 200;
-    border: none
-}
-#PdfBtn {
-    background-color: transparent;
-    color: var(--primary-blue);
-    border: 1px solid var(--primary-blue);
-    border-radius: 5px;
-    padding: 3px;
-    font-size: 0.8rem;
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-    transition: background-color .3s
-}
-    #PdfBtn:hover {
-        background-color: var(--drab-dark-brown);
-        color: var(--accent-white)
-    }
-
-#formSubtitle, .dropdown-content {
-    font-weight: 600;
-    text-align: center
-}
-
-.dropbtn a:hover, .dropdown:hover .dropbtn {
-    background-color: var(--butter-cup);
-    color: var(--accent-white)
-}
-
-#cmimetPart, #infoPart, .cmimeLabel, .dropdown-content a:hover, .sector_name, span {
-    color: var(--drab-dark-brown)
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: var(--seaside-villa);
-    font-size: .7rem;
-    font-style: oblique;
-    z-index: 1
-}
-
-#cmimetPart, .cmimeInput, .vleraSip {
-    text-align: right
-}
-
-.dropdown-content a {
-    color: #000;
-    padding: 5px 10px;
-    text-decoration: none;
-    display: block
-}
-
-    .dropdown-content a:hover {
-        background-color: var(--merino)
-    }
-
-.hidden {
-    visibility: hidden
 }
 
 .sector_name {
@@ -1151,3 +1126,62 @@ h5 {
     }
 
 }
+
+#editBtn {
+    position: absolute;
+    top: 100px;
+    display: none;
+    left: 10px;
+    background-color: var(--butter-cup);
+    color: var(--accent-white);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    z-index: 2000;
+}
+
+#editFormContainer {
+    position: fixed;
+    top: 5vh;
+    left: 15vw;
+    width: 20%;
+    font-size: 1.2rem;
+    padding: 20px;
+    height: fit-content;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2001;
+}
+
+.editInput {
+    width: 100%;
+    padding: 5px;
+    font-size: 1.2rem;
+    text-align: right;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid var(--drab-dark-brown);
+    background-color: var(--merino);
+    color: var(--drab-dark-brown);
+}
+
+#updateApDetails {
+    background-color: red;
+    color: var(--accent-white);
+    border: 2px solid var(--accent-white);
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 10px;
+    float: right;
+    transition: background-color 0.3s, color 0.3s;
+}
+    #updateApDetails :hover {
+        background-color: #310d15;
+        color: var(--accent-white);
+    }
