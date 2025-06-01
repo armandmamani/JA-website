@@ -32,6 +32,9 @@ const apartmentDetails = [
 { id: "B52", floor: "5", typology: "2+1", scale: "B", totalNetArea: 88.61, commonArea: 37.59, totalArea: 126.2, verandaArea: 4.45, plotArea: 0, storeArea : 25.57, statusi: "Shitur", shenime: "Skender Bedalli" },
 
 ]
+
+
+
 function showPlan(apartmentId) {
     // Hide all images
     const images = document.querySelectorAll('.apartament-plan');
@@ -198,34 +201,39 @@ document.addEventListener("DOMContentLoaded", function () {
             const apartment = apartmentDetails.find(apartment => apartment.id === checkbox.value);
             const label = document.querySelector(`label[for='${checkbox.id}']`);
             const button = document.querySelector(`.ApBtn[id='${checkbox.value}btn']`);
-            if (apartment) {
-                if (apartment.statusi === "Shitur") {
-                    if (label) {
-                        label.style.backgroundColor = "#cc5c5c";
-                        label.style.color = "#ffffff";
+
+            if (localStorage.getItem('loggedIn') == 'true') {
+
+
+                if (apartment) {
+                    if (apartment.statusi === "Shitur") {
+                        if (label) {
+                            label.style.backgroundColor = "#cc5c5c";
+                            label.style.color = "#ffffff";
+                        }
+                        if (button) {
+                            button.style.backgroundColor = "#cc5c5c";
+                            button.style.color = "#ffffff";
+                        }
                     }
-                    if (button) {
-                        button.style.backgroundColor = "#cc5c5c";
-                        button.style.color = "#ffffff";
-                    }
-                }
-                else if (apartment.statusi === "Rezervuar") {
-                    if (label) {
-                        label.style.backgroundColor = "#f4c95d";
-                        label.style.color = "ffffff";
-                    }
-                    if (button) {
-                        button.style.backgroundColor = "#f4c95d";
-                        button.style.color = "ffffff";
-                    }
-                } else if (checkbox.checked) {
-                    if (label) {
-                        label.style.backgroundColor = "#8d7655";
-                        label.style.color = "#ffffff"
-                    }
-                    if (button) {
-                        button.style.backgroundColor = "#8d7655";
-                        button.style.color = "#ffffff";
+                    else if (apartment.statusi === "Rezervuar") {
+                        if (label) {
+                            label.style.backgroundColor = "#f4c95d";
+                            label.style.color = "ffffff";
+                        }
+                        if (button) {
+                            button.style.backgroundColor = "#f4c95d";
+                            button.style.color = "ffffff";
+                        }
+                    } else if (checkbox.checked) {
+                        if (label) {
+                            label.style.backgroundColor = "#8d7655";
+                            label.style.color = "#ffffff"
+                        }
+                        if (button) {
+                            button.style.backgroundColor = "#8d7655";
+                            button.style.color = "#ffffff";
+                        }
                     }
                 }
             }
@@ -418,4 +426,81 @@ document.addEventListener("DOMContentLoaded", function () {
     fullscreenContainer.addEventListener("click", function () {
         fullscreenContainer.classList.add("hidden");
     });
+});
+if (localStorage.getItem('loggedIn') == 'true') {
+    document.getElementById('editBtn').style.display = "block";
+
+}
+document.getElementById("editBtn").addEventListener("click", () => {
+    document.getElementById("editFormContainer").style.display = "block";
+    console.log("Edit button clicked, form should be visible now.");
+});
+
+document.getElementById("editForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const id = document.getElementById("editId").value.trim();
+    const netAra = document.getElementById("editTotalNetArea").value.trim();
+    const commonAra = document.getElementById("editCommonArea").value.trim();
+    const totalAra = document.getElementById("TotalArea").value.trim();
+    const verandaArea = document.getElementById("editverandaArea").value.trim();
+    const plotAra = document.getElementById("editPlotArea").value.trim();
+    const storageAra = document.getElementById("editStorageArea").value.trim();
+    const parking = document.getElementById("editParking").value.trim();
+
+    const statusi = document.getElementById("editStatusi").value.trim();
+    const buyer = document.getElementById("editBuyer").value.trim();
+
+
+    const messageBox = document.getElementById("editMessage");
+
+    const apt = apartmentDetails.find(ap => ap.id === id);
+
+    if (apt) {
+        if (netAra) apt.totalNetArea = parseFloat(netAra);
+        if (commonAra) apt.commonArea = parseFloat(commonAra);
+        if (totalAra) apt.totalArea = parseFloat(totalAra);
+        if (verandaArea) apt.verandaArea = parseFloat(verandaArea);
+        if (plotAra) apt.plotArea = parseFloat(plotAra);
+        if (storageAra) apt.storeArea = parseFloat(storageAra);
+        if (parking) apt.parking = parseFloat(parking);
+        if (statusi) apt.statusi = statusi;
+        if (buyer) apt.shenime = buyer;
+        saveApartmentDetailsToLocalStorage();
+
+        messageBox.innerText = "✔️ Apartment updated successfully.";
+        messageBox.style.color = "green";
+        console.log(apartmentDetails); // For debugging
+    } else {
+        messageBox.innerText = "❌ Apartment ID not found.";
+        messageBox.style.color = "red";
+    }
+
+    setTimeout(() => messageBox.innerText = "", 5000);
+});
+
+function saveApartmentDetailsToLocalStorage() {
+    localStorage.setItem("apartmentDetails", JSON.stringify(apartmentDetails));
+}
+
+// 🔄 Auto-fill form based on ID
+function loadDataToForm(id) {
+    const apt = apartmentDetails.find(ap => ap.id === id);
+    if (apt) {
+        document.getElementById("editTotalNetArea").value = apt.totalNetArea;
+        document.getElementById("editCommonArea").value = apt.commonArea;
+        document.getElementById("TotalArea").value = apt.totalArea;
+        document.getElementById("editverandaArea").value = apt.verandaArea;
+        document.getElementById("editPlotArea").value = apt.plotArea;
+        document.getElementById("editStorageArea").value = apt.storeArea;
+        document.getElementById("editParking").value = apt.parking;
+        document.getElementById("editStatusi").value = apt.statusi;
+        document.getElementById("editBuyer").value = apt.shenime;
+    }
+}
+
+// Optional: Auto-load when user leaves the ID field
+document.getElementById("editId").addEventListener("blur", function () {
+    const id = this.value.trim();
+    if (id) loadDataToForm(id);
 });
