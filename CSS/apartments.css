@@ -1126,6 +1126,9 @@ h5 {
     }
 
 }
+#submitBtn {
+    float: right;
+}
 
 #editBtn {
     position: absolute;

@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CSS/Hyrja.css">
+    <link rel="stylesheet" href="CSS/apartments.css">
 
     <link href="CSS/JAmainPage.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -10,32 +12,34 @@
 </head>
 
 <body>
+    <div id="editFormContainer" style="display:none">></div>
+    <div id="editBtn" style="display:none">></div>
 
     <img id="ProjectBackground" src="main images/Concept Design Submission Image[16].webp" />
     <section class="hero">
         <div class="main-button" id="sectorA-main-button">
             <a class="main-btn" href="SektoriA.html">SEKTORI A</a><br />
-            <i class='fas fa-map-marker-alt' style='font-size: 48px; color: red; opacity: 0.7'></i>
+            <i class='fas fa-map-marker-alt'></i>
         </div>
         <div class="main-button" id="sectorB-main-button">
             <a class="main-btn" href="SektoriB.html">SEKTORI B</a><br />
-            <i class='fas fa-map-marker-alt' style='font-size: 48px; color: red; opacity: 0.7'></i>
+            <i class='fas fa-map-marker-alt'></i>
         </div>
         <div class="main-button" id="sectorC-main-button">
             <a class="main-btn" href="SektoriC.html">SEKTORI C</a><br />
-            <i class='fas fa-map-marker-alt' style='font-size: 48px; color: red; opacity: 0.7'></i>
+            <i class='fas fa-map-marker-alt'></i>
         </div>
         <div class="main-button" id="sectorD-main-button">
             <a class="main-btn" href="SektoriD.html">SEKTORI D</a><br />
-            <i class='fas fa-map-marker-alt' style='font-size:48px;color:red;opacity:0.7'></i>
+            <i class='fas fa-map-marker-alt'></i>
         </div>
         <div class="main-button" id="sectorE-main-button">
             <a class="main-btn" href="SektoriE.html">SEKTORI E</a><br />
-            <i class='fas fa-map-marker-alt' style='font-size: 48px; color: red; opacity: 0.7'></i>
+            <i class='fas fa-map-marker-alt'></i>
         </div>
         <div class="main-button" id="sectorV-main-button">
             <a class="main-btn" href="Vilat.html">VILA</a><br />
-            <i class='fas fa-map-marker-alt' style='font-size: 48px; color: red; opacity: 0.7'></i>
+            <i class='fas fa-map-marker-alt'></i>
         </div>
 
         <div class="hero-content">
@@ -46,7 +50,6 @@
         <div class="dropdown">
             <a class="dropbtn" href='index.html'>HOME</a>
         </div>
-
 
         <div class="dropdown">
             <a class="dropbtn" href="index Projekti.html">Projekti JA</a>
@@ -69,14 +72,24 @@
         <div class="dropdown">
             <a class="dropbtn" href="GalleryJA.html">JA gallery</a>
         </div>
-
         <div class="dropdown">
-            <a class="dropbtn" href="LoginPage.html">Log in</a>
+            <button class="LogInBtn" id="LogInBtn">Log In</button>
         </div>
 
     </div>
+    <div id="login-container">
+        <div id="loginMessage"></div>
+        <form id="loginForm">
+            <label for="username">Username:</label><br />
+            <input type="text" id="username" name="username" placeholder="Username" required />
+            <label for="password">Password:</label><br />
+            <input type="password" name="password" id="password" placeholder="Password" required />
+            <button class="LogInBtn" id="submitBtn" type="submit">Login</button>
+        </form>
+    </div>
 
     <script src="JS/JAmainPage.js"></script>
+    <script src="JS/Hyrja.js"></script>
 
 </body>
 </html>

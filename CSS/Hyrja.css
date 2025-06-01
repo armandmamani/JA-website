@@ -86,6 +86,7 @@ h1 {
     height: 30px;
     font-size: 20px;
     font-weight: bold;
+    text-align: center;
     transition: all 0.3s ease-in-out;
 }
 
@@ -118,6 +119,22 @@ h1 {
     font-size: 16px;
 }
 
+    #username:hover, #password:hover {
+        border-color: #00a8ea;
+        background-color: rgba(255, 255, 255, 0.6);
+    }
+
+
+    #username:focus, #password:focus {
+        border-color: #eaa803;
+        background-color: rgba(255, 255, 255, 0.8);
+        color: #444;
+    }
+
+
+#submitBtn {
+    float: right;
+}
 
 #LogInBtn {
     position: fixed;

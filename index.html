@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 <body>
+    <div id="editFormContainer" style="display:none"></div>
+    <div id="editBtn"  style="display:none">></div>
+
     <section class="hero">
         <button class="LogInBtn" id="LogInBtn">Log In</button>
 
@@ -23,7 +26,7 @@
                 <input type="text" id="username" name="username" placeholder="Username" required />
                 <label for="password">Password:</label><br />
                 <input type="password" name="password" id="password" placeholder="Password" required />
-                <button class="LogInBtn" type="submit">Login</button>
+                <button class="LogInBtn" id="submitBtn" type="submit">Login</button>
             </form>
         </div>
 

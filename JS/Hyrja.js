@@ -43,15 +43,21 @@ document.getElementById('loginForm').addEventListener('submit', function (e) {
     if (isValid) {
         localStorage.setItem('loggedIn', 'true');
         loginMessage.textContent = 'Login successful';
-        loginMessage.style.color = 'green';
-
-        updateUIOnLoginStatus();
-    } else {
-        loginMessage.textContent = 'Login not successful';
+        loginMessage.style.color = '#6bf572';
         setTimeout(() => {
             loginMessage.textContent = '';
             loginContainer.style.display = 'none';
-        }, 5000);
+            updateUIOnLoginStatus();
+        }, 1000);
+ 
+    } else {
+        loginMessage.textContent = 'Login not successful';
+        loginMessage.style.color = '#f00';
+        loginMessage.style.backgroundColor = '#fff';
+        setTimeout(() => {
+            loginMessage.textContent = '';
+            loginContainer.style.display = 'none';
+        }, 2000);
     }
 });
 // Close login container if clicking outside

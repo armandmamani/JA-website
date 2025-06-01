@@ -31,6 +31,9 @@ a, img, button, span, ion-icon, label, input, textarea {
     height: 100vh;
     animation: fadeIn 1s ease-out forwards;
 }
+#submitBtn {
+    float: right;
+}
 
 @keyframes mymove {
     0% {
@@ -180,14 +183,22 @@ a, img, button, span, ion-icon, label, input, textarea {
     align-content: center;
 }
 
+.fa-map-marker-alt {
+    font-size: 28px; 
+    color: red;
+    opacity: 0.7
+}
+
 .main-btn {
     padding: 5px;
-    border-radius:10px;
-    background-color: rgba(250,250,250,0.7);
+    border-radius: 5px;
+    border:none;
+    background-color: rgba(250,250,250,0.5);
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
     font-size: 1.2rem;
     font-weight: 800;
     text-decoration: none;
-    border: none;
 }
 
 #sectorA-main-button {
@@ -267,7 +278,7 @@ a, img, button, span, ion-icon, label, input, textarea {
     display: block;
     position: fixed;
     top:0;
-    right:0;
+    left:0;
     width:100%;
     height: 40px;
     cursor: pointer;
@@ -285,7 +296,6 @@ a, img, button, span, ion-icon, label, input, textarea {
     padding: 10px;
     text-align: center;
     text-decoration: none;
-    width: 130px;
     height: 40px;
     cursor: pointer;
     font-size: 1.2rem;
@@ -300,12 +310,12 @@ a, img, button, span, ion-icon, label, input, textarea {
 
 .dropdown {
     display: inline-block;
+    width: 150px;
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
-    width: 130px;
     background-color: var(--seaside-villa);
     font-size: 0.7rem;
     font-style: oblique;
