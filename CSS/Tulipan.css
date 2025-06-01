@@ -1736,3 +1736,82 @@ margin-left: 15%;
     box-shadow:  7px 7px 20px 0px rgba(0,0,0,.2), 4px 4px 5px 0px rgba(0,0,0,.3);
 }
 
+#submitBtn {
+    float: right;
+}
+
+#editForm {
+    color: var(--accent-white);
+}
+
+#editBtn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 150px;
+    display: none;
+    background-color: var(--butter-cup);
+    color: var(--accent-white);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    z-index: 2000;
+}
+
+    #editBtn:hover {
+        background-color: var(--button-hover);
+        color: var(--accent-white);
+    }
+
+#editFormContainer {
+    position: fixed;
+    top: 5vh;
+    left: 15vw;
+    width: 20%;
+    font-size: 1.2rem;
+    padding: 20px;
+    height: fit-content;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2001;
+}
+
+.editInput {
+    width: 100%;
+    padding: 5px;
+    font-size: 1.2rem;
+    text-align: right;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid var(--drab-dark-brown);
+    background-color: #ccc;
+    color: black;
+}
+
+    .editInput:focus {
+        outline: none;
+        border-color: var(--butter-cup);
+        color: black;
+    }
+
+#updateApDetails {
+    background-color: red;
+    color: var(--accent-white);
+    border: 2px solid var(--accent-white);
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 10px;
+    float: right;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+    #updateApDetails :hover {
+        background-color: #310d15;
+        color: var(--accent-white);
+    }
