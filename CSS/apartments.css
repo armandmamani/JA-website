@@ -489,7 +489,7 @@ a {
 }
 
 #cmimetPart {
-    margin-top: 7rem;
+    margin-top: 3rem;
     width: inherit;
     border: none;
     padding: 5px;
@@ -550,8 +550,8 @@ td {
 }
 
 #apNameTable {
-    height: 5rem;
-    padding-top: 3.5rem;
+    height:2rem;
+    padding-top: 2rem;
     text-align: center;
     z-index: 10;
     font-size: 5rem;
@@ -910,7 +910,7 @@ h5 {
 }
 
 .footer {
-    height: 20%;
+    height: 23%;
     right: 0;
     animation: .5s ease-out forwards slideUp;
     animation-delay: 1.5s
@@ -1136,8 +1136,8 @@ h5 {
 #editBtn {
     position: absolute;
     top: 100px;
+    left: 300px;
     display: none;
-    left: 10px;
     background-color: var(--butter-cup);
     color: var(--accent-white);
     border: none;

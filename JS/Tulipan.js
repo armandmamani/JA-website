@@ -184,7 +184,6 @@ document.getElementById("editForm").addEventListener("submit", function (e) {
         if (parking) apt.parking = parseFloat(parking);
         if (statusi) apt.statusi = statusi;
         if (buyer) apt.shenime = buyer;
-        saveApartmentDetailsToLocalStorage();
 
         messageBox.innerText = "✔️ Apartment updated successfully.";
         messageBox.style.color = "green";
