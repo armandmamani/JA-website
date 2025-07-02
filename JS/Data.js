@@ -186,7 +186,7 @@ const defaultApartmentDetails = [
     { id: "A35", floor: "3", typology: "2+1", scale: "A", totalNetArea: 90.94, commonArea: 38.58, totalArea: 129.52, verandaArea: 36.79, plotArea: 0, storeArea: 11.05, statusi: "Per shitje", shenime: "0" },
     { id: "A41", floor: "4", typology: "1+1", scale: "A", totalNetArea: 71.57, commonArea: 30.36, totalArea: 101.93, verandaArea: 0, plotArea: 0, storeArea: 11.05, statusi: "Shitur", shenime: "Shefi" },
     { id: "A42", floor: "4", typology: "1+1", scale: "A", totalNetArea: 68.23, commonArea: 28.94, totalArea: 97.17, verandaArea: 6.99, plotArea: 0, storeArea: 14.85, statusi: "Shitur", shenime: "Lori" },
-    { id: "A43", floor: "4", typology: "2+1", scale: "A", totalNetArea: 90.75, commonArea: 38.5, totalArea: 129.25, verandaArea: 0, plotArea: 0, storeArea: 15.75, statusi: "Shitur", shenime: "0" },
+    { id: "A43", floor: "4", typology: "2+1", scale: "A", totalNetArea: 90.75, commonArea: 38.5, totalArea: 129.25, verandaArea: 0, plotArea: 0, storeArea: 15.75, statusi: "Shitur", shenime: "Lori" },
     { id: "A51", floor: "5", typology: "1+1", scale: "A", totalNetArea: 69.28, commonArea: 29.39, totalArea: 98.67, verandaArea: 27.2, plotArea: 0, storeArea: 15, statusi: "Shitur", shenime: "Shefi" },
     { id: "B11", floor: "1", typology: "1+1", scale: "B", totalNetArea: 71.21, commonArea: 30.21, totalArea: 101.42, verandaArea: 4.72, plotArea: 0, storeArea: 15.87, statusi: "Rezervuar", shenime: "Hektori" },
     { id: "B13", floor: "1", typology: "2+1", scale: "B", totalNetArea: 118.74, commonArea: 50.37, totalArea: 169.11, verandaArea: 148.85, plotArea: 0, storeArea: 15.85, statusi: "Per shitje", shenime: "0" },
