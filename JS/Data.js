@@ -177,10 +177,10 @@ const defaultApartmentDetails = [
     { id: "C04", floor: "0", typology: "1+1", scale: "C", totalNetArea: 66.19, commonArea: 28.08, totalArea: 94.27, verandaArea: 76.61, plotArea: 0, storeArea: 17.86, statusi: "Rezervuar", shenime: "Hektori" },
     { id: "C06", floor: "0", typology: "2+1", scale: "C", totalNetArea: 112.25, commonArea: 47.62, totalArea: 159.87, verandaArea: 16.03, plotArea: 0, storeArea: 17.03, statusi: "Shitur", shenime: "Akili" },
     { id: "A11", floor: "1", typology: "Studio", scale: "A", totalNetArea: 58.9, commonArea: 24.99, totalArea: 83.89, verandaArea: 71.33, plotArea: 0, storeArea: 0, statusi: "Rezervuar", shenime: "Hektori" },
-    { id: "A12", floor: "1", typology: "2+1", scale: "A", totalNetArea: 118.46, commonArea: 50.25, totalArea: 168.71, verandaArea: 175.56, plotArea: 0, storeArea: 16.44, statusi: "Per shitje", shenime: "0" },
-    { id: "A13", floor: "1", typology: "2+1", scale: "A", totalNetArea: 104.43, commonArea: 44.3, totalArea: 148.73, verandaArea: 165.08, plotArea: 0, storeArea: 25.61, statusi: "Per shitje", shenime: "0" },
+    { id: "A12", floor: "1", typology: "2+1", scale: "A", totalNetArea: 118.46, commonArea: 50.25, totalArea: 168.71, verandaArea: 175.56, plotArea: 0, storeArea: 16.44, statusi: "Rezervuar", shenime: "Arber" },
+    { id: "A13", floor: "1", typology: "2+1", scale: "A", totalNetArea: 104.43, commonArea: 44.3, totalArea: 148.73, verandaArea: 165.08, plotArea: 0, storeArea: 25.61, statusi: "Rezervuar", shenime: "Arber" },
     { id: "A24", floor: "2", typology: "1+1", scale: "A", totalNetArea: 67.79, commonArea: 28.76, totalArea: 96.55, verandaArea: 4.35, plotArea: 0, storeArea: 14.85, statusi: "Per shitje", shenime: "0" },
-    { id: "A23", floor: "2", typology: "1+1", scale: "A", totalNetArea: 65.92, commonArea: 27.96, totalArea: 93.88, verandaArea: 38.21, plotArea: 0, storeArea: 13.62, statusi: "Rezervuar", shenime: "Iliri" },
+    { id: "A23", floor: "2", typology: "1+1", scale: "A", totalNetArea: 65.92, commonArea: 27.96, totalArea: 93.88, verandaArea: 38.21, plotArea: 0, storeArea: 13.62, statusi: "Shitur", shenime: "Iliri" },
     { id: "A31", floor: "3", typology: "Studio", scale: "A", totalNetArea: 53.51, commonArea: 22.7, totalArea: 76.21, verandaArea: 0, plotArea: 0, storeArea: 12.69, statusi: "Shitur", shenime: "Shefi" },
     { id: "A34", floor: "3", typology: "1+1", scale: "A", totalNetArea: 71.77, commonArea: 30.45, totalArea: 102.22, verandaArea: 21.64, plotArea: 0, storeArea: 12.58, statusi: "Shitur", shenime: "Mark Pjetergjoka" },
     { id: "A35", floor: "3", typology: "2+1", scale: "A", totalNetArea: 90.94, commonArea: 38.58, totalArea: 129.52, verandaArea: 36.79, plotArea: 0, storeArea: 11.05, statusi: "Per shitje", shenime: "0" },
@@ -200,7 +200,7 @@ const defaultApartmentDetails = [
     { id: "B36", floor: "3", typology: "1+1", scale: "B", totalNetArea: 68.8, commonArea: 29.19, totalArea: 97.99, verandaArea: 0, plotArea: 225.63, storeArea: 17.25, statusi: "Per shitje", shenime: "0" },
     { id: "B42", floor: "4", typology: "2+1", scale: "B", totalNetArea: 93.9, commonArea: 39.83, totalArea: 133.73, verandaArea: 0, plotArea: 0, storeArea: 26.08, statusi: "Shitur", shenime: "Lori" },
     { id: "B43", floor: "4", typology: "2+1", scale: "B", totalNetArea: 91.64, commonArea: 38.87, totalArea: 130.51, verandaArea: 0, plotArea: 0, storeArea: 15.85, statusi: "Shitur", shenime: "Nexhmi Aliaj" },
-    { id: "B51", floor: "5", typology: "2+1", scale: "B", totalNetArea: 91.92, commonArea: 38.99, totalArea: 130.91, verandaArea: 2.62, plotArea: 0, storeArea: 30.36, statusi: "Per shitje", shenime: "0" },
+    { id: "B51", floor: "5", typology: "2+1", scale: "B", totalNetArea: 91.92, commonArea: 38.99, totalArea: 130.91, verandaArea: 2.62, plotArea: 0, storeArea: 30.36, statusi: "Rezervuar", shenime: "Shoku i shefit" },
     { id: "B52", floor: "5", typology: "2+1", scale: "B", totalNetArea: 88.61, commonArea: 37.59, totalArea: 126.2, verandaArea: 4.45, plotArea: 0, storeArea: 25.57, statusi: "Shitur", shenime: "Skender Bedalli" },
 
 
