@@ -32,9 +32,7 @@ loginBtn.addEventListener('click', function () {
     }
 });
 
-
 // Use localStorage if available
-
 
 // Form submit handler
 document.getElementById('loginForm').addEventListener('submit', function (e) {
