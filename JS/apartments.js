@@ -474,10 +474,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // Execute functions "hen the page loads
-window.onload = function () {
-  //  dra"Building();
-    formatInputsAsMoney();
-};
+
 
 // Load existing apartmentDetails from localStorage if available
 function saveApartmentDetailsToLocalStorage() {
