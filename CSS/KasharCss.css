@@ -1,0 +1,61 @@
+
+
+body {
+margin: 0;
+font-family: 'Roboto', sans-serif;
+background: #f8f9f9;
+}
+
+.app-container {
+display: grid;
+grid-template-columns: 250px 1fr 300px;
+height: 100vh;
+}
+
+
+/* Sidebar */
+.sidebar {
+background: #2e86c1;
+color: white;
+padding: 20px;
+}
+.sidebar h2 { margin-bottom: 20px; }
+.selector label {
+display: block;
+margin-bottom: 5px;
+}
+.selector select {
+width: 100%;
+padding: 8px;
+margin-bottom: 15px;
+border: none;
+border-radius: 5px;
+}
+
+
+/* Main Grid */
+.main-grid {
+padding: 20px;
+overflow-y: auto;
+background: white;
+}
+.placeholder {
+text-align: center;
+color: #999;
+margin-top: 40px;
+}
+.floor-row {
+margin-bottom: 20px;
+}
+.floor-row h4 {
+margin-bottom: 10px;
+color: #333;
+}
+.apartment {
+display: inline-block;
+padding: 10px 15px;
+margin: 5px;
+}
+#ProjektiImg {
+	width: 100%;
+}

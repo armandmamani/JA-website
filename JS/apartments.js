@@ -297,7 +297,9 @@ function formatNumber(value) {
                 TotalVerandArea += (apartment.verandaArea+apartment.greenTerraceArea+apartment.usableTerrace) || 0;
                 plotArea += apartment.plotArea || 0;
                 storeArea += apartment.storeArea || 0;
-                parkingCount += apartment.parking || 0;;
+                parkingCount += apartment.parking || 0;
+                if (apartment.aptParking) parkingCount++;
+
                 if (apartment.poolArea > 0) poolCount++;
  
             }

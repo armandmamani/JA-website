@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="CSS/KasharCss.css" rel="stylesheet" />
+    <link rel="stylesheet" href="CSS/Hyrja.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>KASHAR CENTER</title>
+</head>
+
+<body>
+    <div class="app-container">
+
+
+        <!-- Left Panel: Navigation -->
+        <aside class="sidebar">
+            <h2>Kashar Center</h2>
+
+
+            <div class="selector">
+                <label for="buildingSelect">Godina</label>
+                <select id="buildingSelect"></select>
+            </div>
+
+
+            <div class="selector">
+                <label for="entranceSelect">Shkalla</label>
+                <select id="entranceSelect"></select>
+            </div>
+
+            <div class="selector">
+                <label for="entranceSelect">Kati</label>
+                <select id="entranceSelect"></select>
+            </div>
+
+            <div class="selector">
+                <label for="entranceSelect">Apartamenti</label>
+                <select id="entranceSelect"></select>
+            </div>
+
+
+        </aside>
+
+
+        <!-- Main Panel: Apartments Grid -->
+        <main class="main-grid" id="apartmentGrid">
+            <p class="placeholder">Select a building and entrance to view apartments</p>
+            <img id="ProjektiImg" src="Kashar_images\Projekti Arkitektonik-3.jpg" alt="Projekti Arkitektonik" />
+        </main>
+
+
+        <!-- Right Panel: Apartment Details -->
+        <aside class="details-panel" id="apartmentDetails">
+            <h3>Apartment Details</h3>
+            <p>Select an apartment to view details.</p>
+        </aside>
+
+
+    </div>
+    <script src="JS/Data.js"></script>
+    <script src="JS/Kashar.js"></script>
+
+
+</body>
+</html>
