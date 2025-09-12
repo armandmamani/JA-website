@@ -36,7 +36,7 @@ border-radius: 5px;
 /* Main Grid */
 .main-grid {
 padding: 20px;
-overflow-y: auto;
+
 background: white;
 }
 .placeholder {
@@ -44,8 +44,71 @@ text-align: center;
 color: #999;
 margin-top: 40px;
 }
+.buildingLetter {
+    font-family: 'Arial Black', sans-serif;
+    font-size: 10vh;
+    color: #ddd;
+    font-weight: bolder;
+    position: fixed;
+}
+
+#buildingLetterA {
+    bottom: 5%;
+    left: 50%;
+}
+
+#buildingLetterB {
+    top: 50%;
+    left: 30%;
+}
+
+#buildingLetterC {
+    top: 33%;
+    left: 40%;
+}
+
+#buildingLetterD {
+    top: 33%;
+    left: 54%;
+}
+
+#buildingLetterE {
+    top: 55%;
+    left: 63%;
+}
+#godina {
+    position: absolute;
+    left: 14vw;
+    width: 70%;
+    height: 70%;
+    background-image: url(Godina_A_background.jpg);
+    background-size: cover;
+    padding: 10px;
+    padding-top: 175px;
+    padding-left: 175px;
+    border: 3px solid #000;
+}
+
+.katet {
+    display: flex;
+    width: 80%;
+    opacity: 0.7;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+}
+
+
+    .katet:hover {
+        opacity: 1;
+    }
+#kati9 {
+    padding-top: 20px;
+    border-top: 2px solid black;
+}
+
+
 .floor-row {
-margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 .floor-row h4 {
 margin-bottom: 10px;
@@ -58,4 +121,12 @@ margin: 5px;
 }
 #ProjektiImg {
 	width: 100%;
+}
+
+#apartmentDetails {
+    display: none;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #495929;
 }
