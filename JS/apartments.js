@@ -225,11 +225,11 @@ document.addEventListener("DOMContentLoaded", function () {
                     else if (apartment.statusi === "Rezervuar") {
                         if (label) {
                             label.style.backgroundColor = "#f4c95d";
-                            label.style.color = "ff0000";
+                            label.style.color = "500e0e";
                         }
                         if (button) {
                             button.style.backgroundColor = "#f4c95d";
-                            button.style.color = "ff0000";
+                            button.style.color = "500e0e";
                         }
                     }
                     else if (apartment.statusi === "Balfin") {
