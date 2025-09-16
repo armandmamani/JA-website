@@ -38,9 +38,7 @@ table, td, th {
     page-break-inside: avoid
 }
 
-.ApBtn:hover, .apLabel:hover {
-    background-color: #9f8b6f
-}
+
 
 #sideImage1A, #sideImage1C {
     margin-left: 260px;
@@ -957,11 +955,15 @@ h5 {
     height: 30px;
     color: #fff;
     background-color: #b5a58d;
+    font-weight:800;
     border-radius: 3px;
     cursor: pointer;
     box-shadow: 0 4px 6px rgba(0,0,0,.2);
     transition: background-color .3s
 }
+    .ApBtn:hover, .apLabel:hover {
+        background-color: #9f8b6f
+    }
 
 .narrow {
     width: 40px;
