@@ -834,7 +834,8 @@ h5 {
 
 .apLabel {
     font-size: 12px;
-    font-weight: 500;
+    color: #544632;
+    font-weight: 800;
     padding: 1px;
     width: 40px;
     display: inline-flex;
