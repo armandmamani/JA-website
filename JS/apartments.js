@@ -26,7 +26,8 @@ function showApartmentDetails(apartmentId) {
   );
   // Find the apartment details by ID
   if (details) {
-    // Populate the details table
+      // Populate the details table
+      console.log(details);
     document.getElementById("aptId").textContent = details.id;
     document.getElementById("aptSector").textContent = details.sector;
     document.getElementById("aptFloor").textContent = details.floor;
