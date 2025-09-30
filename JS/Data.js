@@ -169,7 +169,7 @@ const defaultApartmentDetails = [
     { id: "VI19", sector: "Villa", typology: "INDIVUDUAL", Kat0Area: 96.44, Kati1Area: 91.4, verandaArea: 23.63, poolArea: 27.8, plotArea: 393.34, TotalArea: 187.84, status: "bolv", floor: "1", scale: "A", netArea: 0, loggiaArea: 0, totalNetArea: 0, commonArea: 0, terraceArea: 0, usableTerrace: 0, storeArea: 8.72, parking: 1, statusi: "Per shitje", shenime: "0" },
     { id: "VI20", sector: "Villa", typology: "INDIVUDUAL", Kat0Area: 96.44, Kati1Area: 91.4, verandaArea: 23.63, poolArea: 27.8, plotArea: 435.6, TotalArea: 187.84, status: "bolv", floor: "1", scale: "A", netArea: 0, loggiaArea: 0, totalNetArea: 0, commonArea: 0, terraceArea: 0, usableTerrace: 0, storeArea: 8.72, parking: 1, statusi: "Per shitje", shenime: "0" },
     { id: "VI22", sector: "Villa", typology: "TWIN", Kat0Area: 99.09, Kati1Area: 75.29, verandaArea: 53.55, poolArea: 37.2, plotArea: 529.5, TotalArea: 174.38, status: "bolv", floor: "1", scale: "A", netArea: 0, loggiaArea: 0, totalNetArea: 0, commonArea: 0, terraceArea: 0, usableTerrace: 0, storeArea: 8.72, parking: 1, statusi: "Per shitje", shenime: "0" },
-    { id: "VI23", sector: "Villa", typology: "TWIN", Kat0Area: 99.09, Kati1Area: 75.29, verandaArea: 49.41, poolArea: 34.41, plotArea: 329.59, TotalArea: 174.38, status: "bolv", floor: "1", scale: "A", netArea: 0, loggiaArea: 0, totalNetArea: 0, commonArea: 0, terraceArea: 0, usableTerrace: 0, storeArea: 8.72, parking: 1, statusi: "Per shitje", shenime: "0" },
+    { id: "VI23", sector: "Villa", typology: "TWIN", Kat0Area: 99.09, Kati1Area: 75.29, verandaArea: 49.41, poolArea: 34.41, plotArea: 329.59, TotalArea: 174.38, status: "bolv", floor: "1", scale: "A", netArea: 0, loggiaArea: 0, totalNetArea: 0, commonArea: 0, terraceArea: 0, usableTerrace: 0, storeArea: 8.72, parking: 1, statusi: "Rezervuar", shenime: "Forbes" },
 
     //Apartamentet == G7B ===
 
@@ -374,7 +374,7 @@ const defaultApartmentDetails = [
     { id:"C8HC5", Tipology: "2+1", building: "C8", floor: 2, NetArea: 124.04, ComonArea: 20.04, TotalArea: 144.08, GreenArea: 0, TerraceArea: 0, ParkingNumber: "P04 01 - 11, 12", statusi :"Shitur", shenime :"ARDJAN BASHA"  },
     { id:"C8HC6", Tipology: "1+1", building: "C8", floor: 2, NetArea: 67.99, ComonArea: 10.98, TotalArea: 78.97, GreenArea: 0, TerraceArea: 0, ParkingNumber: "P04 01 - 16", statusi :"Shitur", shenime :"Behar Sinakolli"  },
     { id:"C8HC7", Tipology: "2+1", building: "C8", floor: 2, NetArea: 108.98, ComonArea: 17.61, TotalArea: 126.59, GreenArea: 70, TerraceArea: 0, ParkingNumber: "", statusi :"Shitur", shenime :"Klaudia Ballari"  },
-    { id:"C8HC8", Tipology: "3+1", building: "C8", floor: 3, NetArea: 247.4, ComonArea: 26, TotalArea: 273, GreenArea: 0, TerraceArea: 89.1, ParkingNumber: "", statusi :"Per shitje", shenime :""  },
+    { id:"C8HC8", Tipology: "3+1", building: "C8", floor: 3, NetArea: 247.4, ComonArea: 26, TotalArea: 273, GreenArea: 0, TerraceArea: 89.1, ParkingNumber: "", statusi :"Rezervuar", shenime :"Forbes"  },
 
 
 
