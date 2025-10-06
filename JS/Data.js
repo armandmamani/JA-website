@@ -301,6 +301,7 @@ const defaultApartmentDetails = [
     { id:"B5HB8", Tipology: "3+1", building: "B5", floor: 2, NetArea: 148.63, ComonArea: 23.12, TotalArea: 171.75, GreenArea: 0, TerraceArea: 0, ParkingNumber: "P01 06 90, 91", statusi :"Shitur", shenime :"BESMIR SHEHAJ"  },
     { id:"B6HB1", Tipology: "3+1", building: "B6", floor: 0, NetArea: 143, ComonArea: 22, TotalArea: 165, GreenArea: 150.5, TerraceArea: 0, ParkingNumber: "P06 03 -42, 43, 44", statusi :"Shitur", shenime :"ARBEN SHINAJ"  },
     { id:"B6HB2", Tipology: "3+1", building: "B6", floor: 0, NetArea: 143, ComonArea: 22, TotalArea: 165, GreenArea: 186, TerraceArea: 0, ParkingNumber: "P06 03 -47, 48", statusi :"Shitur", shenime :"RIDJAN KARASANI"  },
+    { id:"B6HB3", Tipology: "0", building: "B6", floor: 0, NetArea: 0, ComonArea: 0, TotalArea: 0, GreenArea: 0, TerraceArea: 0, ParkingNumber: "0", statusi :"Shitur", shenime :"RIDJAN KARASANI"  },
     { id:"B6HB4", Tipology: "2+1", building: "B6", floor: 1, NetArea: 129.24, ComonArea: 20.1, TotalArea: 149.34, GreenArea: 0, TerraceArea: 0, ParkingNumber: "", statusi :"Rezervuar", shenime :"Gazmend Malo"  },
     { id:"B6HB5", Tipology: "1+1", building: "B6", floor: 1, NetArea: 70.75, ComonArea: 11, TotalArea: 81.75, GreenArea: 0, TerraceArea: 0, ParkingNumber: "", statusi :"Rezervuar", shenime :"Klienti"  },
     { id:"B6HB6", Tipology: "2+1", building: "B6", floor: 1, NetArea: 127.05, ComonArea: 19.76, TotalArea: 146.81, GreenArea: 0, TerraceArea: 0, ParkingNumber: "", statusi :"Shitur", shenime :"Aleksander Vasili"  },
