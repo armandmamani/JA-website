@@ -311,6 +311,7 @@ const defaultApartmentDetails = [
     { id:"B6HB8", Tipology: "3+1", building: "B6", floor: 2, NetArea: 148.63, ComonArea: 23.12, TotalArea: 171.75, GreenArea: 0, TerraceArea: 0, ParkingNumber: "P06 05 - 45,46", statusi :"Shitur", shenime :"ARDIT  BEJLERI"  },
     { id:"B7HB1", Tipology: "3+1", building: "B7", floor: 0, NetArea: 143, ComonArea: 22, TotalArea: 165, GreenArea: 186, TerraceArea: 0, ParkingNumber: "P02 02 - 17, 18", statusi :"Shitur", shenime :"ERMAL SHINI"  },
     { id:"B7HB2", Tipology: "3+1", building: "B7", floor: 0, NetArea: 143, ComonArea: 22, TotalArea: 165, GreenArea: 185, TerraceArea: 0, ParkingNumber: "P02 02 - 19, 20", statusi :"Shitur", shenime :"ELVIN LEKA"  },
+    { id:"B7HB3", Tipology: "0", building: "B6", floor: 0, NetArea: 0, ComonArea: 0, TotalArea: 0, GreenArea: 0, TerraceArea: 0, ParkingNumber: "0", statusi :"Shitur", shenime :"ELVIN LEKA"  },
     { id:"B7HB4", Tipology: "2+1", building: "B7", floor: 1, NetArea: 129.24, ComonArea: 20.1, TotalArea: 149.34, GreenArea: 0, TerraceArea: 0, ParkingNumber: "P02 02 - 11, 14", statusi :"Shitur", shenime :"Ledian Mimini"  },
     { id:"B7HB5", Tipology: "1+1", building: "B7", floor: 1, NetArea: 70.75, ComonArea: 11, TotalArea: 81.75, GreenArea: 0, TerraceArea: 0, ParkingNumber: "", statusi :"Shitur", shenime :"Eldi Condi"  },
     { id:"B7HB6", Tipology: "2+1", building: "B7", floor: 1, NetArea: 127.05, ComonArea: 19.76, TotalArea: 146.81, GreenArea: 0, TerraceArea: 0, ParkingNumber: "P02 02 - 15, 16", statusi :"Shitur", shenime :"EUGENT CAUSHI"  },
