@@ -286,6 +286,8 @@ const defaultApartmentDetails = [
     { id:"B3HB7", Tipology: "3+1", building: "B3", floor: 2, NetArea: 201.29, ComonArea: 31.31, TotalArea: 232.6, GreenArea: 0, TerraceArea: 0, ParkingNumber: "P05-03-33,34", statusi :"Shitur", shenime :"GEZIM BEQAJ"  },
     { id:"B3HB8", Tipology: "3+1", building: "B3", floor: 2, NetArea: 148.63, ComonArea: 23.12, TotalArea: 171.75, GreenArea: 0, TerraceArea: 0, ParkingNumber: "P05 03 -25, 26", statusi :"Shitur", shenime :"ARDJAN MALASI"  },
     { id:"B4HB1", Tipology: "x", building: "B4", floor: 0, NetArea: 276.9, ComonArea: 0, TotalArea: 276.9, GreenArea: 0, TerraceArea: 0, ParkingNumber: "", statusi :"Rezervuar", shenime :"BLLOKUAR"  },
+    { id:"B4HB2", Tipology: "x", building: "B4", floor: 0, NetArea: 0, ComonArea: 0, TotalArea:0, GreenArea: 0, TerraceArea: 0, ParkingNumber: "", statusi :"Rezervuar", shenime :"BLLOKUAR"  },
+    { id:"B4HB3", Tipology: "x", building: "B4", floor: 0, NetArea: 0, ComonArea: 0, TotalArea: 0, GreenArea: 0, TerraceArea: 0, ParkingNumber: "", statusi :"Rezervuar", shenime :"BLLOKUAR"  },
     { id:"B4HB4", Tipology: "2+1", building: "B4", floor: 1, NetArea: 129.24, ComonArea: 20.1, TotalArea: 149.34, GreenArea: 0, TerraceArea: 0, ParkingNumber: "", statusi :"Rezervuar", shenime :"BLLOKUAR"  },
     { id:"B4HB5", Tipology: "1+1", building: "B4", floor: 1, NetArea: 70.75, ComonArea: 11, TotalArea: 81.75, GreenArea: 0, TerraceArea: 0, ParkingNumber: "", statusi :"Rezervuar", shenime :"BLLOKUAR"  },
     { id:"B4HB6", Tipology: "2+1", building: "B4", floor: 1, NetArea: 127.05, ComonArea: 19.76, TotalArea: 146.81, GreenArea: 0, TerraceArea: 0, ParkingNumber: "", statusi :"Rezervuar", shenime :"BLLOKUAR"  },
