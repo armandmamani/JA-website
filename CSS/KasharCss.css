@@ -1,9 +1,34 @@
 
 
 body {
-margin: 0;
-font-family: 'Roboto', sans-serif;
-background: #f8f9f9;
+    margin: 0;
+    background-color: #384637;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position-x: 200px;
+    background-size: 90% 100%;
+    color: var(--accent-white);
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    display: block;
+    color: #384637;
+    background: #f8f9f9;
+}
+:root {
+    --myrtle-green: #4B787Bff; /* Blue */
+    --drab-dark-brown: #454326ff; /* Dark brown */
+    --desert-sand: #D6BFAFff; /* Sand */
+    --text-color: #ddd; /* Dark Gray */
+    --background-color-beaver: #AC9682ff; /* Light Gray */
+    --primary-blue: #003b6f; /* Deep Sea Blue */
+    --secondary-gold: #ffd700; /* Luxurious Gold */
+    --accent-white: #ffffff; /* White Accent */
+    --background-gradient: linear-gradient(to bottom, #87cefa, #4682b4); /* Sky to Ocean Gradient */
+    --button-hover: #ffa500; /* Warm Glow */
+    --seaside-villa: #e8d6cb;
+    --butter-cup: #f39c12;
+    --saffron-mango: #fabe58;
+    --merino: #f7efe8;
 }
 
 .app-container {
@@ -11,38 +36,81 @@ display: grid;
 grid-template-columns: 250px 1fr 300px;
 height: 100vh;
 }
+@keyframes fadein  {
+    from {
+        opacity: 0;
+    }
 
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes float {
+    from {
+        transform: translateY(-10px);
+    }
+
+    to {
+        transform: translateY(0px);
+    }
+
+ 
+}
 
 /* Sidebar */
 .sidebar {
-background: #2e86c1;
+background: var(--myrtle-green);
 color: white;
 padding: 20px;
 }
 .sidebar h2 { margin-bottom: 20px; }
-.selector label {
-display: block;
-margin-bottom: 5px;
-}
+
 .selector select {
-width: 100%;
-padding: 8px;
-margin-bottom: 15px;
-border: none;
-border-radius: 5px;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #9cf5fb;
 }
 
+
+option {
+    color: black;
+    font-weight: normal;
+}
+    option:hover {
+        background-color: var(--myrtle-green);
+        color: white;
+    }
 
 /* Main Grid */
 .main-grid {
-padding: 20px;
-
-background: white;
+    padding: 20px;
+    background: white;
 }
 .placeholder {
 text-align: center;
 color: #999;
 margin-top: 40px;
+}
+
+#ProjektiImgA {
+    position: fixed;
+    left: 13%;
+    width: 72%;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.building {
+    display: none;
+    margin-top: 20px;
+    border: 2px solid #ddd;
+    padding: 10px;
+    border-radius: 10px;
 }
 .buildingLetter {
     font-family: 'Arial Black', sans-serif;
@@ -50,7 +118,11 @@ margin-top: 40px;
     color: #ddd;
     font-weight: bolder;
     position: fixed;
+    cursor: pointer;
+    animation: fadein 1s;
+    z-index: 2;
 }
+
 
 #buildingLetterA {
     bottom: 5%;
@@ -76,35 +148,247 @@ margin-top: 40px;
     top: 55%;
     left: 63%;
 }
-#godina {
+
+.floorContainer {
+    display: flex;
+    margin-left: 2%;
+    width: 77%;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.FloorNumber {
     position: absolute;
-    left: 14vw;
-    width: 70%;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    opacity: 0.3;
+    z-index: 10;
+    cursor: pointer;
+}
+    .FloorNumber:hover {
+        opacity: 0.8;
+    }
+
+
+
+#kati9A, #kati9B, #kati9C, #kati9D, #kati9E {
+    border-top: 2px solid black;
+}
+
+#godinaA, #godinaB, #godinaC, #godinaD, #godinaE {
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 13%;
+    width: 72%;
     height: 70%;
-    background-image: url(Godina_A_background.jpg);
     background-size: cover;
     padding: 10px;
     padding-top: 175px;
     padding-left: 175px;
     border: 3px solid #000;
+    animation: fadein 2s;
+    z-index: 5;
+}
+#godinaA {
+    display: none;
+    background-image: url(Kashar_images/Godina_A/Godina_A_background.jpg);
 }
 
-.katet {
-    display: flex;
-    width: 80%;
-    opacity: 0.7;
-    border-left: 2px solid black;
-    border-right: 2px solid black;
+#godinaB {
+    display: none;
+    background-image: url(Kashar_images/Godina_B/Godina_B_background.jpg);
+}
+
+#godinaC {
+    display: none;
+    background-image: url(Kashar_images/Godina_C/Godina_C_background.jpg);
+}
+
+#godinaD {
+    display: none;
+    background-image: url(Kashar_images/Godina_D/Godina_D_background.jpg);
+}
+
+#godinaE {
+    display: none;
+    background-image: url(Kashar_images/Godina_E/Godina_E_background.jpg);
+}
+
+.floorPlan {
+    display: none;
+    position: absolute;
+    margin-top: 40px;
+    width: 71vw;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 5px;
+    background: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 30;
+}
+
+.floor-plan {
+    display: none;
+    background-color: #f9f9f9;
+    border: 1px dashed #ccc;
+    padding: 10px;
+    margin-top: 10px;
+}
+.building-letter {
+    cursor: pointer;
+    font-weight: bold;
+    margin: 10px;
+    font-size: 20px;
 }
 
 
-    .katet:hover {
-        opacity: 1;
+    .floor {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        opacity: 0.5;
+        border-top: 1px dashed black;
+        border-left: 2px solid black;
+        border-right: 2px solid black;
+        background-color: #f8e7c3;
+        cursor: pointer;
     }
-#kati9 {
-    padding-top: 20px;
-    border-top: 2px solid black;
+
+        .floor:hover {
+            background-color: #f8e7c3;
+            opacity: 1;
+        }
+
+
+
+
+#floorHeader {
+    margin-top: 10px;
+    font-weight: bold;
 }
+
+#table-plan {
+    display: none;
+    position: absolute;
+    top: 20vh;
+    background-color: var(--desert-sand);
+    width: 70%;
+    grid-column: span 10;
+    text-align: center;
+    margin-bottom: 15px;
+    color: #333;
+    z-index: 200;
+    border: 5px solid var(--drab-dark-brown);
+}
+#floorHeader {
+    text-align: center;
+    margin-top: 10px;
+    grid-column: span 10;
+    text-align: center;
+    margin-bottom: 15px;
+    font: bold 44px Roboto;
+    color: var(--drab-dark-brown);
+}
+.apTabHeader {
+    margin-top: 10px;
+    width: 100%;
+    font: bold 44px Roboto;
+    grid-column: span 10;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.apTabSubHeader1 {
+    border: 5px solid var(--drab-dark-brown);
+    grid-column: 1/span 5;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.apTabSubHeader2 {
+    border: 5px solid var(--drab-dark-brown);
+    grid-column: 6/span 5;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.apartmentOver {
+    background-color: var(--merino);
+    border: 2px solid #333;
+    border-radius: 5px;
+    text-align: left;
+    width: 7vw;
+    height: 15vh;
+    font-size: 12px;
+    font-family: Roboto;
+    padding: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+    .apartmentOver:hover {
+        background-color: #bbb;
+        transform: scale(1.05);
+    }
+
+#apOver_1B, #apOver_2B {
+    grid-row: 3/span 3;
+    border-left: 5px solid var(--drab-dark-brown);
+    height: 100%;
+}
+
+#apOver_2B {
+    grid-column: 6;
+}
+
+#apOver_1F, #apOver_2F {
+    border-right: 5px solid var(--drab-dark-brown);
+    height: 100%;
+    grid-row: 3/span 3;
+}
+
+#apOver_1F {
+    grid-column: 5;
+}
+
+#apOver_2F {
+    grid-column: 10;
+}
+
+#empty1, #empty2, #empty3, #empty4 {
+    background-color: var(--accent-white);
+    border: none;
+    cursor: default;
+    width: 100%;
+    transform:none;
+}
+
+#empty1, #empty2 {
+    background-image: url(Kashar_images/shkallet.jpg);
+    background-size: cover;
+    
+}
+
+    #empty3 {
+        grid-column: 2/span 3;
+    }
+
+#empty4 {
+    grid-column: 7/span 3;
+}
+
+
 
 
 .floor-row {

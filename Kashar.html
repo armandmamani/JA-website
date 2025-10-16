@@ -19,24 +19,55 @@
 
 
             <div class="selector">
-                <label for="buildingSelect">Godina</label>
-                <select id="buildingSelect"></select>
+                <select id="buildingSelect">
+                    <option value="">GODINA</option>
+                    <option value="A">Godina A</option>
+                    <option value="B">Godina B</option>
+                    <option value="C">Godina C</option>
+                    <option value="D">Godina D</option>
+                    <option value="D">Godina E</option>
+                </select>
+
+            </div>
+            <div class="selector">
+                <select id="entranceSelect">
+                    <option value="">SHKALLA</option>
+                    <option value="1">Shkalla 1</option>
+                    <option value="2">Shkalla 2</option>
+                    <option value="3">Shkalla 3</option>
+                </select>
             </div>
 
-
             <div class="selector">
-                <label for="entranceSelect">Shkalla</label>
-                <select id="entranceSelect"></select>
+                <select id="floorSelect">
+                    <option value="">KATI</option>
+                    <option value="1">Kati 1</option>
+                    <option value="2">Kati 2</option>
+                    <option value="3">Kati 3</option>
+                    <option value="4">Kati 4</option>
+                    <option value="5">Kati 5</option>
+                    <option value="6">Kati 6</option>
+                    <option value="7">Kati 7</option>
+                    <option value="8">Kati 8</option>
+                    <option value="9">Kati 9</option>
+
+                </select>
             </div>
 
             <div class="selector">
-                <label for="entranceSelect">Kati</label>
-                <select id="entranceSelect"></select>
-            </div>
+                <select id="apartmentSelect">
+                    <option value="">APARTAMENTI</option>
+                    <option value="A">Apartamenti A</option>
+                    <option value="B">Apartamenti B</option>
+                    <option value="C">Apartamenti C</option>
+                    <option value="D">Apartamenti D</option>
+                    <option value="E">Apartamenti E</option>
+                    <option value="f">Apartamenti F</option>
+                    <option value="G">Apartamenti G</option>
+                    <option value="H">Apartamenti H</option>
+                    <option value="I">Apartamenti I</option>
 
-            <div class="selector">
-                <label for="entranceSelect">Apartamenti</label>
-                <select id="entranceSelect"></select>
+                </select>
             </div>
 
 
@@ -45,26 +76,295 @@
 
         <!-- Main Panel: Apartments Grid -->
         <main class="main-grid" id="apartmentGrid">
-            <h2 class=" buildingLetter" id="buildingLetterA">A</h2>
-            <h2 class=" buildingLetter" id="buildingLetterB">B</h2>
-            <h2 class=" buildingLetter" id="buildingLetterC">C</h2>
-            <h2 class=" buildingLetter" id="buildingLetterD">D</h2>
-            <h2 class=" buildingLetter" id="buildingLetterE">E</h2>
-          
-            <div id="godina">
-                <img class="katet" id="kati9" src="Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
-                <img class="katet" id="kati8" src="Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
-                <img class="katet" id="kati7" src="Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
-                <img class="katet" id="kati6" src="Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
-                <img class="katet" id="kati5" src="Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
-                <img class="katet" id="kati4" src="Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
-                <img class="katet" id="kati3" src="Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
-                <img class="katet" id="kati2" src="Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
-                <img class="katet" id="kati1" src="Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
-            
+            <div id="sitePlan">
+                <h2 class=" buildingLetter" id="buildingLetterA">A</h2>
+                <h2 class=" buildingLetter" id="buildingLetterB">B</h2>
+                <h2 class=" buildingLetter" id="buildingLetterC">C</h2>
+                <h2 class=" buildingLetter" id="buildingLetterD">D</h2>
+                <h2 class=" buildingLetter" id="buildingLetterE">E</h2>
             </div>
-            <img id="ProjektiImg" src="Kashar_images\Projekti Arkitektonik-3.jpg" alt="Projekti Arkitektonik" />
+            <div id="table-plan">
+                <div class="apTabHeader">
+                    <h1 id="floorHeader">GODINA A KATI 1</h1>
+                </div>
+                <div class="apTabSubHeader1">
+                    <h2>SHKALLA 1</h2>
+                </div>
+                <div class="apTabSubHeader2">
+                    <h2>SHKALLA 2</h2>
+                </div>
+                <div class="apartmentOver" id="apOver_1B">Apartamenti 1B</div>
+                <div class="apartmentOver" id="apOver_1A">Apartamenti 1A</div>
+                <div class="apartmentOver" id="empty1"></div>
+                <div class="apartmentOver" id="apOver_1G">Apartamenti 1G</div>
+                <div class="apartmentOver" id="apOver_1F">Apartamenti 1F</div>
+
+                <div class="apartmentOver" id="apOver_2B">Apartamenti 2B</div>
+                <div class="apartmentOver" id="apOver_2A">Apartamenti 2A</div>
+                <div class="apartmentOver" id="empty2"></div>
+                <div class="apartmentOver" id="apOver_2G">Apartamenti 2G</div>
+                <div class="apartmentOver" id="apOver_2F">Apartamenti 2F</div>
+
+                <div class="apartmentOver" id="empty3"></div>
+                <div class="apartmentOver" id="empty4"></div>
+
+                <div class="apartmentOver" id="apOver_1C">Apartamenti 1C</div>
+                <div class="apartmentOver" id="apOver_1D">Apartamenti 1D</div>
+                <div class="apartmentOver" id="apOver_1E">Apartamenti 1E</div>
+
+                <div class="apartmentOver" id="apOver_2C">Apartamenti 2C</div>
+                <div class="apartmentOver" id="apOver_2D">Apartamenti 2D</div>
+                <div class="apartmentOver" id="apOver_2E">Apartamenti 2E</div>
+            </div>
+
+            <div id="godinaA" class="building">
+                <div class="floorContainer" style="background-color: #fbe4c8">
+                    <h2 id="floor_9A" class="FloorNumber">Kati 9</h2>
+                    <img class="floor" id="kati9A" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                </div>
+                <div class="floorContainer">
+                    <h2 id="floor_8A" class="FloorNumber">Kati 8</h2>
+                    <img class="floor" id="kati8A" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                </div>
+                <div class="floorContainer">
+                    <h2 id="floor_7A" class="FloorNumber">Kati 7</h2>
+                    <img class="floor" id="kati7A" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                </div>
+                <div class="floorContainer">
+                    <h2 id="floor_6A" class="FloorNumber">Kati 6</h2>
+                    <img class="floor" id="kati6A" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                </div>
+                <div class="floorContainer">
+                    <h2 id="floor_5A" class="FloorNumber">Kati 5</h2>
+                    <img class="floor" id="kati5A" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                </div>
+                <div class="floorContainer">
+                    <h2 id="floor_4A" class="FloorNumber">Kati 4</h2>
+                    <img class="floor" id="kati4A" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                </div>
+                <div class="floorContainer">
+                    <h2 id="floor_3A" class="FloorNumber">Kati 3</h2>
+                    <img class="floor" id="kati3A" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                </div>
+                <div class="floorContainer">
+                    <h2 id="floor_2A" class="FloorNumber">Kati 2</h2>
+                    <img class="floor" id="kati2A" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                </div>
+                <div class="floorContainer">
+                    <h2 id="floor_1A" class="FloorNumber">Kati 1</h2>
+                    <img class="floor" id="kati1A" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                </div>
+
+                <div id="floor-plan1A" class="floorPlan">Floor Plan 1A</div>
+                <div id="floor-plan2A" class="floorPlan">Floor Plan 2A</div>
+                <div id="floor-plan3A" class="floorPlan">Floor Plan 3A</div>
+                <div id="floor-plan4A" class="floorPlan">Floor Plan 4A</div>
+                <div id="floor-plan5A" class="floorPlan">Floor Plan 5A</div>
+                <div id="floor-plan6A" class="floorPlan">Floor Plan 6A</div>
+                <div id="floor-plan7A" class="floorPlan">Floor Plan 7A</div>
+                <div id="floor-plan8A" class="floorPlan">Floor Plan 8A</div>
+                <div id="floor-plan9A" class="floorPlan">Floor Plan 9A</div>
+
+
+            </div>
+            <div id="godinaB" class="building">
+                <div class="floorContainer" style="background-color: #fbe4c8">
+                    <h2 id="floor_9B" class="FloorNumber">Kati 9</h2>
+                    <img class="floor" id="kati9B" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                </div>
+                <div class="floorContainer">
+                    <h2 id="floor_8B" class="FloorNumber">Kati 8</h2>
+                    <img class="floor" id="kati8B" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                </div>
+                <div class="floorContainer">
+                    <h2 id="floor_7B" class="FloorNumber">Kati 7</h2>
+                    <img class="floor" id="kati7B" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                </div>
+                <div class="floorContainer">
+                    <h2 id="floor_6B" class="FloorNumber">Kati 6</h2>
+                    <img class="floor" id="kati6B" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                </div>
+                <div class="floorContainer">
+                    <h2 id="floor_5B" class="FloorNumber">Kati 5</h2>
+                    <img class="floor" id="kati5B" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                </div>
+                <div class="floorContainer">
+                    <h2 id="floor_4B" class="FloorNumber">Kati 4</h2>
+                    <img class="floor" id="kati4B" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                </div>
+                <div class="floorContainer">
+                    <h2 id="floor_3B" class="FloorNumber">Kati 3</h2>
+                    <img class="floor" id="kati3B" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                </div>
+                <div class="floorContainer">
+                    <h2 id="floor_2B" class="FloorNumber">Kati 2</h2>
+                    <img class="floor" id="kati2B" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                </div>
+                <div class="floorContainer">
+                    <h2 id="floor_1B" class="FloorNumber">Kati 1</h2>
+                    <img class="floor" id="kati1B" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                </div>
+                <div id="floor-plan1B" class="floorPlan">Floor Plan 1B</div>
+                <div id="floor-plan2B" class="floorPlan">Floor Plan 2B</div>
+                <div id="floor-plan3B" class="floorPlan">Floor Plan 3B</div>
+                <div id="floor-plan4B" class="floorPlan">Floor Plan 4B</div>
+                <div id="floor-plan5B" class="floorPlan">Floor Plan 5B</div>
+                <div id="floor-plan6B" class="floorPlan">Floor Plan 6B</div>
+                <div id="floor-plan7B" class="floorPlan">Floor Plan 7B</div>
+                <div id="floor-plan8B" class="floorPlan">Floor Plan 8B</div>
+                <div id="floor-plan9B" class="floorPlan">Floor Plan 9B</div>
+
+            </div>
+            <div id="godinaC" class="building">
+                <div class="floorContainer" style="background-color: #fbe4c8">
+                    <h2 id="floor_9C" class="FloorNumber">Kati 9</h2>
+                    <img class="floor" id="kati9C" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                </div>
+                <div class="floorContainer">
+                    <h2 id="floor_8C" class="FloorNumber">Kati 8</h2>
+                    <img class="floor" id="kati8C" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                </div>
+                <div class="floorContainer">
+                    <h2 id="floor_7C" class="FloorNumber">Kati 7</h2>
+                    <img class="floor" id="kati7C" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                </div>
+                <div class="floorContainer">
+                    <h2 id="floor_6C" class="FloorNumber">Kati 6</h2>
+                    <img class="floor" id="kati6C" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                </div>
+                <div class="floorContainer">
+                    <h2 id="floor_5C" class="FloorNumber">Kati 5</h2>
+                    <img class="floor" id="kati5C" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                </div>
+                <div class="floorContainer">
+                    <h2 id="floor_4C" class="FloorNumber">Kati 4</h2>
+                    <img class="floor" id="kati4C" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                </div>
+                <div class="floorContainer">
+                    <h2 id="floor_3C" class="FloorNumber">Kati 3</h2>
+                    <img class="floor" id="kati3C" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                </div>
+                <div class="floorContainer">
+                    <h2 id="floor_2C" class="FloorNumber">Kati 2</h2>
+                    <img class="floor" id="kati2C" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                </div>
+                <div class="floorContainer">
+                    <h2 id="floor_1C" class="FloorNumber">Kati 1</h2>
+                    <img class="floor" id="kati1C" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                </div>
+
+                <div id="floor-plan1C" class="floorPlan">Floor Plan 1C</div>
+                <div id="floor-plan2C" class="floorPlan">Floor Plan 2C</div>
+                <div id="floor-plan3C" class="floorPlan">Floor Plan 3C</div>
+                <div id="floor-plan4C" class="floorPlan">Floor Plan 4C</div>
+                <div id="floor-plan5C" class="floorPlan">Floor Plan 5C</div>
+                <div id="floor-plan6C" class="floorPlan">Floor Plan 6C</div>
+                <div id="floor-plan7C" class="floorPlan">Floor Plan 7C</div>
+                <div id="floor-plan8C" class="floorPlan">Floor Plan 8C</div>
+                <div id="floor-plan9C" class="floorPlan">Floor Plan 9A</div>
+
+            </div>
+            <div id="godinaD" class="building">
+                <div class="floorContainer" style="background-color: #fbe4c8">
+                    <h2 id="floor_9D" class="FloorNumber">Kati 9</h2>
+                    <img class="floor" id="kati9D" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                </div>
+                <div class="floorContainer">
+                    <h2 id="floor_8D" class="FloorNumber">Kati 8</h2>
+                    <img class="floor" id="kati8D" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                </div>
+                <div class="floorContainer">
+                    <h2 id="floor_7D" class="FloorNumber">Kati 7</h2>
+                    <img class="floor" id="kati7D" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                </div>
+                <div class="floorContainer">
+                    <h2 id="floor_6D" class="FloorNumber">Kati 6</h2>
+                    <img class="floor" id="kati6D" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                </div>
+                <div class="floorContainer">
+                    <h2 id="floor_5D" class="FloorNumber">Kati 5</h2>
+                    <img class="floor" id="kati5D" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                </div>
+                <div class="floorContainer">
+                    <h2 id="floor_4D" class="FloorNumber">Kati 4</h2>
+                    <img class="floor" id="kati4D" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                </div>
+                <div class="floorContainer">
+                    <h2 id="floor_3D" class="FloorNumber">Kati 3</h2>
+                    <img class="floor" id="kati3D" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                </div>
+                <div class="floorContainer">
+                    <h2 id="floor_2D" class="FloorNumber">Kati 2</h2>
+                    <img class="floor" id="kati2D" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                </div>
+                <div class="floorContainer">
+                    <h2 id="floor_1D" class="FloorNumber">Kati 1</h2>
+                    <img class="floor" id="kati1D" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                </div>
+                <div id="floor-plan1D" class="floorPlan">Floor Plan 1D</div>
+                <div id="floor-plan2D" class="floorPlan">Floor Plan 2D</div>
+                <div id="floor-plan3D" class="floorPlan">Floor Plan 3D</div>
+                <div id="floor-plan4D" class="floorPlan">Floor Plan 4D</div>
+                <div id="floor-plan5D" class="floorPlan">Floor Plan 5D</div>
+                <div id="floor-plan6D" class="floorPlan">Floor Plan 6D</div>
+                <div id="floor-plan7D" class="floorPlan">Floor Plan 7D</div>
+                <div id="floor-plan8D" class="floorPlan">Floor Plan 8D</div>
+                <div id="floor-plan9D" class="floorPlan">Floor Plan 9A</div>
+
+            </div>
+            <div id="godinaE" class="building">
+                <div class="floorContainer" style="background-color: #fbe4c8">
+                    <h2 id="floor_9E" class="FloorNumber">Kati 9</h2>
+                    <img class="floor" id="kati9E" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                </div>
+                <div class="floorContainer">
+                    <h2 id="floor_8E" class="FloorNumber">Kati 8</h2>
+                    <img class="floor" id="kati8E" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                </div>
+                <div class="floorContainer">
+                    <h2 id="floor_7E" class="FloorNumber">Kati 7</h2>
+                    <img class="floor" id="kati7E" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                </div>
+                <div class="floorContainer">
+                    <h2 id="floor_6E" class="FloorNumber">Kati 6</h2>
+                    <img class="floor" id="kati6E" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                </div>
+                <div class="floorContainer">
+                    <h2 id="floor_5" class="FloorNumber">Kati 5</h2>
+                    <img class="floor" id="kati5E" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                </div>
+                <div class="floorContainer">
+                    <h2 id="floor_4E" class="FloorNumber">Kati 4</h2>
+                    <img class="floor" id="kati4E" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                </div>
+                <div class="floorContainer">
+                    <h2 id="floor_3E" class="FloorNumber">Kati 3</h2>
+                    <img class="floor" id="kati3E" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                </div>
+                <div class="floorContainer">
+                    <h2 id="floor_2E" class="FloorNumber">Kati 2</h2>
+                    <img class="floor" id="kati2E" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                </div>
+                <div class="floorContainer">
+                    <h2 id="floor_1E" class="FloorNumber">Kati 1</h2>
+                    <img class="floor" id="kati1E" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                </div>
+                <div id="floor-plan1E" class="floorPlan">Floor Plan 1E</div>
+                <div id="floor-plan2E" class="floorPlan">Floor Plan 2E</div>
+                <div id="floor-plan3E" class="floorPlan">Floor Plan 3E</div>
+                <div id="floor-plan4E" class="floorPlan">Floor Plan 4E</div>
+                <div id="floor-plan5E" class="floorPlan">Floor Plan 5E</div>
+                <div id="floor-plan6E" class="floorPlan">Floor Plan 6E</div>
+                <div id="floor-plan7E" class="floorPlan">Floor Plan 7E</div>
+                <div id="floor-plan8E" class="floorPlan">Floor Plan 8E</div>
+                <div id="floor-plan9E" class="floorPlan">Floor Plan 9A</div>
+
+            </div>
+            <div id="apartments">
+
+            </div>
         </main>
+        <img id="ProjektiImgA" src="CSS\Kashar_images\Projekti Arkitektonik-3.jpg" alt="Projekti Arkitektonik" />
 
 
         <!-- Right Panel: Apartment Details -->
