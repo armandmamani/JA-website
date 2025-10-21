@@ -25,17 +25,9 @@
                     <option value="B">Godina B</option>
                     <option value="C">Godina C</option>
                     <option value="D">Godina D</option>
-                    <option value="D">Godina E</option>
+                    <option value="E">Godina E</option>
                 </select>
 
-            </div>
-            <div class="selector">
-                <select id="entranceSelect">
-                    <option value="">SHKALLA</option>
-                    <option value="1">Shkalla 1</option>
-                    <option value="2">Shkalla 2</option>
-                    <option value="3">Shkalla 3</option>
-                </select>
             </div>
 
             <div class="selector">
@@ -55,6 +47,16 @@
             </div>
 
             <div class="selector">
+                <select id="scaleSelect">
+                    <option value="">SHKALLA</option>
+                    <option value="1">Shkalla 1</option>
+                    <option value="2">Shkalla 2</option>
+                    <option value="3">Shkalla 3</option>
+                </select>
+            </div>
+
+
+            <div class="selector">
                 <select id="apartmentSelect">
                     <option value="">APARTAMENTI</option>
                     <option value="A">Apartamenti A</option>
@@ -62,14 +64,14 @@
                     <option value="C">Apartamenti C</option>
                     <option value="D">Apartamenti D</option>
                     <option value="E">Apartamenti E</option>
-                    <option value="f">Apartamenti F</option>
+                    <option value="F">Apartamenti F</option>
                     <option value="G">Apartamenti G</option>
                     <option value="H">Apartamenti H</option>
                     <option value="I">Apartamenti I</option>
 
                 </select>
             </div>
-
+            <div id="apartmentDetails"></div>
 
         </aside>
 
@@ -83,39 +85,98 @@
                 <h2 class=" buildingLetter" id="buildingLetterD">D</h2>
                 <h2 class=" buildingLetter" id="buildingLetterE">E</h2>
             </div>
-            <div id="table-plan">
-                <div class="apTabHeader">
-                    <h1 id="floorHeader">GODINA A KATI 1</h1>
-                </div>
-                <div class="apTabSubHeader1">
-                    <h2>SHKALLA 1</h2>
-                </div>
-                <div class="apTabSubHeader2">
-                    <h2>SHKALLA 2</h2>
-                </div>
-                <div class="apartmentOver" id="apOver_1B">Apartamenti 1B</div>
-                <div class="apartmentOver" id="apOver_1A">Apartamenti 1A</div>
-                <div class="apartmentOver" id="empty1"></div>
-                <div class="apartmentOver" id="apOver_1G">Apartamenti 1G</div>
-                <div class="apartmentOver" id="apOver_1F">Apartamenti 1F</div>
-
-                <div class="apartmentOver" id="apOver_2B">Apartamenti 2B</div>
-                <div class="apartmentOver" id="apOver_2A">Apartamenti 2A</div>
-                <div class="apartmentOver" id="empty2"></div>
-                <div class="apartmentOver" id="apOver_2G">Apartamenti 2G</div>
-                <div class="apartmentOver" id="apOver_2F">Apartamenti 2F</div>
-
-                <div class="apartmentOver" id="empty3"></div>
-                <div class="apartmentOver" id="empty4"></div>
-
-                <div class="apartmentOver" id="apOver_1C">Apartamenti 1C</div>
-                <div class="apartmentOver" id="apOver_1D">Apartamenti 1D</div>
-                <div class="apartmentOver" id="apOver_1E">Apartamenti 1E</div>
-
-                <div class="apartmentOver" id="apOver_2C">Apartamenti 2C</div>
-                <div class="apartmentOver" id="apOver_2D">Apartamenti 2D</div>
-                <div class="apartmentOver" id="apOver_2E">Apartamenti 2E</div>
+            <div id="tablePlan-container">
             </div>
+
+            <div id="table-plan"></div>
+            <div id="floorHeader"></div>
+
+            <!-- Template: Layout 1 -->
+            <template id="layout1-template">
+                <table class="layout layout1">
+                    <tr>
+                        <td rowspan="3">B</td>
+                        <td>A</td>
+                        <td class="empty"></td>
+                        <td>G</td>
+                        <td rowspan="3">F </td>
+                    </tr>
+                    <tr>
+                        <td class="merged" colspan="3"></td>
+                    </tr>
+                    <tr>
+                        <td>C</td>
+                        <td>D</td>
+                        <td>E</td>
+                    </tr>
+                </table>
+            </template>
+
+            <!-- Template: Layout 2 -->
+            <template id="layout2-template">
+                <table class="layout layout2">
+                    <tr>
+                        <td rowspan="3">C</td>
+                        <td>B</td>
+                        <td>A</td>
+                        <td class="empty"></td>
+                        <td>I</td>
+                        <td rowspan="3">H</td>
+                    </tr>
+                    <tr>
+                        <td class="merged" colspan="4"> </td>
+                    </tr>
+                    <tr>
+                        <td>D</td>
+                        <td>E</td>
+                        <td>F</td>
+                        <td>G</td>
+                    </tr>
+                </table>
+            </template>
+            <template id="layout3-template">
+                <table class="layout layout3">
+                    <tr>
+                        <td rowspan="3">A</td>
+                        <td>B</td>
+                        <td class="empty"></td>
+                        <td>C</td>
+                        <td>D</td>
+                        <td rowspan="3">E</td>
+                    </tr>
+                    <tr>
+                        <td class="merged" colspan="4"> </td>
+                    </tr>
+                    <tr>
+                        <td>I</td>
+                        <td>H</td>
+                        <td>G</td>
+                        <td>F</td>
+                    </tr>
+                </table>
+            </template>
+            <template id="layout4-template">
+                <table class="layout layout4">
+                    <tr>
+                        <td rowspan="3">B</td>
+                        <td>A</td>
+                        <td class="empty"></td>
+                        <td>I</td>
+                        <td>H</td>
+                        <td rowspan="3">G</td>
+                    </tr>
+                    <tr>
+                        <td class="merged" colspan="4"> </td>
+                    </tr>
+                    <tr>
+                        <td>C</td>
+                        <td>D</td>
+                        <td>E</td>
+                        <td>F</td>
+                    </tr>
+                </table>
+            </template>
+
 
             <div id="godinaA" class="building">
                 <div class="floorContainer" style="background-color: #fbe4c8">
@@ -369,8 +430,6 @@
 
         <!-- Right Panel: Apartment Details -->
         <aside class="details-panel" id="apartmentDetails">
-            <h3>Apartment Details</h3>
-            <p>Select an apartment to view details.</p>
         </aside>
 
 

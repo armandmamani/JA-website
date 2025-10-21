@@ -1,8 +1,8 @@
-
+﻿
 
 body {
     margin: 0;
-    background-color: #384637;
+    background-color: var(--drab-dark-green);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position-x: 200px;
@@ -15,25 +15,33 @@ body {
     background: #f8f9f9;
 }
 :root {
-    --myrtle-green: #4B787Bff; /* Blue */
-    --drab-dark-brown: #454326ff; /* Dark brown */
-    --desert-sand: #D6BFAFff; /* Sand */
+    --myrtle-green: #317873; /* Myrtle Green */
+    --drab-dark-green: #225454; /* Dark myrtle */
+    --gri-e-hapur: #E6E6E6; /*Per sfond*/
+    --gri-e-mbyllur: #6C8480; /*per hijet*/
+    --e-gjelber-gri: #404E3B; /*e erret*/
+    --e-gjelber-grigio: #7B9669; /*e celet*/
+    --jeshile-gri: #BAC8B1; /*e hapur*/
+    --accent-white: #D9ffff; /* White Accent */
     --text-color: #ddd; /* Dark Gray */
+
+
+    --desert-sand: #D6BFAFff; /* Sand */
+    --secondary-color-brown: #784D31; /* Earthy Brown */
+    --primary-color-green: #4A7C59; /* Forest Green */
+    --highlight-orange-color: #FFA500; /* Vibrant Orange */
+    --drab-dark-brown: #543622; /* Dark brown */
+
+
     --background-color-beaver: #AC9682ff; /* Light Gray */
-    --primary-blue: #003b6f; /* Deep Sea Blue */
-    --secondary-gold: #ffd700; /* Luxurious Gold */
-    --accent-white: #ffffff; /* White Accent */
-    --background-gradient: linear-gradient(to bottom, #87cefa, #4682b4); /* Sky to Ocean Gradient */
     --button-hover: #ffa500; /* Warm Glow */
     --seaside-villa: #e8d6cb;
-    --butter-cup: #f39c12;
-    --saffron-mango: #fabe58;
     --merino: #f7efe8;
 }
 
 .app-container {
 display: grid;
-grid-template-columns: 250px 1fr 300px;
+grid-template-columns: 13% 72% 15%;
 height: 100vh;
 }
 @keyframes fadein  {
@@ -54,135 +62,90 @@ height: 100vh;
     to {
         transform: translateY(0px);
     }
-
- 
 }
 
-/* Sidebar */
+/* Sidebar right */
+
 .sidebar {
-background: var(--myrtle-green);
-color: white;
-padding: 20px;
+    background: var(--drab-dark-green);
+    color: var(--accent-white);
+    border-right: 3px solid var(--jeshile-gri);
+    padding: 20px;
 }
 .sidebar h2 { margin-bottom: 20px; }
-
-.selector select {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 15px;
-    border: none;
-    border-radius: 5px;
-    background-color: #9cf5fb;
-}
 
 
 option {
     color: black;
     font-weight: normal;
+    background-color: var(--gri-e-hapur);
 }
     option:hover {
         background-color: var(--myrtle-green);
         color: white;
     }
 
-/* Main Grid */
+
+.selector select{
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--jeshile-gri);
+}
+
+.select {
+    padding: 5px;
+}
+apartmentDetails {
+    width: 100%;
+    margin-top: 15px;
+}
+.apt-details {
+    width: 100%;
+    font-size: 14px;
+    text-align: center;
+}
+
+    .apt-details td {
+        padding: 3px;
+        border-bottom: 1px solid #ccc;
+        text-align: right;
+    }
+
+    .apt-details tr {
+        padding: 3px;
+        border-bottom: 1px solid #ccc;
+        text-align: left;
+    }
+
+
+
+
+
+
+    /* ----- Main Grid ----- */
 .main-grid {
-    padding: 20px;
-    background: white;
+    background: var(--drab-dark-green);
+    
 }
 .placeholder {
 text-align: center;
 color: #999;
 margin-top: 40px;
 }
-
+/* background - project */
 #ProjektiImgA {
     position: fixed;
     left: 13%;
     width: 72%;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
-}
-
-.building {
-    display: none;
-    margin-top: 20px;
-    border: 2px solid #ddd;
-    padding: 10px;
-    border-radius: 10px;
-}
-.buildingLetter {
-    font-family: 'Arial Black', sans-serif;
-    font-size: 10vh;
-    color: #ddd;
-    font-weight: bolder;
-    position: fixed;
-    cursor: pointer;
-    animation: fadein 1s;
-    z-index: 2;
-}
-
-
-#buildingLetterA {
-    bottom: 5%;
-    left: 50%;
-}
-
-#buildingLetterB {
-    top: 50%;
-    left: 30%;
-}
-
-#buildingLetterC {
-    top: 33%;
-    left: 40%;
-}
-
-#buildingLetterD {
-    top: 33%;
-    left: 54%;
-}
-
-#buildingLetterE {
-    top: 55%;
-    left: 63%;
-}
-
-.floorContainer {
-    display: flex;
-    margin-left: 2%;
-    width: 77%;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-
-.FloorNumber {
-    position: absolute;
-    text-align: center;
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
-    opacity: 0.3;
-    z-index: 10;
-    cursor: pointer;
-}
-    .FloorNumber:hover {
-        opacity: 0.8;
-    }
-
-
-
-#kati9A, #kati9B, #kati9C, #kati9D, #kati9E {
-    border-top: 2px solid black;
+    border-top: 3px solid var(--jeshile-gri);
+    border-bottom: 3px solid var(--jeshile-gri);
 }
 
 #godinaA, #godinaB, #godinaC, #godinaD, #godinaE {
     position: absolute;
-    display: none;
     top: 0;
     left: 13%;
     width: 72%;
@@ -195,30 +158,113 @@ margin-top: 40px;
     animation: fadein 2s;
     z-index: 5;
 }
+
 #godinaA {
-    display: none;
     background-image: url(Kashar_images/Godina_A/Godina_A_background.jpg);
 }
 
 #godinaB {
-    display: none;
     background-image: url(Kashar_images/Godina_B/Godina_B_background.jpg);
 }
 
 #godinaC {
-    display: none;
     background-image: url(Kashar_images/Godina_C/Godina_C_background.jpg);
 }
 
 #godinaD {
-    display: none;
     background-image: url(Kashar_images/Godina_D/Godina_D_background.jpg);
 }
 
 #godinaE {
-    display: none;
     background-image: url(Kashar_images/Godina_E/Godina_E_background.jpg);
 }
+
+
+
+
+.building {
+    display: none;
+    margin-top: 20px;
+    border: 2px solid #ddd;
+    padding: 10px;
+    border-radius: 10px;
+}
+    .active {
+        display: block;
+    }
+
+.buildingLetter {
+    font-family: 'Arial Black', sans-serif;
+    font-size: 10vh;
+    color: var(--gri-e-hapur);
+    font-weight: bolder;
+    position: fixed;
+    cursor: pointer;
+    animation: fadein 1s;
+    text-shadow: 2px 2px 4px #000;
+    z-index: 2;
+}
+
+
+#buildingLetterA {
+    bottom: 12%;
+    left: 50%;
+}
+
+#buildingLetterB {
+    top: 43%;
+    left: 30%;
+}
+
+#buildingLetterC {
+    top: 22%;
+    left: 40%;
+}
+
+#buildingLetterD {
+    top: 26%;
+    left: 54%;
+}
+
+#buildingLetterE {
+    top: 48%;
+    left: 64%;
+}
+
+/*------- Godinat ------*/
+
+.floorContainer {
+    display: flex;
+    width: 77%;
+    margin-left: 2%;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+.FloorNumber {
+    position: absolute;
+    padding: 8px;
+    text-align: left;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    opacity: 0.3;
+    z-index: 10;
+    cursor: pointer;
+}
+
+    .FloorNumber:hover {
+        opacity: 0.8;
+    }
+
+
+
+#kati9A, #kati9B, #kati9C, #kati9D, #kati9E {
+    border-top: 2px solid black;
+}
+
+
 
 .floorPlan {
     display: none;
@@ -228,14 +274,14 @@ margin-top: 40px;
     border: 2px solid #ccc;
     border-radius: 8px;
     padding: 5px;
-    background: #f9f9f9;
+    background: var(--gri-e-hapur);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     z-index: 30;
 }
 
 .floor-plan {
     display: none;
-    background-color: #f9f9f9;
+    background-color: var(--gri-e-hapur);
     border: 1px dashed #ccc;
     padding: 10px;
     margin-top: 10px;
@@ -253,10 +299,8 @@ margin-top: 40px;
         width: 100%;
         height: 100%;
         opacity: 0.5;
-        border-top: 1px dashed black;
-        border-left: 2px solid black;
-        border-right: 2px solid black;
-        background-color: #f8e7c3;
+        border: 1px dashed var(--drab-dark-green);
+        background-color: var(--gri-e-hapur);
         cursor: pointer;
     }
 
@@ -266,73 +310,56 @@ margin-top: 40px;
         }
 
 
-
+/* ---- Floor plans ------*/
 
 #floorHeader {
     margin-top: 10px;
     font-weight: bold;
 }
 
-#table-plan {
+#tablePlan-container {
     display: none;
     position: absolute;
-    top: 20vh;
-    background-color: var(--desert-sand);
-    width: 70%;
-    grid-column: span 10;
-    text-align: center;
-    margin-bottom: 15px;
-    color: #333;
+    width: 72%;
+    height: 100%;
+    background-color: var(--e-gjelber-gri);
+    opacity: 0.8;
     z-index: 200;
-    border: 5px solid var(--drab-dark-brown);
-}
-#floorHeader {
-    text-align: center;
-    margin-top: 10px;
-    grid-column: span 10;
-    text-align: center;
-    margin-bottom: 15px;
-    font: bold 44px Roboto;
-    color: var(--drab-dark-brown);
-}
-.apTabHeader {
-    margin-top: 10px;
-    width: 100%;
-    font: bold 44px Roboto;
-    grid-column: span 10;
-    text-align: center;
-    margin-bottom: 15px;
-}
-.apTabSubHeader1 {
-    border: 5px solid var(--drab-dark-brown);
-    grid-column: 1/span 5;
-    text-align: center;
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #333;
+    animation: fadein 0.5s;
 }
 
-.apTabSubHeader2 {
-    border: 5px solid var(--drab-dark-brown);
-    grid-column: 6/span 5;
+
+
+
+#building-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+#floorHeader {
+    text-align: center;
+    font: bold 44px Roboto;
+    color: var(--drab-dark-green);
+    padding: 15px 0;
+}
+
+.apTabSubHeader {
+    border: 5px solid var(--drab-dark-green);
     text-align: center;
     font-size: 18px;
     font-weight: bold;
-    margin-bottom: 10px;
     color: #333;
+    padding: 5px;
 }
 
 .apartmentOver {
     background-color: var(--merino);
     border: 2px solid #333;
-    border-radius: 5px;
-    text-align: left;
-    width: 7vw;
-    height: 15vh;
+    text-align: center;
     font-size: 12px;
     font-family: Roboto;
-    padding: 3px;
+    padding: 8px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
 }
@@ -341,54 +368,6 @@ margin-top: 40px;
         background-color: #bbb;
         transform: scale(1.05);
     }
-
-#apOver_1B, #apOver_2B {
-    grid-row: 3/span 3;
-    border-left: 5px solid var(--drab-dark-brown);
-    height: 100%;
-}
-
-#apOver_2B {
-    grid-column: 6;
-}
-
-#apOver_1F, #apOver_2F {
-    border-right: 5px solid var(--drab-dark-brown);
-    height: 100%;
-    grid-row: 3/span 3;
-}
-
-#apOver_1F {
-    grid-column: 5;
-}
-
-#apOver_2F {
-    grid-column: 10;
-}
-
-#empty1, #empty2, #empty3, #empty4 {
-    background-color: var(--accent-white);
-    border: none;
-    cursor: default;
-    width: 100%;
-    transform:none;
-}
-
-#empty1, #empty2 {
-    background-image: url(Kashar_images/shkallet.jpg);
-    background-size: cover;
-    
-}
-
-    #empty3 {
-        grid-column: 2/span 3;
-    }
-
-#empty4 {
-    grid-column: 7/span 3;
-}
-
-
 
 
 .floor-row {
@@ -407,10 +386,121 @@ margin: 5px;
 	width: 100%;
 }
 
-#apartmentDetails {
+
+#table-plan {
     display: none;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background: #495929;
+    position: absolute;
+    top: 20vh;
+    background-color: var(--jeshile-gri);
+    width: 72%;
+    border: 15px solid var(--jeshile-gri);
+    color: #333;
+    text-align: center;
+    z-index: 201;
+    animation: fadein 1s;
+}
+
+/* Make all scales sit side-by-side */
+.scales-wrapper {
+    display: flex;
+    flex-wrap: nowrap; /* Keep them on one line */
+    gap: 30px; /* Space between scales */
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* Each scale box */
+.scale-container {
+    display: flex; /* ensure flex container */
+    flex-direction: row; /* scales side by side */
+    align-items: flex-start; /* aligns top of tables */
+    gap: 15px; /* spacing between scales */
+    width: 100%;
+}
+
+.table-container {
+    border: 2px solid #ccc;
+    overflow: hidden;
+    background-image: url(Kashar_images/Trotuari.jpg);
+    background-size: cover;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+.scaleHeader {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    text-align: center;
+    color: var(--drab-dark-green);
+    background-image: url(Kashar_images/Trotuari.jpg);
+    background-size: cover;
+    width: 100%;
+}
+
+/* Table styling */
+.layout {
+    border-collapse: collapse;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid #ccc;
+    box-shadow: inset 2px 2px 2px 0px rgba(0,0,0,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+    padding: 0;
+    width: 100%;
+    font: 200 14px Roboto, sans-serif;
+}
+
+    .layout td {
+        border: 1px solid #bbb;
+        padding: 8px;
+        text-align: center;
+        min-width: 40px;
+        height: 12vh;
+    }
+        .layout td:hover {
+            box-shadow: inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
+            transform: scale(1.1);
+            transition: all 0.3s ease;
+        }
+
+
+    .layout .merged {
+        background-image: url(Kashar_images/Korridori.jpg);
+        background-size: contain;
+        cursor: default;
+        transform: none;
+    }
+        .layout .merged:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+
+        .layout .empty {
+        background-image: url(Kashar_images/Shkallet_A.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        cursor: default;
+        opacity: 0.5;
+        transform: none;
+    }
+
+            .layout .empty:hover {
+                transform: none;
+                box-shadow: none;
+            }
+
+
+
+
+
+/*-----    Right Panel: Apartment Details  --------*/
+
+.details-panel {
+    background: var(--jeshile-gri);
+    color: var(--drab-dark-greene);
+    border-left: 3px solid var(--drab-dark-green);
+    padding: 20px;
+    overflow-y: auto;
 }

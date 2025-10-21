@@ -386,8 +386,8 @@ const defaultApartmentDetails = [
 
 
     //KASHAR CENTER
- { id: "A11A", Tipology:" 1+1", building: "A", scale: 1, floor:1, apartment :"A", totalNetArea:65, commonArea: 9.75, totalArea: 74.75, parking:0, ParkingNumber:0 , statusi:"Per Shitje", shenime:"0" },
- { id: "A11B", Tipology:" 3+1", building: "A", scale: 1, floor:1, apartment :"B", totalNetArea:126, commonArea: 18.9, totalArea: 144.9, parking:0, ParkingNumber:0 , statusi:"Per Shitje", shenime:"0" },
+ { id: "A11A", Tipology:" 1+1", building: "A", scale: 1, floor:1, apartment :"A", totalNetArea:65, commonArea: 9.75, totalArea: 74.75, parking:0, ParkingNumber:0 , statusi:"Shitur", shenime:"0" },
+ { id: "A11B", Tipology:" 3+1", building: "A", scale: 1, floor:1, apartment :"B", totalNetArea:126, commonArea: 18.9, totalArea: 144.9, parking:0, ParkingNumber:0 , statusi:"Rezervuar", shenime:"0" },
  { id: "A11C", Tipology:" 1+1", building: "A", scale: 1, floor:1, apartment :"C", totalNetArea:65, commonArea: 9.75, totalArea: 74.75, parking:0, ParkingNumber:0 , statusi:"Per Shitje", shenime:"0" },
  { id: "A11D", Tipology:" 1+1", building: "A", scale: 1, floor:1, apartment :"D", totalNetArea:65, commonArea: 9.75, totalArea: 74.75, parking:0, ParkingNumber:0 , statusi:"Per Shitje", shenime:"0" },
  { id: "A11E", Tipology:" 1+1", building: "A", scale: 1, floor:1, apartment :"E", totalNetArea:65, commonArea: 9.75, totalArea: 74.75, parking:0, ParkingNumber:0 , statusi:"Per Shitje", shenime:"0" },
