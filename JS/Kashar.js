@@ -166,7 +166,6 @@ document.getElementById("table-plan").addEventListener("click", function (e) {
   const floor = cell.dataset.floor;
   const apartment = cell.dataset.apartment;
 
-  console.log("Clicked apartment:", { building, scale, floor, apartment });
 
   // Update dropdowns
   document.getElementById("scaleSelect").value = scale;
@@ -196,7 +195,6 @@ function showApartmentDetalis () {
         selectedBuilding = buildingSelect.value;
         selectedScale = scaleSelect.value;
         selectedFloor = floorSelect.value;
-    console.log("Selected Apartment:", apartmentLetter ,selectedBuilding, selectedScale);
 
   if (!selectedBuilding || !selectedScale || !apartmentLetter) return;
   // Build the apartment ID (e.g., D23G)
@@ -204,7 +202,6 @@ function showApartmentDetalis () {
 
   // Find the apartment object from the array
   const details = defaultApartmentDetails.find((apt) => apt.id === aptId);
-  console.log("Selected Apartment Details:", details);
   // Clear previous details
   apartmentDetailsDiv.innerHTML = "";
 
@@ -225,7 +222,9 @@ function showApartmentDetalis () {
   } else {
     apartmentDetailsDiv.innerHTML = `<p>Nuk u gjetën të dhëna për apartamentin ${apartmentLetter}.</p>`;
   }
-  
+  window.currentApartment = details; // store current selection globally
+  updateApartmentValue(details);     // refresh value table
+
 }
 
 // === UTILITY FUNCTION TO RESET A SELECT ===
@@ -366,3 +365,50 @@ function populateApartments(building, floor) {
   });
 }
 
+    // === 💰 FUNCTION: Update Apartment Value Table ===
+function updateApartmentValue(apt) {
+  if (!apt) return;
+
+  // Get DOM elements
+  const netAreaCell = document.getElementById("netAreaCell");
+  const commonAreaCell = document.getElementById("commonAreaCell");
+  const parkingAreaCell = document.getElementById("parkingAreaCell");
+
+  const netPriceInput = document.getElementById("netPrice");
+  const commonPriceInput = document.getElementById("commonPrice");
+  const parkingPriceInput = document.getElementById("parkingPrice");
+
+  const netTotal = document.getElementById("netTotal");
+  const commonTotal = document.getElementById("commonTotal");
+  const parkingTotal = document.getElementById("parkingTotal");
+  const grandTotal = document.getElementById("grandTotal");
+
+  // Fill in area values from the apartment
+
+  document.getElementById("apartmentInfo").textContent = apt.id;
+
+  netAreaCell.textContent = apt.totalNetArea.toFixed(2);
+  commonAreaCell.textContent = apt.commonArea.toFixed(2);
+  parkingAreaCell.textContent = apt.parking ? "1" : "0";
+
+  // Calculate totals
+  const netVal = apt.totalNetArea * parseFloat(netPriceInput.value || 0);
+  const commonVal = apt.commonArea * parseFloat(commonPriceInput.value || 0);
+  const parkingVal = (apt.parking ? 1 : 0) * parseFloat(parkingPriceInput.value || 0);
+  const totalVal = netVal + commonVal + parkingVal;
+
+  // Display results
+  netTotal.textContent = netVal.toLocaleString("en-US", { minimumFractionDigits: 0 });
+  commonTotal.textContent = commonVal.toLocaleString("en-US", { minimumFractionDigits: 0 });
+  parkingTotal.textContent = parkingVal.toLocaleString("en-US", { minimumFractionDigits: 0 });
+  grandTotal.textContent = totalVal.toLocaleString("en-US", { minimumFractionDigits: 0 });
+}
+
+// Recalculate totals automatically when any price changes
+["netPrice", "commonPrice", "parkingPrice"].forEach((id) => {
+  document.getElementById(id).addEventListener("input", () => {
+    if (window.currentApartment) {
+      updateApartmentValue(window.currentApartment);
+    }
+  });
+});

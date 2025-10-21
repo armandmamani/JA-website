@@ -501,6 +501,99 @@ margin: 5px;
     background: var(--jeshile-gri);
     color: var(--drab-dark-greene);
     border-left: 3px solid var(--drab-dark-green);
-    padding: 20px;
     overflow-y: auto;
+}
+
+/* === 💎 Modern Apartment Value Table === */
+#apartmentValue {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+    font-family: "Poppins", "Segoe UI", Arial, sans-serif;
+    background: var(--accent-white);
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease-in-out;
+    margin-right: 20px;
+}
+    #apartmentValue tbody {
+        font-size: 0.8rem;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+        transform: translateY(-2px);
+    }
+    /* Table headers */
+    #apartmentValue thead {
+        background: linear-gradient(135deg, var(--e-gjelber-gri),var(--jeshile-gri));
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 0.8rem;
+    }
+
+    #apartmentValue th,
+    #apartmentValue td {
+        padding: 2px 6px;
+        border-bottom: 1px solid #f0f0f0;
+    }
+    #apartmentValue td {
+        text-align: right;
+    }
+        /* Highlight total row */
+        #apartmentValue #rowTotal th {
+            background: #f9f9f9;
+            font-size: 1rem;
+            font-weight: 700;
+            color: #222;
+            border-top: 2px solid #ddd;
+        }
+
+    /* Inputs inside table */
+    #apartmentValue input[type="number"] {
+        width: 60px;
+        border: 1px solid #ccc;
+        border-radius: 2px;
+        background-color: var(--gri-e-hapur);
+        text-align: right;
+        font-size: 0.8rem;
+        transition: 0.2s;
+    }
+
+        #apartmentValue input[type="number"]:focus {
+            outline: none;
+            border-color: #800;
+            box-shadow: 0 0 4px rgba(255, 136, 0, 0.4);
+            background-color: var(--accent-white);
+        }
+
+    /* Total cells formatting */
+    #apartmentValue td[id$="Total"],
+    #apartmentValue #grandTotal {
+        font-weight: 600;
+        color: #333;
+    }
+
+    /* Grand total row styling */
+    #apartmentValue #rowTotal th#grandTotal {
+        color: var(--accent-white);
+        font-size: 1rem;
+        background: var(--drab-dark-green);
+    }
+
+    /* Alternate row background for readability */
+    #apartmentValue tbody tr:nth-child(odd):not(#rowTotal) {
+        background-color: #fcfcfc;
+    }
+
+/* Responsive behavior */
+@media (max-width: 600px) {
+    #apartmentValue th,
+    #apartmentValue td {
+        padding: 8px;
+        font-size: 0.85rem;
+    }
+
+    #apartmentValue input[type="number"] {
+        width: 80px;
+    }
 }

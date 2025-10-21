@@ -430,6 +430,47 @@
 
         <!-- Right Panel: Apartment Details -->
         <aside class="details-panel" id="apartmentDetails">
+            <div style="height: 5vh; padding: 20px">
+                <h3>Apartamenti: <span style="color:darkred; font-weight:600" id="apartmentInfo"></span></h3>
+ 
+            </div>
+            <table id="apartmentValue" border="1">
+                <thead>
+                    <tr>
+                        <th id="category">Category</th>
+                        <th id="area">Area (m²)</th>
+                        <th id="price">Price/m² (€)</th>
+                        <th id="value">Total (€)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="rowNet">
+                        <td class="category">Net Area</td>
+                        <td class="area" id="netAreaCell"></td>
+                        <td><input type="number" class="price" id="netPrice" value="1000"></td>
+                        <td class="value" id="netTotal"></td>
+                    </tr>
+                    <tr id="rowCommon">
+                        <td class="category">Common Area</td>
+                        <td class="area" id="commonAreaCell"></td>
+                        <td><input type="number" class="price" id="commonPrice" value="500"></td>
+                        <td class="value" id="commonTotal"></td>
+                    </tr>
+                    <tr id="rowParking">
+                        <td>Parking</td>
+                        <td id="parkingAreaCell"></td>
+                        <td><input type="number" id="parkingPrice" value="3000"></td>
+                        <td id="parkingTotal"></td>
+                    </tr>
+                    <tr id="rowTotal">
+                        <th style=" color: var(--accent-white); font-size: 1rem; background: var(--drab-dark-green); " colspan="3">Total Apartment Value</th>
+                        <th id="grandTotal"></th>
+                    </tr>
+                </tbody>
+            </table>
+
+
+
         </aside>
 
 
