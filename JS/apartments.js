@@ -27,7 +27,6 @@ function showApartmentDetails(apartmentId) {
   // Find the apartment details by ID
   if (details) {
       // Populate the details table
-      console.log(details);
     document.getElementById("aptId").textContent = details.id;
     document.getElementById("aptSector").textContent = details.sector;
     document.getElementById("aptFloor").textContent = details.floor;
@@ -48,7 +47,6 @@ function showApartmentDetails(apartmentId) {
     document.getElementById("aptplotArea").textContent = details.plotArea;
     document.getElementById("aptstoreArea").textContent = details.storeArea;
     document.getElementById("aptParking").textContent = details.parking;
-    console.log(details);
     // In dashboard.js or apartments.js
     if (localStorage.getItem("loggedIn") == "true") {
       document.getElementById("aptStatus").textContent = details.statusi;
@@ -168,7 +166,6 @@ document.addEventListener("DOMContentLoaded", function() {
     document.querySelectorAll(".apartament-plan").forEach(plan => {
       plan.classList.add("hidden");
     });
-    console.log(apartmentId);
 
     const selectedPlan = document.getElementById(apartmentId);
     const fulScreenPlan = document.getElementById("printBtnContainer");
