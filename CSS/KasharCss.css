@@ -41,7 +41,7 @@ body {
 
 .app-container {
 display: grid;
-grid-template-columns: 13% 72% 15%;
+grid-template-columns: 20% 72% 8%;
 height: 100vh;
 }
 @keyframes fadein  {
@@ -67,7 +67,7 @@ height: 100vh;
 /* Sidebar right */
 
 .sidebar {
-    background: var(--drab-dark-green);
+    background: linear-gradient(to bottom, var(--drab-dark-green) 20%, var(--jeshile-gri) 92%, var(--gri-e-mbyllur) 95%, var(--gri-e-hapur) 100%);
     color: var(--accent-white);
     border-right: 3px solid var(--jeshile-gri);
     padding: 20px;
@@ -101,6 +101,7 @@ option {
 apartmentDetails {
     width: 100%;
     margin-top: 15px;
+    animation: fadein 1s;
 }
 .apt-details {
     width: 100%;
@@ -122,13 +123,110 @@ apartmentDetails {
 
 
 
+/* === 💎 Modern Apartment Value Table === */
+#apartmentValue {
+    display: none;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 5rem;
+    font-family: "Poppins", "Segoe UI", Arial, sans-serif;
+    background: var(--accent-white);
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease-in-out;
+    margin-right: 20px;
+    color: #555;
+    animation: fadein 2s;
+}
+
+    #apartmentValue tbody {
+        font-size: 0.8rem;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+        transform: translateY(-2px);
+    }
+    /* Table headers */
+    #apartmentValue thead {
+        background: var(--e-gjelber-gri);
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 0.8rem;
+    }
+
+    #apartmentValue th,
+    #apartmentValue td {
+        padding: 2px 6px;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    #apartmentValue td {
+        text-align: right;
+    }
+    /* Highlight total row */
+    #apartmentValue #rowTotal th {
+        background: #f9f9f9;
+        font-size: 1rem;
+        font-weight: 700;
+        color: #222;
+        border-top: 2px solid #ddd;
+    }
+
+    /* Inputs inside table */
+    #apartmentValue input[type="number"] {
+        width: 60px;
+        border: 1px solid #ccc;
+        border-radius: 2px;
+        background-color: var(--gri-e-hapur);
+        text-align: right;
+        font-size: 0.8rem;
+        transition: 0.2s;
+    }
+
+        #apartmentValue input[type="number"]:focus {
+            outline: none;
+            border-color: #800;
+            box-shadow: 0 0 4px rgba(255, 136, 0, 0.4);
+            background-color: var(--accent-white);
+        }
+
+    /* Total cells formatting */
+    #apartmentValue td[id$="Total"],
+    #apartmentValue #grandTotal {
+        font-weight: 600;
+        color: #333;
+    }
+
+    /* Grand total row styling */
+    #apartmentValue #rowTotal th#grandTotal {
+        color: var(--accent-white);
+        font-size: 1rem;
+        background: var(--drab-dark-green);
+    }
+
+    /* Alternate row background for readability */
+    #apartmentValue tbody tr:nth-child(odd):not(#rowTotal) {
+        background-color: #fcfcfc;
+    }
+
+/* Responsive behavior */
+@media (max-width: 600px) {
+    #apartmentValue th,
+    #apartmentValue td {
+        padding: 8px;
+        font-size: 0.85rem;
+    }
+
+    #apartmentValue input[type="number"] {
+        width: 80px;
+    }
+}
 
 
 
     /* ----- Main Grid ----- */
 .main-grid {
-    background: var(--drab-dark-green);
-    
+    background: linear-gradient(to bottom, var(--drab-dark-green) 20%, var(--jeshile-gri) 92%, var(--gri-e-mbyllur) 95%, var(--gri-e-hapur) 100%);
 }
 .placeholder {
 text-align: center;
@@ -138,16 +236,17 @@ margin-top: 40px;
 /* background - project */
 #ProjektiImgA {
     position: fixed;
-    left: 13%;
+    left: 20%;
     width: 72%;
     border-top: 3px solid var(--jeshile-gri);
     border-bottom: 3px solid var(--jeshile-gri);
+    animation: fadein 1s;
 }
 
 #godinaA, #godinaB, #godinaC, #godinaD, #godinaE {
     position: absolute;
     top: 0;
-    left: 13%;
+    left: 20%;
     width: 72%;
     height: 70%;
     background-size: cover;
@@ -157,6 +256,7 @@ margin-top: 40px;
     border: 3px solid #000;
     animation: fadein 2s;
     z-index: 5;
+    animation: fadein 1s;
 }
 
 #godinaA {
@@ -208,27 +308,27 @@ margin-top: 40px;
 
 #buildingLetterA {
     bottom: 12%;
-    left: 50%;
+    left: 58%;
 }
 
 #buildingLetterB {
     top: 43%;
-    left: 30%;
+    left: 38%;
 }
 
 #buildingLetterC {
     top: 22%;
-    left: 40%;
+    left: 47%;
 }
 
 #buildingLetterD {
-    top: 26%;
-    left: 54%;
+    top: 23%;
+    left: 62%;
 }
 
 #buildingLetterE {
     top: 48%;
-    left: 64%;
+    left: 71%;
 }
 
 /*------- Godinat ------*/
@@ -498,102 +598,9 @@ margin: 5px;
 /*-----    Right Panel: Apartment Details  --------*/
 
 .details-panel {
-    background: var(--jeshile-gri);
+    background: linear-gradient(to bottom, var(--drab-dark-green) 20%, var(--jeshile-gri) 92%, var(--gri-e-mbyllur) 95%, var(--gri-e-hapur) 100%);
     color: var(--drab-dark-greene);
     border-left: 3px solid var(--drab-dark-green);
     overflow-y: auto;
 }
 
-/* === 💎 Modern Apartment Value Table === */
-#apartmentValue {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 1.5rem;
-    font-family: "Poppins", "Segoe UI", Arial, sans-serif;
-    background: var(--accent-white);
-    border-radius: 5px;
-    overflow: hidden;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
-    transition: all 0.3s ease-in-out;
-    margin-right: 20px;
-}
-    #apartmentValue tbody {
-        font-size: 0.8rem;
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
-        transform: translateY(-2px);
-    }
-    /* Table headers */
-    #apartmentValue thead {
-        background: linear-gradient(135deg, var(--e-gjelber-gri),var(--jeshile-gri));
-        color: #fff;
-        text-transform: uppercase;
-        font-weight: 600;
-        font-size: 0.8rem;
-    }
-
-    #apartmentValue th,
-    #apartmentValue td {
-        padding: 2px 6px;
-        border-bottom: 1px solid #f0f0f0;
-    }
-    #apartmentValue td {
-        text-align: right;
-    }
-        /* Highlight total row */
-        #apartmentValue #rowTotal th {
-            background: #f9f9f9;
-            font-size: 1rem;
-            font-weight: 700;
-            color: #222;
-            border-top: 2px solid #ddd;
-        }
-
-    /* Inputs inside table */
-    #apartmentValue input[type="number"] {
-        width: 60px;
-        border: 1px solid #ccc;
-        border-radius: 2px;
-        background-color: var(--gri-e-hapur);
-        text-align: right;
-        font-size: 0.8rem;
-        transition: 0.2s;
-    }
-
-        #apartmentValue input[type="number"]:focus {
-            outline: none;
-            border-color: #800;
-            box-shadow: 0 0 4px rgba(255, 136, 0, 0.4);
-            background-color: var(--accent-white);
-        }
-
-    /* Total cells formatting */
-    #apartmentValue td[id$="Total"],
-    #apartmentValue #grandTotal {
-        font-weight: 600;
-        color: #333;
-    }
-
-    /* Grand total row styling */
-    #apartmentValue #rowTotal th#grandTotal {
-        color: var(--accent-white);
-        font-size: 1rem;
-        background: var(--drab-dark-green);
-    }
-
-    /* Alternate row background for readability */
-    #apartmentValue tbody tr:nth-child(odd):not(#rowTotal) {
-        background-color: #fcfcfc;
-    }
-
-/* Responsive behavior */
-@media (max-width: 600px) {
-    #apartmentValue th,
-    #apartmentValue td {
-        padding: 8px;
-        font-size: 0.85rem;
-    }
-
-    #apartmentValue input[type="number"] {
-        width: 80px;
-    }
-}

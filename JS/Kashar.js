@@ -7,7 +7,7 @@ const apartmentDetails = document.getElementById("apartmentDetails");
 const tablePlanContainer = document.getElementById("table-plan");
 const header = document.getElementById("floorHeader");
 const apartmentDetailsDiv = document.getElementById("apartmentDetails");
-
+const apartmentValueTable = document.getElementById("apartmentValue");
 
 
 // === 🏢 FUNCTION: Show Building ===
@@ -195,7 +195,6 @@ function showApartmentDetalis () {
         selectedBuilding = buildingSelect.value;
         selectedScale = scaleSelect.value;
         selectedFloor = floorSelect.value;
-
   if (!selectedBuilding || !selectedScale || !apartmentLetter) return;
   // Build the apartment ID (e.g., D23G)
   const aptId = `${selectedBuilding}${selectedScale}${selectedFloor}${apartmentLetter}`;
@@ -211,12 +210,12 @@ function showApartmentDetalis () {
       <h4 style="text-align: center">Apartamenti<br/><strong>${aptId}</strong></h4>
       <table class="apt-details">
         <tr><th>Tipologjia</th><td>${details.Tipology || "-"}</td></tr>
-        <tr><th>Sip. Neto</th><td>${details.totalNetArea ?? 0} m²</td></tr>
-        <tr><th>Sip. e përbashkët</th><td>${details.commonArea ?? 0} m²</td></tr>
-        <tr><th>Totali</th><td>${details.totalArea ?? 0} m²</td></tr>
+        <tr><th>Siperfaqe neto</th><td>${details.totalNetArea ?? 0} m²</td></tr>
+        <tr><th>Siperfaqe e përbashkët</th><td>${details.commonArea ?? 0} m²</td></tr>
+        <tr style="font-size: 20px"><th>Siperfaqe totale</th><td><strong>${details.totalArea ?? 0} m²</strong></td></tr>
         <tr><th>Parkim</th><td>${details.ParkingNumber || "0"}</td></tr>
         <tr><th>Statusi</th><td>${details.statusi || "—"}</td></tr>
-        <tr><th>Shënime</th><td>${details.shenime || "—"}</td></tr>
+        <tr><th>Shënime</th><td><em>${details.shenime || "—"}</em></td></tr>
       </table>
     `;
   } else {
@@ -224,6 +223,7 @@ function showApartmentDetalis () {
   }
   window.currentApartment = details; // store current selection globally
   updateApartmentValue(details);     // refresh value table
+  apartmentValueTable.style.display = "block";
 
 }
 
@@ -385,11 +385,13 @@ function updateApartmentValue(apt) {
 
   // Fill in area values from the apartment
 
-  document.getElementById("apartmentInfo").textContent = apt.id;
+ // document.getElementById("apartmentInfo").textContent = apt.id;
 
   netAreaCell.textContent = apt.totalNetArea.toFixed(2);
   commonAreaCell.textContent = apt.commonArea.toFixed(2);
   parkingAreaCell.textContent = apt.parking ? "1" : "0";
+
+  console.log("Updating values for apartment:", apt.id, netAreaCell.textContent);
 
   // Calculate totals
   const netVal = apt.totalNetArea * parseFloat(netPriceInput.value || 0);
@@ -412,3 +414,20 @@ function updateApartmentValue(apt) {
     }
   });
 });
+ // click outside to hide (keeps behavior class-based; removes inline style issues)
+  document.addEventListener("click", (e) => {
+    const isInsideBuilding = e.target.closest(".building");
+    const isInsideTable = e.target.closest("#table-plan");
+    const isInsideselectors = e.target.closest(".selector");
+    const tableContainer = document.getElementById("tablePlan-container");
+    const isInsideletter =  e.target.closest(".buildingLetter");
+    if (!isInsideBuilding && !isInsideTable && !isInsideselectors && !isInsideletter)  {
+      // hide table-plan by clearing content or hiding container
+
+      tablePlanContainer.innerHTML = "";
+      tablePlanContainer.style.display = "none";
+      tableContainer.style.display = "none";
+      document.querySelectorAll(".building").forEach(div => (div.style.display = "none"));
+
+    }
+  });
