@@ -490,7 +490,7 @@ margin: 5px;
 #table-plan {
     display: none;
     position: absolute;
-    top: 20vh;
+    top: 0;
     background-color: var(--jeshile-gri);
     width: 72%;
     border: 15px solid var(--jeshile-gri);
@@ -556,7 +556,7 @@ margin: 5px;
         padding: 8px;
         text-align: center;
         min-width: 40px;
-        height: 12vh;
+        height: 10vh;
     }
         .layout td:hover {
             box-shadow: inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
