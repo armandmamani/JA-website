@@ -159,6 +159,8 @@ apartmentSelect.addEventListener("change", showApartmentDetalis);
 // === 🖱️ EVENT: Click Apartment in Layout ===
 document.getElementById("table-plan").addEventListener("click", function (e) {
   const cell = e.target.closest("td");
+    console.log("Clicked cell:", cell.dataset);
+
   if (!cell || !cell.dataset.apartment) return; // Ignore empty cells or merged ones
 
   const building = cell.dataset.building;
