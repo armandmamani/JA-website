@@ -1,5 +1,4 @@
 ﻿// JavaScript source code
-console.log("Apartment details script loaded", apartmentDetails);
 
 function showPlan(apartmentId) {
     // Hide all images
@@ -46,6 +45,7 @@ function showApartmentDetails(apartmentId) {
 
         document.getElementById('llogApBtn').dataset.apartmentId = apartmentId;
     }
+}
 }
 document.addEventListener("DOMContentLoaded", function () {
     // Add event listeners to buttons with class 'ApBtn'
@@ -336,32 +336,6 @@ document.addEventListener("DOMContentLoaded", function () {
         fullscreenContainer.classList.remove("hidden");
     }
 
-    const sideImage = document.getElementById("sideImage");
-    const sideImageB = document.getElementById("sideImageB");
-    const sideImageE = document.getElementById("sideImageE");
-
-
-    const ImageAbtn = document.getElementById("btnImageA")
-    const ImageBbtn = document.getElementById("btnImageB")
-
-
-    let sImage
-    if (sideImage) sImage = sideImage
-    else if (sideImageB) sImage = sideImageB
-    else if (sideImageE) sImage = sideImageE
-    let imageBtn
-    if (ImageAbtn)
-        imageBtn = ImageAbtn
-    else imageBtn = ImageBbtn
-
-
-    imageBtn.addEventListener("click", function (e) {
-        // Toggle opacity bet"een 0 and 1
-        sImage.style.opacity = sImage.style.opacity === "1" ? "0" : "1";
-
-        // Prevent click from triggering "indo" event that hides it immediately
-        e.stopPropagation();
-    });
 
     // Hide sideImage "hen clicking any"here except the footer
     window.addEventListener("click", function (event) {
@@ -407,27 +381,24 @@ if (localStorage.getItem('loggedIn') == 'true') {
 }
 document.getElementById("editBtn").addEventListener("click", () => {
     document.getElementById("editFormContainer").style.display = "block";
-    console.log("Edit button clicked, form should be visible now.");
 });
 
 document.getElementById("editForm").addEventListener("submit", function (e) {
     e.preventDefault();
 
-    const id = document.getElementById("editId").value.trim();
-    const netAra = document.getElementById("editTotalNetArea").value.trim();
-    const commonAra = document.getElementById("editCommonArea").value.trim();
-    const totalAra = document.getElementById("TotalArea").value.trim();
-    const verandaArea = document.getElementById("editverandaArea").value.trim();
-    const plotAra = document.getElementById("editPlotArea").value.trim();
-    const storageAra = document.getElementById("editStorageArea").value.trim();
-    const parking = document.getElementById("editParking").value.trim();
+    const id = document.getElementById("aptId").value.trim();
+    const netAra = document.getElementById("aptTotalNetArea").value.trim();
+    const commonAra = document.getElementById("aptCommonArea").value.trim();
+    const totalAra = document.getElementById("aptTotalArea").value.trim();
+    const verandaArea = document.getElementById("aptverandaArea").value.trim();
+    const plotAra = document.getElementById("aptPlotArea").value.trim();
+    const storageAra = document.getElementById("aptStorageArea").value.trim();
+    const parking = document.getElementById("aptParking").value.trim();
 
-    const statusi = document.getElementById("editStatusi").value.trim();
-    const buyer = document.getElementById("editBuyer").value.trim();
-
+    const statusi = document.getElementById("aptStatusi").value.trim();
+    const buyer = document.getElementById("aptBuyer").value.trim();
 
     const messageBox = document.getElementById("editMessage");
-
     const apt = apartmentDetails.find(ap => ap.id === id);
 
     if (apt) {
@@ -437,13 +408,9 @@ document.getElementById("editForm").addEventListener("submit", function (e) {
         if (verandaArea) apt.verandaArea = parseFloat(verandaArea);
         if (plotAra) apt.plotArea = parseFloat(plotAra);
         if (storageAra) apt.storeArea = parseFloat(storageAra);
-        if (parking) apt.parking = parseFloat(parking);
-        if (statusi) apt.statusi = statusi;
-        if (buyer) apt.shenime = buyer;
 
         messageBox.innerText = "✔️ Apartment updated successfully.";
         messageBox.style.color = "green";
-        console.log(apartmentDetails); // For debugging
     } else {
         messageBox.innerText = "❌ Apartment ID not found.";
         messageBox.style.color = "red";
@@ -460,20 +427,20 @@ function saveApartmentDetailsToLocalStorage() {
 function loadDataToForm(id) {
     const apt = apartmentDetails.find(ap => ap.id === id);
     if (apt) {
-        document.getElementById("editTotalNetArea").value = apt.totalNetArea;
-        document.getElementById("editCommonArea").value = apt.commonArea;
-        document.getElementById("TotalArea").value = apt.totalArea;
-        document.getElementById("editverandaArea").value = apt.verandaArea;
-        document.getElementById("editPlotArea").value = apt.plotArea;
-        document.getElementById("editStorageArea").value = apt.storeArea;
-        document.getElementById("editParking").value = apt.parking;
-        document.getElementById("editStatusi").value = apt.statusi;
-        document.getElementById("editBuyer").value = apt.shenime;
+        document.getElementById("aptTotalNetArea").value = apt.totalNetArea;
+        document.getElementById("aptCommonArea").value = apt.commonArea;
+        document.getElementById("aptTotalArea").value = apt.totalArea;
+        document.getElementById("aptverandaArea").value = apt.verandaArea;
+        document.getElementById("aptPlotArea").value = apt.plotArea;
+        document.getElementById("aptStorageArea").value = apt.storeArea;
+        document.getElementById("aptParking").value = apt.Parking;
+        document.getElementById("aptStatusi").value = apt.statusi;
+        document.getElementById("aptBuyer").value = apt.shenime;
     }
 }
 
 // Optional: Auto-load when user leaves the ID field
-document.getElementById("editId").addEventListener("blur", function () {
+document.getElementById("aptId").addEventListener("blur", function () {
     const id = this.value.trim();
     if (id) loadDataToForm(id);
 });

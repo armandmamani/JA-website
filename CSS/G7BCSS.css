@@ -93,7 +93,7 @@ body {
 
 .cmimeLabel {
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 0.7rem;
     color: var(--warm-white-floral)
 }
 
@@ -823,11 +823,10 @@ a:hover {
 
 
 #editBtn {
-    position: fixed;
-    top: 80vh;
-    right: 170px;
+    position: absolute;
+    top: 92vh;
+    left:42vw;
     width: 150px;
-    display: none;
     background-color: var(--butter-cup);
     color: var(--accent-white);
     border: none;
@@ -845,7 +844,7 @@ a:hover {
 #editFormContainer {
     position: fixed;
     top: 5vh;
-    left: 15vw;
+    left: 20vw;
     width: 20%;
     font-size: 1.2rem;
     padding: 20px;
