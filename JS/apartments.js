@@ -34,16 +34,13 @@ function showApartmentDetails(apartmentId) {
     document.getElementById("aptScale").textContent = details.scale;
     document.getElementById("aptNetArea").textContent = details.netArea;
     document.getElementById("aptLoggiaArea").textContent = details.loggiaArea;
-    document.getElementById("aptTotalNetArea").textContent =
-      details.totalNetArea;
+    document.getElementById("aptTotalNetArea").textContent = details.totalNetArea;
     document.getElementById("aptCommonArea").textContent = details.commonArea;
     document.getElementById("aptTotalArea").textContent = details.totalArea;
     document.getElementById("aptVerandaArea").textContent = details.verandaArea;
     document.getElementById("aptPoolArea").textContent = details.poolArea;
-    document.getElementById("aptgreenTerraceArea").textContent =
-      details.greenTerraceArea;
-    document.getElementById("aptusableTerrace").textContent =
-      details.usableTerrace;
+    document.getElementById("aptgreenTerraceArea").textContent = details.greenTerraceArea;
+    document.getElementById("aptusableTerrace").textContent = details.usableTerrace;
     document.getElementById("aptplotArea").textContent = details.plotArea;
     document.getElementById("aptstoreArea").textContent = details.storeArea;
     document.getElementById("aptParking").textContent = details.parking;

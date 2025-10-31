@@ -39,6 +39,11 @@ function showApartmentDetails(apartmentId) {
         document.getElementById('aptstoreArea').textContent = details.storeArea;
         document.getElementById('aptStatus').textContent = details.statusi;
         // Store the apartmentId to be used when the button is clicked
+            // In dashboard.js or apartments.js
+    if (localStorage.getItem("loggedIn") == "true") {
+      document.getElementById("aptStatus").textContent = details.statusi;
+      document.getElementById("aptBuyer").textContent = details.shenime;
+
         document.getElementById('llogApBtn').dataset.apartmentId = apartmentId;
     }
 }
