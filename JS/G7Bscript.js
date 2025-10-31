@@ -440,7 +440,7 @@ function loadDataToForm(id) {
 }
 
 // Optional: Auto-load when user leaves the ID field
-document.getElementById("aptId").addEventListener("blur", function () {
+document.getElementById("aptId").addEventListener("change", function () {
     const id = this.value.trim();
     if (id) loadDataToForm(id);
 });
