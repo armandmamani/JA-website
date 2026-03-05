@@ -68,6 +68,7 @@
                     <option value="G">Apartamenti G</option>
                     <option value="H">Apartamenti H</option>
                     <option value="I">Apartamenti I</option>
+                    <option value="J">Apartamenti J</option>
 
                 </select>
             </div>
@@ -133,20 +134,21 @@
             <template id="layout1-template">
                 <table class="layout layout1">
                     <tr>
-                        <td rowspan="3">B</td>
-                        <td>A</td>
-                        <td class="empty"></td>
-                        <td>G</td>
-                        <td rowspan="3">F </td>
+                        <td colspan="2">F</td>
+                        <td colspan="2">E</td>
+                        <td colspan="4">D</td>
+                        <td colspan="4">C</td>
+
                     </tr>
                     <tr>
-                        <td class="merged" colspan="3"></td>
+                        <td colspan="2">G</td>
+                        <td colspan="2">H</td>
+                        <td colspan="2"></td>
+                        <td colspan="2">A</td>
+                        <td colspan="4">B</td>
+
                     </tr>
-                    <tr>
-                        <td>C</td>
-                        <td>D</td>
-                        <td>E</td>
-                    </tr>
+
                 </table>
             </template>
 
@@ -154,43 +156,46 @@
             <template id="layout2-template">
                 <table class="layout layout2">
                     <tr>
-                        <td rowspan="3">C</td>
-                        <td>B</td>
-                        <td>A</td>
-                        <td class="empty"></td>
-                        <td>I</td>
-                        <td rowspan="3">H</td>
+                        <td colspan="3">C</td>
+                        <td colspan="3">D</td>
+                        <td colspan="2">E</td>
+                        <td colspan="2">F</td>
+
                     </tr>
+
+
                     <tr>
-                        <td class="merged" colspan="4"> </td>
-                    </tr>
-                    <tr>
-                        <td>D</td>
-                        <td>E</td>
-                        <td>F</td>
-                        <td>G</td>
+                        <td colspan="3">B</td>
+                        <td colspan="2">A</td>
+                        <td colspan="1"></td>
+                        <td colspan="2">H</td>
+                        <td colspan="2">G</td>
+
                     </tr>
                 </table>
             </template>
             <template id="layout3-template">
                 <table class="layout layout3">
                     <tr>
-                        <td rowspan="3">A</td>
-                        <td>B</td>
-                        <td class="empty"></td>
-                        <td>C</td>
-                        <td>D</td>
-                        <td rowspan="3">E</td>
+                        <td colspan="2">J</td>
+                        <td colspan="2">F</td>
+                        <td colspan="2">E</td>
+                        <td colspan="3">D</td>
+                        <td colspan="3">C</td>
+
                     </tr>
+
+
                     <tr>
-                        <td class="merged" colspan="4"> </td>
+                        <td colspan="2">I</td>
+                        <td colspan="2">G</td>
+                        <td colspan="2">H</td>
+                        <td colspan="1"></td>
+                        <td colspan="2">A</td>
+                        <td colspan="3">B</td>
+
                     </tr>
-                    <tr>
-                        <td>I</td>
-                        <td>H</td>
-                        <td>G</td>
-                        <td>F</td>
-                    </tr>
+
                 </table>
             </template>
             <template id="layout4-template">
@@ -214,256 +219,885 @@
                     </tr>
                 </table>
             </template>
+            <div id="perspectiveContainer">
+                <div class="tableInsideContainer">
+                    <div class="table-wrapper">
+                        <table class="tblPersp" id="tableBInside">
+                            <tr>
+                                <td class="balcony blc_inside" id="B83BBlcn"></td>
+                                <td class="balcony blc_inside" id="B83ABlcn"></td>
+                                <td class="stair"></td>
+                                <td class="balcony blc_inside" id="B83HBlcn"></td>
+                                <td class="balcony blc_inside" id="B83GBlcn"></td>
+                                <td class="balcony blc_inside" id="B82GBlcn"></td>
+                                <td class="balcony blc_inside" id="B82HBlcn"></td>
+                                <td class="stair"></td>
+                                <td class="balcony blc_inside" id="B82ABlcn"></td>
+                                <td class="balcony blc_inside" id="B82BBlcn"></td>
+                                <td class="balcony blc_inside" id="B81GBlcn"></td>
+                                <td class="balcony blc_inside" id="B81HBlcn"></td>
+                                <td class="stair"></td>
+                                <td class="balcony blc_inside" id="B81ABlcn"></td>
+                                <td class="balcony blc_inside" id="B81BBlcn"></td>
+
+                            </tr>
+                            <tr>
+                                <td class="balcony blc_inside" id="B73BBlcn"></td>
+                                <td class="balcony blc_inside" id="B73ABlcn"></td>
+                                <td class="stair"></td>
+                                <td class="balcony blc_inside" id="B73HBlcn"></td>
+                                <td class="balcony blc_inside" id="B73GBlcn"></td>
+                                <td class="balcony blc_inside" id="B72GBlcn"></td>
+                                <td class="balcony blc_inside" id="B72HBlcn"></td>
+                                <td class="stair"></td>
+                                <td class="balcony blc_inside" id="B72ABlcn"></td>
+                                <td class="balcony blc_inside" id="B72BBlcn"></td>
+                                <td class="balcony blc_inside" id="B71GBlcn"></td>
+                                <td class="balcony blc_inside" id="B71HBlcn"></td>
+                                <td class="stair"></td>
+                                <td class="balcony blc_inside" id="B71ABlcn"></td>
+                                <td class="balcony blc_inside" id="B71BBlcn"></td>
+
+                            </tr>
+                            <tr>
+                                <td class="balcony blc_inside" id="B63BBlcn"></td>
+                                <td class="balcony blc_inside" id="B63ABlcn"></td>
+                                <td class="stair"></td>
+                                <td class="balcony blc_inside" id="B63HBlcn"></td>
+                                <td class="balcony blc_inside" id="B63GBlcn"></td>
+                                <td class="balcony blc_inside" id="B62GBlcn"></td>
+                                <td class="balcony blc_inside" id="B62HBlcn"></td>
+                                <td class="stair"></td>
+                                <td class="balcony blc_inside" id="B62ABlcn"></td>
+                                <td class="balcony blc_inside" id="B62BBlcn"></td>
+                                <td class="balcony blc_inside" id="B61GBlcn"></td>
+                                <td class="balcony blc_inside" id="B61HBlcn"></td>
+                                <td class="stair"></td>
+                                <td class="balcony blc_inside" id="B61ABlcn"></td>
+                                <td class="balcony blc_inside" id="B61BBlcn"></td>
+
+                            </tr>
+                            <tr>
+                                <td class="balcony blc_inside" id="B53BBlcn"></td>
+                                <td class="balcony blc_inside" id="B53ABlcn"></td>
+                                <td class="stair"></td>
+                                <td class="balcony blc_inside" id="B53HBlcn"></td>
+                                <td class="balcony blc_inside" id="B53GBlcn"></td>
+                                <td class="balcony blc_inside" id="B52GBlcn"></td>
+                                <td class="balcony blc_inside" id="B52HBlcn"></td>
+                                <td class="stair"></td>
+                                <td class="balcony blc_inside" id="B52ABlcn"></td>
+                                <td class="balcony blc_inside" id="B52BBlcn"></td>
+                                <td class="balcony blc_inside" id="B51GBlcn"></td>
+                                <td class="balcony blc_inside" id="B51HBlcn"></td>
+                                <td class="stair"></td>
+                                <td class="balcony blc_inside" id="B51ABlcn"></td>
+                                <td class="balcony blc_inside" id="B51BBlcn"></td>
+
+                            </tr>
+                            <tr>
+                                <td class="balcony blc_inside" id="B43BBlcn"></td>
+                                <td class="balcony blc_inside" id="B43ABlcn"></td>
+                                <td class="stair"></td>
+                                <td class="balcony blc_inside" id="B43HBlcn"></td>
+                                <td class="balcony blc_inside" id="B43GBlcn"></td>
+                                <td class="balcony blc_inside" id="B42GBlcn"></td>
+                                <td class="balcony blc_inside" id="B42HBlcn"></td>
+                                <td class="stair"></td>
+                                <td class="balcony blc_inside" id="B42ABlcn"></td>
+                                <td class="balcony blc_inside" id="B42BBlcn"></td>
+                                <td class="balcony blc_inside" id="B41GBlcn"></td>
+                                <td class="balcony blc_inside" id="B41HBlcn"></td>
+                                <td class="stair"></td>
+                                <td class="balcony blc_inside" id="B41ABlcn"></td>
+                                <td class="balcony blc_inside" id="B41BBlcn"></td>
+
+                            </tr>
+                            <tr>
+                                <td class="balcony blc_inside" id="B33BBlcn"></td>
+                                <td class="balcony blc_inside" id="B33ABlcn"></td>
+                                <td class="stair"></td>
+                                <td class="balcony blc_inside" id="B33HBlcn"></td>
+                                <td class="balcony blc_inside" id="B33GBlcn"></td>
+                                <td class="balcony blc_inside" id="B32GBlcn"></td>
+                                <td class="balcony blc_inside" id="B32HBlcn"></td>
+                                <td class="stair"></td>
+                                <td class="balcony blc_inside" id="B32ABlcn"></td>
+                                <td class="balcony blc_inside" id="B32BBlcn"></td>
+                                <td class="balcony blc_inside" id="B31GBlcn"></td>
+                                <td class="balcony blc_inside" id="B31HBlcn"></td>
+                                <td class="stair"></td>
+                                <td class="balcony blc_inside" id="B31ABlcn"></td>
+                                <td class="balcony blc_inside" id="B31BBlcn"></td>
+
+                            </tr>
+                            <tr>
+                                <td class="balcony blc_inside" id="B23BBlcn"></td>
+                                <td class="balcony blc_inside" id="B23ABlcn"></td>
+                                <td class="stair"></td>
+                                <td class="balcony blc_inside" id="B23HBlcn"></td>
+                                <td class="balcony blc_inside" id="B23GBlcn"></td>
+                                <td class="balcony blc_inside" id="B22GBlcn"></td>
+                                <td class="balcony blc_inside" id="B22HBlcn"></td>
+                                <td class="stair"></td>
+                                <td class="balcony blc_inside" id="B22ABlcn"></td>
+                                <td class="balcony blc_inside" id="B22BBlcn"></td>
+                                <td class="balcony blc_inside" id="B21GBlcn"></td>
+                                <td class="balcony blc_inside" id="B21HBlcn"></td>
+                                <td class="stair"></td>
+                                <td class="balcony blc_inside" id="B21ABlcn"></td>
+                                <td class="balcony blc_inside" id="B21BBlcn"></td>
+
+                            </tr>
+                            <tr>
+                                <td class="balcony blc_inside" id="B13BBlcn"></td>
+                                <td class="balcony blc_inside" id="B13ABlcn"></td>
+                                <td class="stair"></td>
+                                <td class="balcony blc_inside" id="B13HBlcn"></td>
+                                <td class="balcony blc_inside" id="B13GBlcn"></td>
+                                <td class="balcony blc_inside" id="B12GBlcn"></td>
+                                <td class="balcony blc_inside" id="B12HBlcn"></td>
+                                <td class="stair"></td>
+                                <td class="balcony blc_inside" id="B12ABlcn"></td>
+                                <td class="balcony blc_inside" id="B12BBlcn"></td>
+                                <td class="balcony blc_inside" id="B11GBlcn"></td>
+                                <td class="balcony blc_inside" id="B11HBlcn"></td>
+                                <td class="stair"></td>
+                                <td class="balcony blc_inside" id="B11ABlcn"></td>
+                                <td class="balcony blc_inside" id="B11BBlcn"></td>
+
+                            </tr>
 
 
-            <div id="godinaA" class="building">
-                <div class="floorContainer" style="background-color: #fbe4c8">
-                    <h2 id="floor_9A" class="FloorNumber">Kati 9</h2>
-                    <img class="floor" id="kati9A" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
-                </div>
-                <div class="floorContainer">
-                    <h2 id="floor_8A" class="FloorNumber">Kati 8</h2>
-                    <img class="floor" id="kati8A" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
-                </div>
-                <div class="floorContainer">
-                    <h2 id="floor_7A" class="FloorNumber">Kati 7</h2>
-                    <img class="floor" id="kati7A" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
-                </div>
-                <div class="floorContainer">
-                    <h2 id="floor_6A" class="FloorNumber">Kati 6</h2>
-                    <img class="floor" id="kati6A" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
-                </div>
-                <div class="floorContainer">
-                    <h2 id="floor_5A" class="FloorNumber">Kati 5</h2>
-                    <img class="floor" id="kati5A" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
-                </div>
-                <div class="floorContainer">
-                    <h2 id="floor_4A" class="FloorNumber">Kati 4</h2>
-                    <img class="floor" id="kati4A" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
-                </div>
-                <div class="floorContainer">
-                    <h2 id="floor_3A" class="FloorNumber">Kati 3</h2>
-                    <img class="floor" id="kati3A" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
-                </div>
-                <div class="floorContainer">
-                    <h2 id="floor_2A" class="FloorNumber">Kati 2</h2>
-                    <img class="floor" id="kati2A" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
-                </div>
-                <div class="floorContainer">
-                    <h2 id="floor_1A" class="FloorNumber">Kati 1</h2>
-                    <img class="floor" id="kati1A" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+
+
+
+
+                        </table>
+                        <table class="tblPersp" id="tableCInside">
+                            <tr>
+                                <td class="balcony blc_inside" id="C81BBlcn"></td>
+                                <td class="balcony blc_inside" id="C81ABlcn"></td>
+                                <td class="stair"></td>
+                                <td class="balcony blc_inside" id="C81HBlcn"></td>
+                                <td class="balcony blc_inside" id="C81GBlcn"></td>
+                                <td class="balcony blc_inside" id="C82IBlcn"></td>
+                                <td class="balcony blc_inside" id="C82GBlcn"></td>
+                                <td class="balcony blc_inside" id="C82HBlcn"></td>
+                                <td class="stair"></td>
+                                <td class="balcony blc_inside" id="C82ABlcn"></td>
+                                <td class="balcony blc_inside" id="C82BBlcn"></td>
+
+                            </tr>
+                            <tr>
+                                <td class="balcony blc_inside" id="C71BBlcn"></td>
+                                <td class="balcony blc_inside" id="C71ABlcn"></td>
+                                <td class="stair"></td>
+                                <td class="balcony blc_inside" id="C71HBlcn"></td>
+                                <td class="balcony blc_inside" id="C71GBlcn"></td>
+                                <td class="balcony blc_inside" id="C72IBlcn"></td>
+                                <td class="balcony blc_inside" id="C72GBlcn"></td>
+                                <td class="balcony blc_inside" id="C72HBlcn"></td>
+                                <td class="stair"></td>
+                                <td class="balcony blc_inside" id="C72ABlcn"></td>
+                                <td class="balcony blc_inside" id="C72BBlcn"></td>
+
+                            </tr>
+                            <tr>
+                                <td class="balcony blc_inside" id="C61BBlcn"></td>
+                                <td class="balcony blc_inside" id="C61ABlcn"></td>
+                                <td class="stair"></td>
+                                <td class="balcony blc_inside" id="C61HBlcn"></td>
+                                <td class="balcony blc_inside" id="C61GBlcn"></td>
+                                <td class="balcony blc_inside" id="C62IBlcn"></td>
+                                <td class="balcony blc_inside" id="C62GBlcn"></td>
+                                <td class="balcony blc_inside" id="C62HBlcn"></td>
+                                <td class="stair"></td>
+                                <td class="balcony blc_inside" id="C62ABlcn"></td>
+                                <td class="balcony blc_inside" id="C62BBlcn"></td>
+
+                            </tr>
+                            <tr>
+                                <td class="balcony blc_inside" id="C51BBlcn"></td>
+                                <td class="balcony blc_inside" id="C51ABlcn"></td>
+                                <td class="stair"></td>
+                                <td class="balcony blc_inside" id="C51HBlcn"></td>
+                                <td class="balcony blc_inside" id="C51GBlcn"></td>
+                                <td class="balcony blc_inside" id="C52IBlcn"></td>
+                                <td class="balcony blc_inside" id="C52GBlcn"></td>
+                                <td class="balcony blc_inside" id="C52HBlcn"></td>
+                                <td class="stair"></td>
+                                <td class="balcony blc_inside" id="C52ABlcn"></td>
+                                <td class="balcony blc_inside" id="C52BBlcn"></td>
+
+                            </tr>
+                            <tr>
+                                <td class="balcony blc_inside" id="C41BBlcn"></td>
+                                <td class="balcony blc_inside" id="C41ABlcn"></td>
+                                <td class="stair"></td>
+                                <td class="balcony blc_inside" id="C41HBlcn"></td>
+                                <td class="balcony blc_inside" id="C41GBlcn"></td>
+                                <td class="balcony blc_inside" id="C42IBlcn"></td>
+                                <td class="balcony blc_inside" id="C42GBlcn"></td>
+                                <td class="balcony blc_inside" id="C42HBlcn"></td>
+                                <td class="stair"></td>
+                                <td class="balcony blc_inside" id="C42ABlcn"></td>
+                                <td class="balcony blc_inside" id="C42BBlcn"></td>
+
+                            </tr>
+                            <tr>
+                                <td class="balcony blc_inside" id="C31BBlcn"></td>
+                                <td class="balcony blc_inside" id="C31ABlcn"></td>
+                                <td class="stair"></td>
+                                <td class="balcony blc_inside" id="C31HBlcn"></td>
+                                <td class="balcony blc_inside" id="C31GBlcn"></td>
+                                <td class="balcony blc_inside" id="C32IBlcn"></td>
+                                <td class="balcony blc_inside" id="C32GBlcn"></td>
+                                <td class="balcony blc_inside" id="C32HBlcn"></td>
+                                <td class="stair"></td>
+                                <td class="balcony blc_inside" id="C32ABlcn"></td>
+                                <td class="balcony blc_inside" id="C32BBlcn"></td>
+
+                            </tr>
+                            <tr>
+                                <td class="balcony blc_inside" id="C21BBlcn"></td>
+                                <td class="balcony blc_inside" id="C21ABlcn"></td>
+                                <td class="stair"></td>
+                                <td class="balcony blc_inside" id="C21HBlcn"></td>
+                                <td class="balcony blc_inside" id="C21GBlcn"></td>
+                                <td class="balcony blc_inside" id="C22IBlcn"></td>
+                                <td class="balcony blc_inside" id="C22GBlcn"></td>
+                                <td class="balcony blc_inside" id="C22HBlcn"></td>
+                                <td class="stair"></td>
+                                <td class="balcony blc_inside" id="C22ABlcn"></td>
+                                <td class="balcony blc_inside" id="C22BBlcn"></td>
+
+                            </tr>
+                            <tr>
+                                <td class="balcony blc_inside" id="C11BBlcn"></td>
+                                <td class="balcony blc_inside" id="C11ABlcn"></td>
+                                <td class="stair"></td>
+                                <td class="balcony blc_inside" id="C11HBlcn"></td>
+                                <td class="balcony blc_inside" id="C11GBlcn"></td>
+                                <td class="balcony blc_inside" id="C12IBlcn"></td>
+                                <td class="balcony blc_inside" id="C12GBlcn"></td>
+                                <td class="balcony blc_inside" id="C12HBlcn"></td>
+                                <td class="stair"></td>
+                                <td class="balcony blc_inside" id="C12ABlcn"></td>
+                                <td class="balcony blc_inside" id="C12BBlcn"></td>
+
+                            </tr>
+                        </table>
+                        <table class="tblPersp" id="tableDInside">
+                            <tr>
+                                <td class="balcony blc_inside" id="D81IBlcn"></td>
+                                <td class="balcony blc_inside" id="D81JBlcn"></td>
+                                <td class="stair"></td>
+                                <td class="balcony blc_inside" id="D81ABlcn"></td>
+                                <td class="balcony blc_inside" id="D81BBlcn"></td>
+                                <td class="balcony blc_inside" id="D82CBlcn"></td>
+                            </tr>
+                            <tr>
+                                <td class="balcony blc_inside" id="D71IBlcn"></td>
+                                <td class="balcony blc_inside" id="D71JBlcn"></td>
+                                <td class="stair"></td>
+                                <td class="balcony blc_inside" id="D71ABlcn"></td>
+                                <td class="balcony blc_inside" id="D71BBlcn"></td>
+                                <td class="balcony blc_inside" id="D72CBlcn"></td>
+                            </tr>
+                            <tr>
+                                <td class="balcony blc_inside" id="D61IBlcn"></td>
+                                <td class="balcony blc_inside" id="D61JBlcn"></td>
+                                <td class="stair"></td>
+                                <td class="balcony blc_inside" id="D61ABlcn"></td>
+                                <td class="balcony blc_inside" id="D61BBlcn"></td>
+                                <td class="balcony blc_inside" id="D62CBlcn"></td>
+                            </tr>
+                            <tr>
+                                <td class="balcony blc_inside" id="D51IBlcn"></td>
+                                <td class="balcony blc_inside" id="D51JBlcn"></td>
+                                <td class="stair"></td>
+                                <td class="balcony blc_inside" id="D51ABlcn"></td>
+                                <td class="balcony blc_inside" id="D51BBlcn"></td>
+                                <td class="balcony blc_inside" id="D52CBlcn"></td>
+                            </tr>
+                            <tr>
+                                <td class="balcony blc_inside" id="D41IBlcn"></td>
+                                <td class="balcony blc_inside" id="D41JBlcn"></td>
+                                <td class="stair"></td>
+                                <td class="balcony blc_inside" id="D41ABlcn"></td>
+                                <td class="balcony blc_inside" id="D41BBlcn"></td>
+                                <td class="balcony blc_inside" id="D42CBlcn"></td>
+                            </tr>
+                            <tr>
+                                <td class="balcony blc_inside" id="D31IBlcn"></td>
+                                <td class="balcony blc_inside" id="D31JBlcn"></td>
+                                <td class="stair"></td>
+                                <td class="balcony blc_inside" id="D31ABlcn"></td>
+                                <td class="balcony blc_inside" id="D31BBlcn"></td>
+                                <td class="balcony blc_inside" id="D32CBlcn"></td>
+                            </tr>
+                            <tr>
+                                <td class="balcony blc_inside" id="D21IBlcn"></td>
+                                <td class="balcony blc_inside" id="D21JBlcn"></td>
+                                <td class="stair"></td>
+                                <td class="balcony blc_inside" id="D21ABlcn"></td>
+                                <td class="balcony blc_inside" id="D21BBlcn"></td>
+                                <td class="balcony blc_inside" id="D22CBlcn"></td>
+                            </tr>
+                            <tr>
+                                <td class="balcony blc_inside" id="D11IBlcn"></td>
+                                <td class="balcony blc_inside" id="D11JBlcn"></td>
+                                <td class="stair"></td>
+                                <td class="balcony blc_inside" id="D11ABlcn"></td>
+                                <td class="balcony blc_inside" id="D11BBlcn"></td>
+                                <td class="balcony blc_inside" id="D12CBlcn"></td>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
 
-                <div id="floor-plan1A" class="floorPlan">Floor Plan 1A</div>
-                <div id="floor-plan2A" class="floorPlan">Floor Plan 2A</div>
-                <div id="floor-plan3A" class="floorPlan">Floor Plan 3A</div>
-                <div id="floor-plan4A" class="floorPlan">Floor Plan 4A</div>
-                <div id="floor-plan5A" class="floorPlan">Floor Plan 5A</div>
-                <div id="floor-plan6A" class="floorPlan">Floor Plan 6A</div>
-                <div id="floor-plan7A" class="floorPlan">Floor Plan 7A</div>
-                <div id="floor-plan8A" class="floorPlan">Floor Plan 8A</div>
-                <div id="floor-plan9A" class="floorPlan">Floor Plan 9A</div>
+
+                <div class="tableOutsideContainer">
+                    <div class="table-wrapper">
+                        <table class="tblPersp" id="tableBOutside">
+                            <tr>
+                                <td class="balcony blc_outside" id="B81CBlcn"></td>
+                                <td class="balcony blc_outside" id="B81DBlcn"></td>
+                                <td class="balcony blc_outside" id="B81EBlcn"></td>
+                                <td class="balcony blc_outside" id="B81FBlcn"></td>
+                                <td class="balcony blc_outside" id="B82CBlcn"></td>
+                                <td class="balcony blc_outside" id="B82DBlcn"></td>
+                                <td class="balcony blc_outside" id="B82EBlcn"></td>
+                                <td class="balcony blc_outside" id="B82FBlcn"></td>
+                                <td class="balcony blc_outside" id="B83FBlcn"></td>
+                                <td class="balcony blc_outside" id="B83EBlcn"></td>
+                                <td class="balcony blc_outside" id="B83DBlcn"></td>
+                                <td class="balcony blc_outside" id="B83CBlcn"></td>
+
+                            </tr>
+                            <tr>
+                                <td class="balcony blc_outside" id="B71CBlcn"></td>
+                                <td class="balcony blc_outside" id="B71DBlcn"></td>
+                                <td class="balcony blc_outside" id="B71EBlcn"></td>
+                                <td class="balcony blc_outside" id="B71FBlcn"></td>
+                                <td class="balcony blc_outside" id="B72CBlcn"></td>
+                                <td class="balcony blc_outside" id="B72DBlcn"></td>
+                                <td class="balcony blc_outside" id="B72EBlcn"></td>
+                                <td class="balcony blc_outside" id="B72FBlcn"></td>
+                                <td class="balcony blc_outside" id="B73FBlcn"></td>
+                                <td class="balcony blc_outside" id="B73EBlcn"></td>
+                                <td class="balcony blc_outside" id="B73DBlcn"></td>
+                                <td class="balcony blc_outside" id="B73CBlcn"></td>
+
+                            </tr>
+                            <tr>
+                                <td class="balcony blc_outside" id="B61CBlcn"></td>
+                                <td class="balcony blc_outside" id="B61DBlcn"></td>
+                                <td class="balcony blc_outside" id="B61EBlcn"></td>
+                                <td class="balcony blc_outside" id="B61FBlcn"></td>
+                                <td class="balcony blc_outside" id="B62CBlcn"></td>
+                                <td class="balcony blc_outside" id="B62DBlcn"></td>
+                                <td class="balcony blc_outside" id="B62EBlcn"></td>
+                                <td class="balcony blc_outside" id="B62FBlcn"></td>
+                                <td class="balcony blc_outside" id="B63FBlcn"></td>
+                                <td class="balcony blc_outside" id="B63EBlcn"></td>
+                                <td class="balcony blc_outside" id="B63DBlcn"></td>
+                                <td class="balcony blc_outside" id="B63CBlcn"></td>
+
+                            </tr>
+                            <tr>
+                                <td class="balcony blc_outside" id="B51CBlcn"></td>
+                                <td class="balcony blc_outside" id="B51DBlcn"></td>
+                                <td class="balcony blc_outside" id="B51EBlcn"></td>
+                                <td class="balcony blc_outside" id="B51FBlcn"></td>
+                                <td class="balcony blc_outside" id="B52CBlcn"></td>
+                                <td class="balcony blc_outside" id="B52DBlcn"></td>
+                                <td class="balcony blc_outside" id="B52EBlcn"></td>
+                                <td class="balcony blc_outside" id="B52FBlcn"></td>
+                                <td class="balcony blc_outside" id="B53FBlcn"></td>
+                                <td class="balcony blc_outside" id="B53EBlcn"></td>
+                                <td class="balcony blc_outside" id="B53DBlcn"></td>
+                                <td class="balcony blc_outside" id="B53CBlcn"></td>
+
+                            </tr>
+                            <tr>
+                                <td class="balcony blc_outside" id="B41CBlcn"></td>
+                                <td class="balcony blc_outside" id="B41DBlcn"></td>
+                                <td class="balcony blc_outside" id="B41EBlcn"></td>
+                                <td class="balcony blc_outside" id="B41FBlcn"></td>
+                                <td class="balcony blc_outside" id="B42CBlcn"></td>
+                                <td class="balcony blc_outside" id="B42DBlcn"></td>
+                                <td class="balcony blc_outside" id="B42EBlcn"></td>
+                                <td class="balcony blc_outside" id="B42FBlcn"></td>
+                                <td class="balcony blc_outside" id="B43FBlcn"></td>
+                                <td class="balcony blc_outside" id="B43EBlcn"></td>
+                                <td class="balcony blc_outside" id="B43DBlcn"></td>
+                                <td class="balcony blc_outside" id="B43CBlcn"></td>
+
+                            </tr>
+                            <tr>
+                                <td class="balcony blc_outside" id="B31CBlcn"></td>
+                                <td class="balcony blc_outside" id="B31DBlcn"></td>
+                                <td class="balcony blc_outside" id="B31EBlcn"></td>
+                                <td class="balcony blc_outside" id="B31FBlcn"></td>
+                                <td class="balcony blc_outside" id="B32CBlcn"></td>
+                                <td class="balcony blc_outside" id="B32DBlcn"></td>
+                                <td class="balcony blc_outside" id="B32EBlcn"></td>
+                                <td class="balcony blc_outside" id="B32FBlcn"></td>
+                                <td class="balcony blc_outside" id="B33FBlcn"></td>
+                                <td class="balcony blc_outside" id="B33EBlcn"></td>
+                                <td class="balcony blc_outside" id="B33DBlcn"></td>
+                                <td class="balcony blc_outside" id="B33CBlcn"></td>
+
+                            </tr>
+                            <tr>
+                                <td class="balcony blc_outside" id="B21CBlcn"></td>
+                                <td class="balcony blc_outside" id="B21DBlcn"></td>
+                                <td class="balcony blc_outside" id="B21EBlcn"></td>
+                                <td class="balcony blc_outside" id="B21FBlcn"></td>
+                                <td class="balcony blc_outside" id="B22CBlcn"></td>
+                                <td class="balcony blc_outside" id="B22DBlcn"></td>
+                                <td class="balcony blc_outside" id="B22EBlcn"></td>
+                                <td class="balcony blc_outside" id="B22FBlcn"></td>
+                                <td class="balcony blc_outside" id="B23FBlcn"></td>
+                                <td class="balcony blc_outside" id="B23EBlcn"></td>
+                                <td class="balcony blc_outside" id="B23DBlcn"></td>
+                                <td class="balcony blc_outside" id="B23CBlcn"></td>
+
+                            </tr>
+                            <tr>
+                                <td class="balcony blc_outside" id="B11CBlcn"></td>
+                                <td class="balcony blc_outside" id="B11DBlcn"></td>
+                                <td class="balcony blc_outside" id="B11EBlcn"></td>
+                                <td class="balcony blc_outside" id="B11FBlcn"></td>
+                                <td class="balcony blc_outside" id="B12CBlcn"></td>
+                                <td class="balcony blc_outside" id="B12DBlcn"></td>
+                                <td class="balcony blc_outside" id="B12EBlcn"></td>
+                                <td class="balcony blc_outside" id="B12FBlcn"></td>
+                                <td class="balcony blc_outside" id="B13FBlcn"></td>
+                                <td class="balcony blc_outside" id="B13EBlcn"></td>
+                                <td class="balcony blc_outside" id="B13DBlcn"></td>
+                                <td class="balcony blc_outside" id="B13CBlcn"></td>
+
+                            </tr>
+
+                        </table>
+                        <table class="tblPersp" id="tableCOutside">
+                            <tr>
+                                <td class="balcony blc_outside" id="C81CBlcn"></td>
+                                <td class="balcony blc_outside" id="C81DBlcn"></td>
+                                <td class="balcony blc_outside" id="C81EBlcn"></td>
+                                <td class="balcony blc_outside" id="C81FBlcn"></td>
+                                <td class="balcony blc_outside" id="C82JBlcn"></td>
+                                <td class="balcony blc_outside" id="C82FBlcn"></td>
+                                <td class="balcony blc_outside" id="C82EBlcn"></td>
+                                <td class="balcony blc_outside" id="C82DBlcn"></td>
+                                <td class="balcony blc_outside" id="C82CBlcn"></td>
+
+                            </tr>
+                            <tr>
+                                <td class="balcony blc_outside" id="C71CBlcn"></td>
+                                <td class="balcony blc_outside" id="C71DBlcn"></td>
+                                <td class="balcony blc_outside" id="C71EBlcn"></td>
+                                <td class="balcony blc_outside" id="C71FBlcn"></td>
+                                <td class="balcony blc_outside" id="C72JBlcn"></td>
+                                <td class="balcony blc_outside" id="C72FBlcn"></td>
+                                <td class="balcony blc_outside" id="C72EBlcn"></td>
+                                <td class="balcony blc_outside" id="C72DBlcn"></td>
+                                <td class="balcony blc_outside" id="C72CBlcn"></td>
+
+                            </tr>
+                            <tr>
+                                <td class="balcony blc_outside" id="C61CBlcn"></td>
+                                <td class="balcony blc_outside" id="C61DBlcn"></td>
+                                <td class="balcony blc_outside" id="C61EBlcn"></td>
+                                <td class="balcony blc_outside" id="C61FBlcn"></td>
+                                <td class="balcony blc_outside" id="C62JBlcn"></td>
+                                <td class="balcony blc_outside" id="C62FBlcn"></td>
+                                <td class="balcony blc_outside" id="C62EBlcn"></td>
+                                <td class="balcony blc_outside" id="C62DBlcn"></td>
+                                <td class="balcony blc_outside" id="C62CBlcn"></td>
+
+                            </tr>
+                            <tr>
+                                <td class="balcony blc_outside" id="C51CBlcn"></td>
+                                <td class="balcony blc_outside" id="C51DBlcn"></td>
+                                <td class="balcony blc_outside" id="C51EBlcn"></td>
+                                <td class="balcony blc_outside" id="C51FBlcn"></td>
+                                <td class="balcony blc_outside" id="C52JBlcn"></td>
+                                <td class="balcony blc_outside" id="C52FBlcn"></td>
+                                <td class="balcony blc_outside" id="C52EBlcn"></td>
+                                <td class="balcony blc_outside" id="C52DBlcn"></td>
+                                <td class="balcony blc_outside" id="C52CBlcn"></td>
+
+                            </tr>
+                            <tr>
+                                <td class="balcony blc_outside" id="C41CBlcn"></td>
+                                <td class="balcony blc_outside" id="C41DBlcn"></td>
+                                <td class="balcony blc_outside" id="C41EBlcn"></td>
+                                <td class="balcony blc_outside" id="C41FBlcn"></td>
+                                <td class="balcony blc_outside" id="C42JBlcn"></td>
+                                <td class="balcony blc_outside" id="C42FBlcn"></td>
+                                <td class="balcony blc_outside" id="C42EBlcn"></td>
+                                <td class="balcony blc_outside" id="C42DBlcn"></td>
+                                <td class="balcony blc_outside" id="C42CBlcn"></td>
+
+                            </tr>
+                            <tr>
+                                <td class="balcony blc_outside" id="C31CBlcn"></td>
+                                <td class="balcony blc_outside" id="C31DBlcn"></td>
+                                <td class="balcony blc_outside" id="C31EBlcn"></td>
+                                <td class="balcony blc_outside" id="C31FBlcn"></td>
+                                <td class="balcony blc_outside" id="C32JBlcn"></td>
+                                <td class="balcony blc_outside" id="C32FBlcn"></td>
+                                <td class="balcony blc_outside" id="C32EBlcn"></td>
+                                <td class="balcony blc_outside" id="C32DBlcn"></td>
+                                <td class="balcony blc_outside" id="C32CBlcn"></td>
+
+                            </tr>
+                            <tr>
+                                <td class="balcony blc_outside" id="C21CBlcn"></td>
+                                <td class="balcony blc_outside" id="C21DBlcn"></td>
+                                <td class="balcony blc_outside" id="C21EBlcn"></td>
+                                <td class="balcony blc_outside" id="C21FBlcn"></td>
+                                <td class="balcony blc_outside" id="C22JBlcn"></td>
+                                <td class="balcony blc_outside" id="C22FBlcn"></td>
+                                <td class="balcony blc_outside" id="C22EBlcn"></td>
+                                <td class="balcony blc_outside" id="C22DBlcn"></td>
+                                <td class="balcony blc_outside" id="C22CBlcn"></td>
+
+                            </tr>
+                            <tr>
+                                <td class="balcony blc_outside" id="C11CBlcn"></td>
+                                <td class="balcony blc_outside" id="C11DBlcn"></td>
+                                <td class="balcony blc_outside" id="C11EBlcn"></td>
+                                <td class="balcony blc_outside" id="C11FBlcn"></td>
+                                <td class="balcony blc_outside" id="C12JBlcn"></td>
+                                <td class="balcony blc_outside" id="C12FBlcn"></td>
+                                <td class="balcony blc_outside" id="C12EBlcn"></td>
+                                <td class="balcony blc_outside" id="C12DBlcn"></td>
+                                <td class="balcony blc_outside" id="C12CBlcn"></td>
+
+                            </tr>
+
+                        </table>
+                        <table  class="tblPersp" id="tableDOutside">
+                            <tr>
+                                <td class="balcony blc_outside" id="D81HBlcn"></td>
+                                <td class="balcony blc_outside" id="D81GBlcn"></td>
+                                <td class="balcony blc_outside" id="D81FBlcn"></td>
+                                <td class="balcony blc_outside" id="D81EBlcn"></td>
+                                <td class="balcony blc_outside" id="D81DBlcn"></td>
+                            </tr>
+                            <tr>
+                                <td class="balcony blc_outside" id="D71HBlcn"></td>
+                                <td class="balcony blc_outside" id="D71GBlcn"></td>
+                                <td class="balcony blc_outside" id="D71FBlcn"></td>
+                                <td class="balcony blc_outside" id="D71EBlcn"></td>
+                                <td class="balcony blc_outside" id="D71DBlcn"></td>
+                            </tr>
+                            <tr>
+                                <td class="balcony blc_outside" id="D61HBlcn"></td>
+                                <td class="balcony blc_outside" id="D61GBlcn"></td>
+                                <td class="balcony blc_outside" id="D61FBlcn"></td>
+                                <td class="balcony blc_outside" id="D61EBlcn"></td>
+                                <td class="balcony blc_outside" id="D61DBlcn"></td>
+                            </tr>
+                            <tr>
+                                <td class="balcony blc_outside" id="D51HBlcn"></td>
+                                <td class="balcony blc_outside" id="D51GBlcn"></td>
+                                <td class="balcony blc_outside" id="D51FBlcn"></td>
+                                <td class="balcony blc_outside" id="D51EBlcn"></td>
+                                <td class="balcony blc_outside" id="D51DBlcn"></td>
+                            </tr>
+                            <tr>
+                                <td class="balcony blc_outside" id="D41HBlcn"></td>
+                                <td class="balcony blc_outside" id="D41GBlcn"></td>
+                                <td class="balcony blc_outside" id="D41FBlcn"></td>
+                                <td class="balcony blc_outside" id="D41EBlcn"></td>
+                                <td class="balcony blc_outside" id="D41DBlcn"></td>
+                            </tr>
+                            <tr>
+                                <td class="balcony blc_outside" id="D31HBlcn"></td>
+                                <td class="balcony blc_outside" id="D31GBlcn"></td>
+                                <td class="balcony blc_outside" id="D31FBlcn"></td>
+                                <td class="balcony blc_outside" id="D31EBlcn"></td>
+                                <td class="balcony blc_outside" id="D31DBlcn"></td>
+                            </tr>
+                            <tr>
+                                <td class="balcony blc_outside" id="D21HBlcn"></td>
+                                <td class="balcony blc_outside" id="D21GBlcn"></td>
+                                <td class="balcony blc_outside" id="D21FBlcn"></td>
+                                <td class="balcony blc_outside" id="D21EBlcn"></td>
+                                <td class="balcony blc_outside" id="D21DBlcn"></td>
+                            </tr>
+                            <tr>
+                                <td class="balcony blc_outside" id="D11HBlcn"></td>
+                                <td class="balcony blc_outside" id="D11GBlcn"></td>
+                                <td class="balcony blc_outside" id="D11FBlcn"></td>
+                                <td class="balcony blc_outside" id="D11EBlcn"></td>
+                                <td class="balcony blc_outside" id="D11DBlcn"></td>
+                            </tr>
+
+
+                        </table>
+                    </div>
+                </div>
+
+
+
+
+
+
+
 
 
             </div>
-            <div id="godinaB" class="building">
-                <div class="floorContainer" style="background-color: #fbe4c8">
-                    <h2 id="floor_9B" class="FloorNumber">Kati 9</h2>
-                    <img class="floor" id="kati9B" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
-                </div>
-                <div class="floorContainer">
-                    <h2 id="floor_8B" class="FloorNumber">Kati 8</h2>
-                    <img class="floor" id="kati8B" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
-                </div>
-                <div class="floorContainer">
-                    <h2 id="floor_7B" class="FloorNumber">Kati 7</h2>
-                    <img class="floor" id="kati7B" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
-                </div>
-                <div class="floorContainer">
-                    <h2 id="floor_6B" class="FloorNumber">Kati 6</h2>
-                    <img class="floor" id="kati6B" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
-                </div>
-                <div class="floorContainer">
-                    <h2 id="floor_5B" class="FloorNumber">Kati 5</h2>
-                    <img class="floor" id="kati5B" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
-                </div>
-                <div class="floorContainer">
-                    <h2 id="floor_4B" class="FloorNumber">Kati 4</h2>
-                    <img class="floor" id="kati4B" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
-                </div>
-                <div class="floorContainer">
-                    <h2 id="floor_3B" class="FloorNumber">Kati 3</h2>
-                    <img class="floor" id="kati3B" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
-                </div>
-                <div class="floorContainer">
-                    <h2 id="floor_2B" class="FloorNumber">Kati 2</h2>
-                    <img class="floor" id="kati2B" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
-                </div>
-                <div class="floorContainer">
-                    <h2 id="floor_1B" class="FloorNumber">Kati 1</h2>
-                    <img class="floor" id="kati1B" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
-                </div>
-                <div id="floor-plan1B" class="floorPlan">Floor Plan 1B</div>
-                <div id="floor-plan2B" class="floorPlan">Floor Plan 2B</div>
-                <div id="floor-plan3B" class="floorPlan">Floor Plan 3B</div>
-                <div id="floor-plan4B" class="floorPlan">Floor Plan 4B</div>
-                <div id="floor-plan5B" class="floorPlan">Floor Plan 5B</div>
-                <div id="floor-plan6B" class="floorPlan">Floor Plan 6B</div>
-                <div id="floor-plan7B" class="floorPlan">Floor Plan 7B</div>
-                <div id="floor-plan8B" class="floorPlan">Floor Plan 8B</div>
-                <div id="floor-plan9B" class="floorPlan">Floor Plan 9B</div>
+            <div id="BuildingContainer">
+                <div id="godinaA" class="building">
 
+                    <div class="floorContainer">
+                        <h2 id="floor_8A" class="FloorNumber">Kati 8</h2>
+                        <img class="floor" id="kati8A" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                    </div>
+                    <div class="floorContainer">
+                        <h2 id="floor_7A" class="FloorNumber">Kati 7</h2>
+                        <img class="floor" id="kati7A" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                    </div>
+                    <div class="floorContainer">
+                        <h2 id="floor_6A" class="FloorNumber">Kati 6</h2>
+                        <img class="floor" id="kati6A" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                    </div>
+                    <div class="floorContainer">
+                        <h2 id="floor_5A" class="FloorNumber">Kati 5</h2>
+                        <img class="floor" id="kati5A" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                    </div>
+                    <div class="floorContainer">
+                        <h2 id="floor_4A" class="FloorNumber">Kati 4</h2>
+                        <img class="floor" id="kati4A" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                    </div>
+                    <div class="floorContainer">
+                        <h2 id="floor_3A" class="FloorNumber">Kati 3</h2>
+                        <img class="floor" id="kati3A" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                    </div>
+                    <div class="floorContainer">
+                        <h2 id="floor_2A" class="FloorNumber">Kati 2</h2>
+                        <img class="floor" id="kati2A" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                    </div>
+                    <div class="floorContainer">
+                        <h2 id="floor_1A" class="FloorNumber">Kati 1</h2>
+                        <img class="floor" id="kati1A" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                    </div>
+
+                    <div id="floor-plan1A" class="floorPlan">Floor Plan 1A</div>
+                    <div id="floor-plan2A" class="floorPlan">Floor Plan 2A</div>
+                    <div id="floor-plan3A" class="floorPlan">Floor Plan 3A</div>
+                    <div id="floor-plan4A" class="floorPlan">Floor Plan 4A</div>
+                    <div id="floor-plan5A" class="floorPlan">Floor Plan 5A</div>
+                    <div id="floor-plan6A" class="floorPlan">Floor Plan 6A</div>
+                    <div id="floor-plan7A" class="floorPlan">Floor Plan 7A</div>
+                    <div id="floor-plan8A" class="floorPlan">Floor Plan 8A</div>
+                    <div id="floor-plan9A" class="floorPlan">Floor Plan 9A</div>
+
+
+                </div>
+                <div id="godinaB" class="building">
+                    <div class="floorContainer">
+                        <h2 id="floor_8B" class="FloorNumber">Kati 8</h2>
+                        <img class="floor" id="kati8B" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                    </div>
+                    <div class="floorContainer">
+                        <h2 id="floor_7B" class="FloorNumber">Kati 7</h2>
+                        <img class="floor" id="kati7B" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                    </div>
+                    <div class="floorContainer">
+                        <h2 id="floor_6B" class="FloorNumber">Kati 6</h2>
+                        <img class="floor" id="kati6B" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                    </div>
+                    <div class="floorContainer">
+                        <h2 id="floor_5B" class="FloorNumber">Kati 5</h2>
+                        <img class="floor" id="kati5B" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                    </div>
+                    <div class="floorContainer">
+                        <h2 id="floor_4B" class="FloorNumber">Kati 4</h2>
+                        <img class="floor" id="kati4B" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                    </div>
+                    <div class="floorContainer">
+                        <h2 id="floor_3B" class="FloorNumber">Kati 3</h2>
+                        <img class="floor" id="kati3B" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                    </div>
+                    <div class="floorContainer">
+                        <h2 id="floor_2B" class="FloorNumber">Kati 2</h2>
+                        <img class="floor" id="kati2B" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                    </div>
+                    <div class="floorContainer">
+                        <h2 id="floor_1B" class="FloorNumber">Kati 1</h2>
+                        <img class="floor" id="kati1B" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                    </div>
+                    <div id="floor-plan1B" class="floorPlan">Floor Plan 1B</div>
+                    <div id="floor-plan2B" class="floorPlan">Floor Plan 2B</div>
+                    <div id="floor-plan3B" class="floorPlan">Floor Plan 3B</div>
+                    <div id="floor-plan4B" class="floorPlan">Floor Plan 4B</div>
+                    <div id="floor-plan5B" class="floorPlan">Floor Plan 5B</div>
+                    <div id="floor-plan6B" class="floorPlan">Floor Plan 6B</div>
+                    <div id="floor-plan7B" class="floorPlan">Floor Plan 7B</div>
+                    <div id="floor-plan8B" class="floorPlan">Floor Plan 8B</div>
+                    <div id="floor-plan9B" class="floorPlan">Floor Plan 9B</div>
+
+                </div>
+                <div id="godinaC" class="building">
+                    <div class="floorContainer" style="background-color: #fbe4c8">
+                        <h2 id="floor_9C" class="FloorNumber">Kati 9</h2>
+                        <img class="floor" id="kati9C" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                    </div>
+                    <div class="floorContainer">
+                        <h2 id="floor_8C" class="FloorNumber">Kati 8</h2>
+                        <img class="floor" id="kati8C" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                    </div>
+                    <div class="floorContainer">
+                        <h2 id="floor_7C" class="FloorNumber">Kati 7</h2>
+                        <img class="floor" id="kati7C" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                    </div>
+                    <div class="floorContainer">
+                        <h2 id="floor_6C" class="FloorNumber">Kati 6</h2>
+                        <img class="floor" id="kati6C" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                    </div>
+                    <div class="floorContainer">
+                        <h2 id="floor_5C" class="FloorNumber">Kati 5</h2>
+                        <img class="floor" id="kati5C" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                    </div>
+                    <div class="floorContainer">
+                        <h2 id="floor_4C" class="FloorNumber">Kati 4</h2>
+                        <img class="floor" id="kati4C" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                    </div>
+                    <div class="floorContainer">
+                        <h2 id="floor_3C" class="FloorNumber">Kati 3</h2>
+                        <img class="floor" id="kati3C" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                    </div>
+                    <div class="floorContainer">
+                        <h2 id="floor_2C" class="FloorNumber">Kati 2</h2>
+                        <img class="floor" id="kati2C" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                    </div>
+                    <div class="floorContainer">
+                        <h2 id="floor_1C" class="FloorNumber">Kati 1</h2>
+                        <img class="floor" id="kati1C" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                    </div>
+
+                    <div id="floor-plan1C" class="floorPlan">Floor Plan 1C</div>
+                    <div id="floor-plan2C" class="floorPlan">Floor Plan 2C</div>
+                    <div id="floor-plan3C" class="floorPlan">Floor Plan 3C</div>
+                    <div id="floor-plan4C" class="floorPlan">Floor Plan 4C</div>
+                    <div id="floor-plan5C" class="floorPlan">Floor Plan 5C</div>
+                    <div id="floor-plan6C" class="floorPlan">Floor Plan 6C</div>
+                    <div id="floor-plan7C" class="floorPlan">Floor Plan 7C</div>
+                    <div id="floor-plan8C" class="floorPlan">Floor Plan 8C</div>
+                    <div id="floor-plan9C" class="floorPlan">Floor Plan 9C</div>
+
+                </div>
+                <div id="godinaD" class="building">
+                    <div class="floorContainer" style="background-color: #fbe4c8">
+                        <h2 id="floor_9D" class="FloorNumber">Kati 9</h2>
+                        <img class="floor" id="kati9D" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                    </div>
+                    <div class="floorContainer">
+                        <h2 id="floor_8D" class="FloorNumber">Kati 8</h2>
+                        <img class="floor" id="kati8D" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                    </div>
+                    <div class="floorContainer">
+                        <h2 id="floor_7D" class="FloorNumber">Kati 7</h2>
+                        <img class="floor" id="kati7D" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                    </div>
+                    <div class="floorContainer">
+                        <h2 id="floor_6D" class="FloorNumber">Kati 6</h2>
+                        <img class="floor" id="kati6D" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                    </div>
+                    <div class="floorContainer">
+                        <h2 id="floor_5D" class="FloorNumber">Kati 5</h2>
+                        <img class="floor" id="kati5D" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                    </div>
+                    <div class="floorContainer">
+                        <h2 id="floor_4D" class="FloorNumber">Kati 4</h2>
+                        <img class="floor" id="kati4D" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                    </div>
+                    <div class="floorContainer">
+                        <h2 id="floor_3D" class="FloorNumber">Kati 3</h2>
+                        <img class="floor" id="kati3D" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                    </div>
+                    <div class="floorContainer">
+                        <h2 id="floor_2D" class="FloorNumber">Kati 2</h2>
+                        <img class="floor" id="kati2D" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                    </div>
+                    <div class="floorContainer">
+                        <h2 id="floor_1D" class="FloorNumber">Kati 1</h2>
+                        <img class="floor" id="kati1D" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                    </div>
+                    <div id="floor-plan1D" class="floorPlan">Floor Plan 1D</div>
+                    <div id="floor-plan2D" class="floorPlan">Floor Plan 2D</div>
+                    <div id="floor-plan3D" class="floorPlan">Floor Plan 3D</div>
+                    <div id="floor-plan4D" class="floorPlan">Floor Plan 4D</div>
+                    <div id="floor-plan5D" class="floorPlan">Floor Plan 5D</div>
+                    <div id="floor-plan6D" class="floorPlan">Floor Plan 6D</div>
+                    <div id="floor-plan7D" class="floorPlan">Floor Plan 7D</div>
+                    <div id="floor-plan8D" class="floorPlan">Floor Plan 8D</div>
+                    <div id="floor-plan9D" class="floorPlan">Floor Plan 9A</div>
+
+                </div>
+                <div id="godinaE" class="building">
+                    <div class="floorContainer" style="background-color: #fbe4c8">
+                        <h2 id="floor_9E" class="FloorNumber">Kati 9</h2>
+                        <img class="floor" id="kati9E" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                    </div>
+                    <div class="floorContainer">
+                        <h2 id="floor_8E" class="FloorNumber">Kati 8</h2>
+                        <img class="floor" id="kati8E" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                    </div>
+                    <div class="floorContainer">
+                        <h2 id="floor_7E" class="FloorNumber">Kati 7</h2>
+                        <img class="floor" id="kati7E" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                    </div>
+                    <div class="floorContainer">
+                        <h2 id="floor_6E" class="FloorNumber">Kati 6</h2>
+                        <img class="floor" id="kati6E" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                    </div>
+                    <div class="floorContainer">
+                        <h2 id="floor_5" class="FloorNumber">Kati 5</h2>
+                        <img class="floor" id="kati5E" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                    </div>
+                    <div class="floorContainer">
+                        <h2 id="floor_4E" class="FloorNumber">Kati 4</h2>
+                        <img class="floor" id="kati4E" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                    </div>
+                    <div class="floorContainer">
+                        <h2 id="floor_3E" class="FloorNumber">Kati 3</h2>
+                        <img class="floor" id="kati3E" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                    </div>
+                    <div class="floorContainer">
+                        <h2 id="floor_2E" class="FloorNumber">Kati 2</h2>
+                        <img class="floor" id="kati2E" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                    </div>
+                    <div class="floorContainer">
+                        <h2 id="floor_1E" class="FloorNumber">Kati 1</h2>
+                        <img class="floor" id="kati1E" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
+                    </div>
+                    <div id="floor-plan1E" class="floorPlan">Floor Plan 1E</div>
+                    <div id="floor-plan2E" class="floorPlan">Floor Plan 2E</div>
+                    <div id="floor-plan3E" class="floorPlan">Floor Plan 3E</div>
+                    <div id="floor-plan4E" class="floorPlan">Floor Plan 4E</div>
+                    <div id="floor-plan5E" class="floorPlan">Floor Plan 5E</div>
+                    <div id="floor-plan6E" class="floorPlan">Floor Plan 6E</div>
+                    <div id="floor-plan7E" class="floorPlan">Floor Plan 7E</div>
+                    <div id="floor-plan8E" class="floorPlan">Floor Plan 8E</div>
+                    <div id="floor-plan9E" class="floorPlan">Floor Plan 9A</div>
+
+                </div>
             </div>
-            <div id="godinaC" class="building">
-                <div class="floorContainer" style="background-color: #fbe4c8">
-                    <h2 id="floor_9C" class="FloorNumber">Kati 9</h2>
-                    <img class="floor" id="kati9C" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
-                </div>
-                <div class="floorContainer">
-                    <h2 id="floor_8C" class="FloorNumber">Kati 8</h2>
-                    <img class="floor" id="kati8C" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
-                </div>
-                <div class="floorContainer">
-                    <h2 id="floor_7C" class="FloorNumber">Kati 7</h2>
-                    <img class="floor" id="kati7C" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
-                </div>
-                <div class="floorContainer">
-                    <h2 id="floor_6C" class="FloorNumber">Kati 6</h2>
-                    <img class="floor" id="kati6C" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
-                </div>
-                <div class="floorContainer">
-                    <h2 id="floor_5C" class="FloorNumber">Kati 5</h2>
-                    <img class="floor" id="kati5C" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
-                </div>
-                <div class="floorContainer">
-                    <h2 id="floor_4C" class="FloorNumber">Kati 4</h2>
-                    <img class="floor" id="kati4C" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
-                </div>
-                <div class="floorContainer">
-                    <h2 id="floor_3C" class="FloorNumber">Kati 3</h2>
-                    <img class="floor" id="kati3C" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
-                </div>
-                <div class="floorContainer">
-                    <h2 id="floor_2C" class="FloorNumber">Kati 2</h2>
-                    <img class="floor" id="kati2C" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
-                </div>
-                <div class="floorContainer">
-                    <h2 id="floor_1C" class="FloorNumber">Kati 1</h2>
-                    <img class="floor" id="kati1C" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
-                </div>
-
-                <div id="floor-plan1C" class="floorPlan">Floor Plan 1C</div>
-                <div id="floor-plan2C" class="floorPlan">Floor Plan 2C</div>
-                <div id="floor-plan3C" class="floorPlan">Floor Plan 3C</div>
-                <div id="floor-plan4C" class="floorPlan">Floor Plan 4C</div>
-                <div id="floor-plan5C" class="floorPlan">Floor Plan 5C</div>
-                <div id="floor-plan6C" class="floorPlan">Floor Plan 6C</div>
-                <div id="floor-plan7C" class="floorPlan">Floor Plan 7C</div>
-                <div id="floor-plan8C" class="floorPlan">Floor Plan 8C</div>
-                <div id="floor-plan9C" class="floorPlan">Floor Plan 9A</div>
-
-            </div>
-            <div id="godinaD" class="building">
-                <div class="floorContainer" style="background-color: #fbe4c8">
-                    <h2 id="floor_9D" class="FloorNumber">Kati 9</h2>
-                    <img class="floor" id="kati9D" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
-                </div>
-                <div class="floorContainer">
-                    <h2 id="floor_8D" class="FloorNumber">Kati 8</h2>
-                    <img class="floor" id="kati8D" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
-                </div>
-                <div class="floorContainer">
-                    <h2 id="floor_7D" class="FloorNumber">Kati 7</h2>
-                    <img class="floor" id="kati7D" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
-                </div>
-                <div class="floorContainer">
-                    <h2 id="floor_6D" class="FloorNumber">Kati 6</h2>
-                    <img class="floor" id="kati6D" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
-                </div>
-                <div class="floorContainer">
-                    <h2 id="floor_5D" class="FloorNumber">Kati 5</h2>
-                    <img class="floor" id="kati5D" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
-                </div>
-                <div class="floorContainer">
-                    <h2 id="floor_4D" class="FloorNumber">Kati 4</h2>
-                    <img class="floor" id="kati4D" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
-                </div>
-                <div class="floorContainer">
-                    <h2 id="floor_3D" class="FloorNumber">Kati 3</h2>
-                    <img class="floor" id="kati3D" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
-                </div>
-                <div class="floorContainer">
-                    <h2 id="floor_2D" class="FloorNumber">Kati 2</h2>
-                    <img class="floor" id="kati2D" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
-                </div>
-                <div class="floorContainer">
-                    <h2 id="floor_1D" class="FloorNumber">Kati 1</h2>
-                    <img class="floor" id="kati1D" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
-                </div>
-                <div id="floor-plan1D" class="floorPlan">Floor Plan 1D</div>
-                <div id="floor-plan2D" class="floorPlan">Floor Plan 2D</div>
-                <div id="floor-plan3D" class="floorPlan">Floor Plan 3D</div>
-                <div id="floor-plan4D" class="floorPlan">Floor Plan 4D</div>
-                <div id="floor-plan5D" class="floorPlan">Floor Plan 5D</div>
-                <div id="floor-plan6D" class="floorPlan">Floor Plan 6D</div>
-                <div id="floor-plan7D" class="floorPlan">Floor Plan 7D</div>
-                <div id="floor-plan8D" class="floorPlan">Floor Plan 8D</div>
-                <div id="floor-plan9D" class="floorPlan">Floor Plan 9A</div>
-
-            </div>
-            <div id="godinaE" class="building">
-                <div class="floorContainer" style="background-color: #fbe4c8">
-                    <h2 id="floor_9E" class="FloorNumber">Kati 9</h2>
-                    <img class="floor" id="kati9E" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
-                </div>
-                <div class="floorContainer">
-                    <h2 id="floor_8E" class="FloorNumber">Kati 8</h2>
-                    <img class="floor" id="kati8E" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
-                </div>
-                <div class="floorContainer">
-                    <h2 id="floor_7E" class="FloorNumber">Kati 7</h2>
-                    <img class="floor" id="kati7E" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
-                </div>
-                <div class="floorContainer">
-                    <h2 id="floor_6E" class="FloorNumber">Kati 6</h2>
-                    <img class="floor" id="kati6E" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
-                </div>
-                <div class="floorContainer">
-                    <h2 id="floor_5" class="FloorNumber">Kati 5</h2>
-                    <img class="floor" id="kati5E" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
-                </div>
-                <div class="floorContainer">
-                    <h2 id="floor_4E" class="FloorNumber">Kati 4</h2>
-                    <img class="floor" id="kati4E" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
-                </div>
-                <div class="floorContainer">
-                    <h2 id="floor_3E" class="FloorNumber">Kati 3</h2>
-                    <img class="floor" id="kati3E" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
-                </div>
-                <div class="floorContainer">
-                    <h2 id="floor_2E" class="FloorNumber">Kati 2</h2>
-                    <img class="floor" id="kati2E" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
-                </div>
-                <div class="floorContainer">
-                    <h2 id="floor_1E" class="FloorNumber">Kati 1</h2>
-                    <img class="floor" id="kati1E" src="CSS\Kashar_images\Kati_Godina_A.jpg" alt="Katiet e godnes" />
-                </div>
-                <div id="floor-plan1E" class="floorPlan">Floor Plan 1E</div>
-                <div id="floor-plan2E" class="floorPlan">Floor Plan 2E</div>
-                <div id="floor-plan3E" class="floorPlan">Floor Plan 3E</div>
-                <div id="floor-plan4E" class="floorPlan">Floor Plan 4E</div>
-                <div id="floor-plan5E" class="floorPlan">Floor Plan 5E</div>
-                <div id="floor-plan6E" class="floorPlan">Floor Plan 6E</div>
-                <div id="floor-plan7E" class="floorPlan">Floor Plan 7E</div>
-                <div id="floor-plan8E" class="floorPlan">Floor Plan 8E</div>
-                <div id="floor-plan9E" class="floorPlan">Floor Plan 9A</div>
-
-            </div>
-            <div id="apartments">
+           
+                <div id="apartments">
 
             </div>
         </main>
-        <img id="ProjektiImgA" src="CSS\Kashar_images\Projekti Arkitektonik-3.jpg" alt="Projekti Arkitektonik" />
+        <img id="ProjektiImgA" src="CSS\Kashar_images\Projekt_Arkitektonik-2.jpg" alt="Projekt_ Arkitektonik" />
 
 
         <!-- Right Panel: Apartment Details -->

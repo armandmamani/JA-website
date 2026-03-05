@@ -8,7 +8,23 @@ const tablePlanContainer = document.getElementById("table-plan");
 const header = document.getElementById("floorHeader");
 const apartmentDetailsDiv = document.getElementById("apartmentDetails");
 const apartmentValueTable = document.getElementById("apartmentValue");
+defaultApartmentDetails.forEach(apt => {
 
+    // Check condition
+    if (apt.statusi !== "Per Shitje") {
+
+        // Build element ID (first 4 letters + "Blcn")
+        const elementId = apt.id.substring(0, 4) + "Blcn";
+
+        // Find element in DOM
+        const el = document.getElementById(elementId);
+
+        // Apply background color if element exists
+        if (el) {
+            el.style.backgroundImage = "url(./CSS/Kashar_images/dritare_me_drite.png)";
+        }
+    }
+});
 
 // === 🏢 FUNCTION: Show Building ===
 function showBuilding(selectedBuilding) {
@@ -19,11 +35,21 @@ function showBuilding(selectedBuilding) {
 
   // 2️⃣ Hide all building divs
   document.querySelectorAll(".building").forEach(div => (div.style.display = "none"));
-
+ document.querySelectorAll(".tblPersp").forEach(div => (div.style.display = "none"));
   // 3️⃣ Show the selected building
-  const buildingDiv = document.getElementById(`godina${selectedBuilding}`);
+    const buildingDiv = document.getElementById(`godina${selectedBuilding}`);
+    const perspectiveContainer = document.getElementById("perspectiveContainer");
+    const BuildingContainer = document.getElementById("BuildingContainer");
+    const backgroundImage = document.getElementById(`ProjektiImgA`);
+    const buildingInsideTable = document.getElementById(`table${selectedBuilding}Inside`);
+    const buildingOutsideTable = document.getElementById(`table${selectedBuilding}Outside`);
   if (buildingDiv) {
-    buildingDiv.style.display = "block";
+      buildingDiv.style.display = "block";
+      perspectiveContainer.style.display = "grid";
+      BuildingContainer.style.display = "block";
+      buildingInsideTable.style.display = "block";
+      buildingOutsideTable.style.display = "block";
+      backgroundImage.style.opacity = "0.3";
   } else {
     console.warn(`Building div not found for: ${selectedBuilding}`);
   }
@@ -31,7 +57,8 @@ function showBuilding(selectedBuilding) {
   // 4️⃣ Reset floors and table
   floorSelect.value = "";
   tablePlanContainer.style.display = "none";
-  header.textContent = `GODINA ${selectedBuilding}`;
+    header.textContent = `GODINA ${selectedBuilding}`;
+    buildingOutsideTable.style.display = "block";
 }
 
 // === 🏢 BUILDING SELECTOR BEHAVIOR ===
@@ -63,7 +90,28 @@ function showFloor(selectedBuilding, selectedFloor) {
   generateTableLayout(selectedBuilding);
 
   // Populate apartments
-  populateApartments(selectedBuilding, selectedFloor);
+    populateApartments(selectedBuilding, selectedFloor);
+    console.log(`Showing floor ${selectedFloor} of building ${selectedBuilding}`);
+
+    // Apply border only to matching floor
+    defaultApartmentDetails.forEach(apt => {
+
+        // Floor is second character in ID
+        const apartmentFloor = apt.id.charAt(1);
+
+        if (
+            apt.building === selectedBuilding &&
+            apartmentFloor == selectedFloor
+        ) {
+            const elementId = apt.id.substring(0, 4) + "Blcn";
+            const el = document.getElementById(elementId);
+
+            if (el) {
+                el.style.border = "5px solid orange";
+            }
+        }
+    });
+
 }
 
 // === 🖼️ FLOOR IMAGE CLICK HANDLER ===
@@ -88,26 +136,25 @@ const buildingLayouts = {
     { scale: 2, layout: 1 },
   ],
   B: [
-    { scale: 1, layout: 1 },
-    { scale: 2, layout: 1 },
-    { scale: 3, layout: 1 },
+      { scale: 3, layout: 2 },
+      { scale: 2, layout: 1 },
+      { scale: 1, layout: 1 },
   ],
   C: [
     { scale: 1, layout: 2 },
-    { scale: 2, layout: 1 },
+    { scale: 2, layout: 3 },
   ],
-  D: [{ scale: 1, layout: 3 }],
+  D: [{ scale: 1, layout: 4 }],
   E: [
-    { scale: 1, layout: 4 },
-    { scale: 2, layout: 2 },
+    { scale: 1, layout: 1 },
+    { scale: 2, layout: 3 },
   ],
 };
 
 const layoutApartments = {
-  1: ["A", "B", "C", "D", "E", "F", "G"],
-  2: ["A", "B", "C", "D", "E", "F", "G", "H", "I"],
-  3: ["A", "B", "C", "D", "E", "F", "G", "H", "I"],
-  4: ["A", "B", "C", "D", "E", "F", "G", "H", "I"],
+    1: ["A", "B", "C", "D", "E", "F", "G", "H"],
+    2: ["H", "G", "F", "E", "D", "C", "B", "A"],
+    3: ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"],
 };
 
 
@@ -159,7 +206,7 @@ apartmentSelect.addEventListener("change", showApartmentDetalis);
 // === 🖱️ EVENT: Click Apartment in Layout ===
 document.getElementById("table-plan").addEventListener("click", function (e) {
   const cell = e.target.closest("td");
-    console.log("Clicked cell:", cell.dataset);
+    
 
   if (!cell || !cell.dataset.apartment) return; // Ignore empty cells or merged ones
 
@@ -181,7 +228,7 @@ document.getElementById("table-plan").addEventListener("click", function (e) {
       a.floor == floor &&
       a.apartment == apartment
   );
-
+    console.log("Apartment clicked:", { building, scale, floor, apartment, apt });
   if (apt) {
     showApartmentDetalis(apt);
   } else {
@@ -199,10 +246,12 @@ function showApartmentDetalis () {
         selectedFloor = floorSelect.value;
   if (!selectedBuilding || !selectedScale || !apartmentLetter) return;
   // Build the apartment ID (e.g., D23G)
-  const aptId = `${selectedBuilding}${selectedScale}${selectedFloor}${apartmentLetter}`;
+    const aptId = `${selectedBuilding}${selectedFloor}${selectedScale}${apartmentLetter}`;
 
   // Find the apartment object from the array
-  const details = defaultApartmentDetails.find((apt) => apt.id === aptId);
+    const details = defaultApartmentDetails.find((apt) => apt.id === aptId);
+    console.log("Apartment selected:", aptId);
+
   // Clear previous details
   apartmentDetailsDiv.innerHTML = "";
 
@@ -422,13 +471,25 @@ function updateApartmentValue(apt) {
     const isInsideTable = e.target.closest("#table-plan");
     const isInsideselectors = e.target.closest(".selector");
     const tableContainer = document.getElementById("tablePlan-container");
-    const isInsideletter =  e.target.closest(".buildingLetter");
+      const isInsideletter = e.target.closest(".buildingLetter");
+      const perspectiveContainer = document.getElementById("perspectiveContainer");
+      const BuildingContainer = document.getElementById("BuildingContainer");
+      const backgroundImage = document.getElementById(`ProjektiImgA`);
+
+
+
+
+     
+
     if (!isInsideBuilding && !isInsideTable && !isInsideselectors && !isInsideletter)  {
       // hide table-plan by clearing content or hiding container
 
       tablePlanContainer.innerHTML = "";
       tablePlanContainer.style.display = "none";
-      tableContainer.style.display = "none";
+        tableContainer.style.display = "none";
+        perspectiveContainer.style.display = "none";
+        backgroundImage.style.opacity = "1";
+        BuildingContainer.style.display = "none";
       document.querySelectorAll(".building").forEach(div => (div.style.display = "none"));
 
     }

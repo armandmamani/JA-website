@@ -243,20 +243,28 @@ margin-top: 40px;
     animation: fadein 1s;
 }
 
-#godinaA, #godinaB, #godinaC, #godinaD, #godinaE {
+#BuildingContainer {
+    display: none;
+    background-color: var(--e-gjelber-gri);
     position: absolute;
     top: 0;
-    left: 20%;
-    width: 72%;
-    height: 70%;
+    left: 30%;
+    width: 50vw;
+    height: 60vh;
+    animation: fadein 2s;
+    z-index: 5;
+    animation: fadein 1s;
+}
+
+
+#godinaA, #godinaB, #godinaC, #godinaD, #godinaE {
     background-size: cover;
-    padding: 10px;
-    padding-top: 175px;
-    padding-left: 175px;
     border: 3px solid #000;
     animation: fadein 2s;
     z-index: 5;
     animation: fadein 1s;
+    width: 100%;
+    height: 100%;
 }
 
 #godinaA {
@@ -264,7 +272,7 @@ margin-top: 40px;
 }
 
 #godinaB {
-    background-image: url(Kashar_images/Godina_B/Godina_B_background.jpg);
+    background-image: url(Kashar_images/Godina_B/Godina_B_front.png);
 }
 
 #godinaC {
@@ -284,9 +292,9 @@ margin-top: 40px;
 
 .building {
     display: none;
-    margin-top: 20px;
-    border: 2px solid #ddd;
-    padding: 10px;
+    border: 20px solid #ddd;
+    padding-top: 9%;
+    padding-left: 2%;
     border-radius: 10px;
 }
     .active {
@@ -295,48 +303,48 @@ margin-top: 40px;
 
 .buildingLetter {
     font-family: 'Arial Black', sans-serif;
-    font-size: 10vh;
+    font-size: 7vh;
     color: var(--gri-e-hapur);
     font-weight: bolder;
     position: fixed;
     cursor: pointer;
     animation: fadein 1s;
-    text-shadow: 2px 2px 4px #000;
+    text-shadow: 2px 2px 4px #2b5b25;
     z-index: 2;
 }
 
 
 #buildingLetterA {
-    bottom: 12%;
-    left: 58%;
+    top: 30%;
+    left: 55%;
 }
 
 #buildingLetterB {
-    top: 43%;
+    top: 32%;
     left: 38%;
 }
 
 #buildingLetterC {
-    top: 22%;
-    left: 47%;
+    top: 20%;
+    left: 37%;
 }
 
 #buildingLetterD {
-    top: 23%;
-    left: 62%;
+    top: 14%;
+    left: 46%;
 }
 
 #buildingLetterE {
-    top: 48%;
-    left: 71%;
+    top: 16%;
+    left: 57%;
 }
 
 /*------- Godinat ------*/
 
 .floorContainer {
     display: flex;
-    width: 77%;
-    margin-left: 2%;
+    width: 97%;
+    height:11%;
     flex-direction: column;
     align-items: flex-start;
 }
@@ -346,16 +354,16 @@ margin-top: 40px;
     position: absolute;
     padding: 8px;
     text-align: left;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
-    color: #333;
-    opacity: 0.3;
+    color: #ccc;
+    opacity: 1;
     z-index: 10;
     cursor: pointer;
 }
 
     .FloorNumber:hover {
-        opacity: 0.8;
+        opacity: 0.1;
     }
 
 
@@ -398,7 +406,7 @@ margin-top: 40px;
         display: flex;
         width: 100%;
         height: 100%;
-        opacity: 0.5;
+        opacity: 0.1;
         border: 1px dashed var(--drab-dark-green);
         background-color: var(--gri-e-hapur);
         cursor: pointer;
@@ -406,7 +414,7 @@ margin-top: 40px;
 
         .floor:hover {
             background-color: #f8e7c3;
-            opacity: 1;
+            opacity: 0.5;
         }
 
 
@@ -490,7 +498,7 @@ margin: 5px;
 #table-plan {
     display: none;
     position: absolute;
-    top: 0;
+    top: 30vh;
     background-color: var(--jeshile-gri);
     width: 72%;
     border: 15px solid var(--jeshile-gri);
@@ -550,12 +558,11 @@ margin: 5px;
     width: 100%;
     font: 200 14px Roboto, sans-serif;
 }
-
     .layout td {
-        border: 1px solid #bbb;
+        border: 3px solid #bbb;
         padding: 8px;
         text-align: center;
-        min-width: 40px;
+        width: 7%;
         height: 10vh;
     }
         .layout td:hover {
@@ -563,7 +570,6 @@ margin: 5px;
             transform: scale(1.1);
             transition: all 0.3s ease;
         }
-
 
     .layout .merged {
         background-image: url(Kashar_images/Korridori.jpg);
@@ -590,13 +596,79 @@ margin: 5px;
                 transform: none;
                 box-shadow: none;
             }
+/*-----   Inside and outside show tables: Apartment Details  --------*/
+#perspectiveContainer {
+    display: none;
+    background-image: linear-gradient(to bottom, orange ,black 30% );
+    grid-template-columns: 1fr 1fr;
+    position: fixed;
+    bottom: 5vh;
+    width: 70%;
+    z-index: 202;
+}
+.tableInsideContainer {
+    top: 40vh;
+    border: none;
+    overflow: hidden;
+    background-color: transparent;
+    width: 100%;
+    perspective: 800px;
+    padding: 20px;
+}
 
 
+.tableOutsideContainer {
+    overflow: hidden;
+    background-color: transparent;
+    width: 100%;
+    top: 40vh;
+    left: 50%;
+    padding: 20px;
 
+}
+
+
+.balcony {
+    background-image: url(Kashar_images/dritare_pa_drite.png);
+    background-size: cover;
+    border: 6px solid #bbb;
+    width: 65px;
+    height: 30px;
+}
+.stair {
+    background-image: url(Kashar_images/shkallet_jashte.jpg);
+    background-size: cover;
+    border: 2px solid #666;
+    width: 40px;
+    height: 30px;
+}
+
+
+.blc_inside {
+    border: 6px solid #3f6d55;
+}
+
+#tableBInside, #tableCInside, #tableDInside {
+    display: none;
+    border: 5px solid #7d9684;
+    border-top: 15px solid #666;
+    border-right: 45px solid #7d9684;
+    transform: rotateX(20deg) rotateY(10deg);
+    transform-style: preserve-3d;
+    float: right;
+}
+
+#tableBOutside, #tableCOutside, #tableDOutside {
+    display: none;
+    border: 5px solid #ccc;
+    border-top: 15px solid #666;
+    border-left: 45px solid #444;
+    transform: rotateX(20deg) rotateY(-10deg);
+    transform-style: preserve-3d;
+}
 
 
 /*-----    Right Panel: Apartment Details  --------*/
-
 .details-panel {
     background: linear-gradient(to bottom, var(--drab-dark-green) 20%, var(--jeshile-gri) 92%, var(--gri-e-mbyllur) 95%, var(--gri-e-hapur) 100%);
     color: var(--drab-dark-greene);
